@@ -37,6 +37,7 @@
 		10000000000000000000001D /* ShareCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000001E /* ShareCardView.swift */; };
 		10000000000000000000001E /* ShareCardRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000001F /* ShareCardRenderer.swift */; };
 		10000000000000000000001F /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000020 /* ShareSheet.swift */; };
+		100000000000000000000020 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000021 /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		20000000000000000000001E /* ShareCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCardView.swift; sourceTree = "<group>"; };
 		20000000000000000000001F /* ShareCardRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCardRenderer.swift; sourceTree = "<group>"; };
 		200000000000000000000020 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		200000000000000000000021 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				20000000000000000000000A /* ExploreView.swift */,
 				20000000000000000000000B /* FavoritesView.swift */,
 				20000000000000000000000C /* SettingsView.swift */,
+				200000000000000000000021 /* OnboardingView.swift */,
 				20000000000000000000000D /* WordDetailView.swift */,
 				20000000000000000000000E /* PremiumDetailsView.swift */,
 				20000000000000000000000F /* PaywallView.swift */,
@@ -355,6 +358,7 @@
 				10000000000000000000000A /* ExploreView.swift in Sources */,
 				10000000000000000000000B /* FavoritesView.swift in Sources */,
 				10000000000000000000000C /* SettingsView.swift in Sources */,
+				100000000000000000000020 /* OnboardingView.swift in Sources */,
 				10000000000000000000000D /* WordDetailView.swift in Sources */,
 				10000000000000000000000E /* PremiumDetailsView.swift in Sources */,
 				10000000000000000000000F /* PaywallView.swift in Sources */,

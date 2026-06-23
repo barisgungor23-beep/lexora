@@ -5,8 +5,10 @@ struct SettingsView: View {
     @EnvironmentObject private var notifications: NotificationManager
     @EnvironmentObject private var premium: PremiumManager
     @EnvironmentObject private var appearance: AppearanceManager
+    #if DEBUG
     @State private var promoCode = ""
     @State private var promoMessage: String?
+    #endif
 
     private let dailyService = DailyWordService()
 
@@ -53,6 +55,7 @@ struct SettingsView: View {
                 }
                 .listRowBackground(LexoraColors.cardBackground)
 
+                #if DEBUG
                 Section("Promo code") {
                     TextField("Code", text: $promoCode)
                         .textInputAutocapitalization(.characters)
@@ -72,7 +75,6 @@ struct SettingsView: View {
                 }
                 .listRowBackground(LexoraColors.cardBackground)
 
-                #if DEBUG
                 Section("Phase 1 testing") {
                     Toggle("Mock premium", isOn: Binding(
                         get: { premium.isMockPremiumEnabled },

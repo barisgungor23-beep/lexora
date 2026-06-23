@@ -4,59 +4,69 @@ struct PaywallView: View {
     @EnvironmentObject private var premium: PremiumManager
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 22) {
-            Image(systemName: "sparkle.magnifyingglass")
-                .font(.system(size: 44))
-                .foregroundStyle(LexoraColors.accent)
+        ScrollView {
+            VStack(alignment: .leading, spacing: 22) {
+                Image(systemName: "sparkle.magnifyingglass")
+                    .font(.system(size: 42))
+                    .foregroundStyle(LexoraColors.accent)
+                    .frame(maxWidth: .infinity, alignment: .leading)
 
-            Text("Unlock Lexora Premium")
-                .font(.lexoraTitle)
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Unlock Lexora Premium")
+                        .font(.lexoraTitle)
 
-            Text("Premium expands the daily word experience without changing the calm, local-first app.")
-                .font(.lexoraBody)
-                .foregroundStyle(LexoraColors.secondaryText)
-                .lineSpacing(4)
+                    Text("A fuller archive, deeper notes, and quiet daily tools for people who like keeping words close.")
+                        .font(.lexoraBody)
+                        .foregroundStyle(LexoraColors.secondaryText)
+                        .lineSpacing(4)
+                }
 
-            VStack(alignment: .leading, spacing: 12) {
-                PremiumBenefitRow(icon: "books.vertical", text: "Full word archive")
-                PremiumBenefitRow(icon: "text.book.closed", text: "Deeper notes")
-                PremiumBenefitRow(icon: "heart", text: "Unlimited favorites")
-                PremiumBenefitRow(icon: "rectangle.inset.filled", text: "Daily word widget")
-                PremiumBenefitRow(icon: "square.and.arrow.up", text: "Share as Card")
-            }
-            .lexoraCard(background: LexoraColors.cardBackgroundSoft, padding: 16)
+                VStack(alignment: .leading, spacing: 12) {
+                    PremiumBenefitRow(icon: "books.vertical", text: "Full word archive")
+                    PremiumBenefitRow(icon: "text.book.closed", text: "Deeper notes")
+                    PremiumBenefitRow(icon: "heart", text: "Unlimited favorites")
+                    PremiumBenefitRow(icon: "rectangle.inset.filled", text: "Daily word widget")
+                    PremiumBenefitRow(icon: "square.and.arrow.up", text: "Share as Card")
+                }
+                .lexoraCard(background: LexoraColors.cardBackgroundSoft, padding: 18)
 
-            Button {
-                premium.handlePurchaseTapped()
-            } label: {
-                Text("Purchase unavailable in Phase 1")
-                    .font(.lexoraHeadline)
-                    .frame(maxWidth: .infinity)
-            }
-            .buttonStyle(.borderedProminent)
+                VStack(spacing: 10) {
+                    Button {
+                        premium.handlePurchaseTapped()
+                    } label: {
+                        Text("Purchases deferred to Phase 2")
+                            .font(.lexoraHeadline)
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.borderedProminent)
 
-            Button("Restore deferred to Phase 2") {
-                premium.handleRestoreTapped()
-            }
-            .font(.lexoraBody)
+                    Button("Restore deferred to Phase 2") {
+                        premium.handleRestoreTapped()
+                    }
+                    .font(.lexoraBody)
+                }
 
-            if let status = premium.statusMessage {
-                Text(status)
+                Text("RevenueCat and real purchases will be connected in Phase 2.")
                     .font(.lexoraFootnote)
                     .foregroundStyle(LexoraColors.secondaryText)
-                    .padding(12)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(LexoraColors.cardBackgroundSoft)
-                    .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10, style: .continuous)
-                            .stroke(LexoraColors.border, lineWidth: 0.7)
-                    )
-            }
+                    .lineSpacing(3)
 
-            Spacer()
+                if let status = premium.statusMessage {
+                    Text(status)
+                        .font(.lexoraFootnote)
+                        .foregroundStyle(LexoraColors.secondaryText)
+                        .padding(12)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(LexoraColors.cardBackgroundSoft)
+                        .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .stroke(LexoraColors.border, lineWidth: 0.7)
+                        )
+                }
+            }
+            .padding()
         }
-        .padding()
         .lexoraPageBackground()
         .navigationTitle("Premium")
         .navigationBarTitleDisplayMode(.inline)

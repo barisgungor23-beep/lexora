@@ -7,10 +7,19 @@ struct LexoraApp: App {
     @StateObject private var notifications = NotificationManager()
     @StateObject private var premium = PremiumManager()
     @StateObject private var appearance = AppearanceManager()
+    @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
 
     var body: some Scene {
         WindowGroup {
-            RootTabView()
+            Group {
+                if hasCompletedOnboarding {
+                    RootTabView()
+                } else {
+                    OnboardingView {
+                        hasCompletedOnboarding = true
+                    }
+                }
+            }
                 .environmentObject(repository)
                 .environmentObject(favorites)
                 .environmentObject(notifications)
