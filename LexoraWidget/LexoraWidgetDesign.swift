@@ -11,8 +11,8 @@ enum LexoraWidgetTypography {
 
 enum LexoraWidgetColors {
     static let background = Color(red: 0.973, green: 0.965, blue: 0.937)
-    static let card = Color(red: 1.000, green: 0.992, blue: 0.969)
+    static let card = Color(red: 1.000, green: 0.994, blue: 0.976)
     static let primaryText = Color(red: 0.145, green: 0.129, blue: 0.108)
     static let secondaryText = Color(red: 0.373, green: 0.353, blue: 0.314)
-    static let border = Color(red: 0.812, green: 0.788, blue: 0.733)
+    static let border = Color(red: 0.725, green: 0.694, blue: 0.631)
 }

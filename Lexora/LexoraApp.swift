@@ -57,7 +57,7 @@ private struct RootTabView: View {
                 }
         }
         .tint(LexoraColors.accent)
-        .toolbarBackground(LexoraColors.cardBackground.opacity(0.92), for: .tabBar)
+        .toolbarBackground(LexoraColors.cardBackground, for: .tabBar)
         .toolbarColorScheme(.light, for: .tabBar)
     }
 }

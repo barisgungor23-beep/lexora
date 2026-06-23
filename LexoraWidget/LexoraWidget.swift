@@ -39,11 +39,11 @@ struct LexoraWidgetView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .background(
             RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .fill(LexoraWidgetColors.card.opacity(0.82))
+                .fill(LexoraWidgetColors.card.opacity(0.94))
         )
         .overlay(
             RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .stroke(LexoraWidgetColors.border.opacity(0.7), lineWidth: 0.7)
+                .stroke(LexoraWidgetColors.border.opacity(0.82), lineWidth: 0.8)
         )
         .containerBackground(LexoraWidgetColors.background, for: .widget)
     }
