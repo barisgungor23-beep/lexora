@@ -71,6 +71,17 @@ struct SettingsView: View {
                         .foregroundStyle(LexoraColors.secondaryText)
                 }
                 .listRowBackground(LexoraColors.cardBackground)
+
+                Section("Legal") {
+                    Link(destination: URL(string: "https://barisgungor23-beep.github.io/lexora/privacy-policy.html")!) {
+                        Label("Privacy Policy", systemImage: "hand.raised")
+                    }
+
+                    Link(destination: URL(string: "https://barisgungor23-beep.github.io/lexora/terms-of-use.html")!) {
+                        Label("Terms of Use", systemImage: "doc.text")
+                    }
+                }
+                .listRowBackground(LexoraColors.cardBackground)
             }
             .font(.lexoraBody)
             .lexoraPageBackground()
