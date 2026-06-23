@@ -38,6 +38,8 @@
 		10000000000000000000001E /* ShareCardRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000001F /* ShareCardRenderer.swift */; };
 		10000000000000000000001F /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000020 /* ShareSheet.swift */; };
 		100000000000000000000020 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000021 /* OnboardingView.swift */; };
+		100000000000000000000021 /* RevenueCatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000022 /* RevenueCatService.swift */; };
+		100000000000000000000022 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = D10000000000000000000001 /* RevenueCat */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,7 @@
 		20000000000000000000001F /* ShareCardRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCardRenderer.swift; sourceTree = "<group>"; };
 		200000000000000000000020 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		200000000000000000000021 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		200000000000000000000022 /* RevenueCatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueCatService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				100000000000000000000022 /* RevenueCat in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +162,7 @@
 				200000000000000000000003 /* WordRepository.swift */,
 				200000000000000000000004 /* DailyWordService.swift */,
 				20000000000000000000001F /* ShareCardRenderer.swift */,
+				200000000000000000000022 /* RevenueCatService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -255,6 +260,9 @@
 				B00000000000000000000001 /* PBXTargetDependency */,
 			);
 			name = Lexora;
+			packageProductDependencies = (
+				D10000000000000000000001 /* RevenueCat */,
+			);
 			productName = Lexora;
 			productReference = 200000000000000000000016 /* Lexora.app */;
 			productType = "com.apple.product-type.application";
@@ -303,6 +311,9 @@
 				Base,
 			);
 			mainGroup = 800000000000000000000001;
+			packageReferences = (
+				D00000000000000000000001 /* XCRemoteSwiftPackageReference "purchases-ios" */,
+			);
 			productRefGroup = 80000000000000000000000A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -345,6 +356,7 @@
 				100000000000000000000002 /* Word.swift in Sources */,
 				100000000000000000000003 /* WordRepository.swift in Sources */,
 				100000000000000000000004 /* DailyWordService.swift in Sources */,
+				100000000000000000000021 /* RevenueCatService.swift in Sources */,
 				100000000000000000000005 /* FavoritesManager.swift in Sources */,
 				100000000000000000000006 /* NotificationManager.swift in Sources */,
 				100000000000000000000007 /* PremiumManager.swift in Sources */,
@@ -384,6 +396,25 @@
 			targetProxy = 300000000000000000000001 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D00000000000000000000001 /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D10000000000000000000001 /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D00000000000000000000001 /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = RevenueCat;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C00000000000000000000001 /* Debug */ = {
