@@ -11,9 +11,9 @@ struct LexoraCardModifier: ViewModifier {
             .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
             .overlay(
                 RoundedRectangle(cornerRadius: 12, style: .continuous)
-                    .stroke(LexoraColors.border, lineWidth: 0.8)
+                    .stroke(LexoraColors.border.opacity(0.72), lineWidth: 0.7)
             )
-            .shadow(color: .black.opacity(0.04), radius: 10, x: 0, y: 4)
+            .shadow(color: .black.opacity(0.025), radius: 8, x: 0, y: 3)
     }
 }
 

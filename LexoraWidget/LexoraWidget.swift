@@ -43,7 +43,7 @@ struct LexoraWidgetView: View {
         )
         .overlay(
             RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .stroke(LexoraWidgetColors.border, lineWidth: 0.8)
+                .stroke(LexoraWidgetColors.border.opacity(0.7), lineWidth: 0.7)
         )
         .containerBackground(LexoraWidgetColors.background, for: .widget)
     }

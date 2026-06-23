@@ -53,7 +53,7 @@ struct WordRowCard: View {
                 .clipShape(Capsule())
                 .overlay(
                     Capsule()
-                        .stroke(LexoraColors.border, lineWidth: 0.7)
+                        .stroke(LexoraColors.border.opacity(0.68), lineWidth: 0.65)
                 )
         }
         .padding(.vertical, 6)

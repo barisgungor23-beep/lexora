@@ -41,11 +41,11 @@ struct PaywallView: View {
                     .background(
                         RoundedRectangle(cornerRadius: 14, style: .continuous)
                             .fill(LexoraColors.cardBackgroundSoft)
-                            .shadow(color: .black.opacity(0.035), radius: 12, x: 0, y: 5)
+                            .shadow(color: .black.opacity(0.025), radius: 10, x: 0, y: 4)
                     )
                     .overlay(
                         RoundedRectangle(cornerRadius: 14, style: .continuous)
-                            .stroke(LexoraColors.border, lineWidth: 0.8)
+                            .stroke(LexoraColors.border.opacity(0.72), lineWidth: 0.7)
                     )
                     .background(
                         RoundedRectangle(cornerRadius: 18, style: .continuous)
@@ -96,7 +96,7 @@ struct PaywallView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                             .overlay(
                                 RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                    .stroke(LexoraColors.border, lineWidth: 0.7)
+                                    .stroke(LexoraColors.border.opacity(0.7), lineWidth: 0.65)
                             )
                             .opacity(hasAppeared ? 1 : 0)
                             .animation(.easeOut(duration: 0.35).delay(0.4), value: hasAppeared)
@@ -181,7 +181,7 @@ private struct PremiumHeroCard: View {
             .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
             .overlay(
                 RoundedRectangle(cornerRadius: 12, style: .continuous)
-                    .stroke(LexoraColors.border, lineWidth: 0.8)
+                    .stroke(LexoraColors.border.opacity(0.72), lineWidth: 0.7)
             )
         }
         .padding(20)
@@ -189,12 +189,12 @@ private struct PremiumHeroCard: View {
             RoundedRectangle(cornerRadius: 18, style: .continuous)
                 .fill(
                     LinearGradient(
-                        colors: [LexoraColors.cardBackground, Color(red: 0.948, green: 0.884, blue: 0.748)],
+                        colors: [LexoraColors.cardBackground, Color(red: 0.966, green: 0.922, blue: 0.832)],
                         startPoint: .topLeading,
                         endPoint: .bottomTrailing
                     )
                 )
-                .shadow(color: .black.opacity(0.06), radius: 18, x: 0, y: 9)
+                .shadow(color: .black.opacity(0.04), radius: 16, x: 0, y: 7)
         )
         .overlay(
             RoundedRectangle(cornerRadius: 18, style: .continuous)
@@ -244,7 +244,7 @@ private struct PremiumPreviewCard: View {
         .padding(18)
         .background(
             LinearGradient(
-                colors: [LexoraColors.cardBackground, Color(red: 0.972, green: 0.928, blue: 0.836)],
+                colors: [LexoraColors.cardBackground, Color(red: 0.984, green: 0.948, blue: 0.880)],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
@@ -254,7 +254,7 @@ private struct PremiumPreviewCard: View {
             RoundedRectangle(cornerRadius: 14, style: .continuous)
                 .stroke(LexoraColors.accent.opacity(0.24), lineWidth: 0.9)
         )
-        .shadow(color: .black.opacity(0.04), radius: 14, x: 0, y: 6)
+        .shadow(color: .black.opacity(0.03), radius: 12, x: 0, y: 5)
     }
 }
 
@@ -283,7 +283,7 @@ private struct PaywallBackgroundOrnaments: View {
             LinearGradient(
                 colors: [
                     LexoraColors.pageBackground,
-                    Color(red: 0.968, green: 0.925, blue: 0.828),
+                    Color(red: 0.986, green: 0.956, blue: 0.900),
                     LexoraColors.pageBackground
                 ],
                 startPoint: .topLeading,

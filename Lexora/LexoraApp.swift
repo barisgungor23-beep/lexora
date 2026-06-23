@@ -56,5 +56,8 @@ private struct RootTabView: View {
                     Label("Settings", systemImage: "gearshape")
                 }
         }
+        .tint(LexoraColors.accent)
+        .toolbarBackground(LexoraColors.cardBackground.opacity(0.92), for: .tabBar)
+        .toolbarColorScheme(.light, for: .tabBar)
     }
 }

@@ -67,7 +67,7 @@ struct OnboardingView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
                         .overlay(
                             RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                .stroke(LexoraColors.border, lineWidth: 0.8)
+                                .stroke(LexoraColors.border.opacity(0.7), lineWidth: 0.7)
                         )
                         .padding(.horizontal, 28)
                         .padding(.bottom, 4)
@@ -241,9 +241,9 @@ private struct WordRitualCard: View {
         .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
         .overlay(
             RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .stroke(LexoraColors.border, lineWidth: 0.9)
+                .stroke(LexoraColors.border.opacity(0.72), lineWidth: 0.8)
         )
-        .shadow(color: .black.opacity(0.06), radius: 16, x: 0, y: 8)
+        .shadow(color: .black.opacity(0.035), radius: 14, x: 0, y: 6)
         .offset(y: isActive ? -4 : 8)
         .animation(.easeInOut(duration: 1.8).repeatForever(autoreverses: true), value: isActive)
     }
@@ -287,10 +287,10 @@ private struct MiniWordCard: View {
         .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
         .overlay(
             RoundedRectangle(cornerRadius: 14, style: .continuous)
-                .stroke(LexoraColors.border, lineWidth: 0.8)
+                .stroke(LexoraColors.border.opacity(0.7), lineWidth: 0.7)
         )
         .rotationEffect(.degrees(angle))
-        .shadow(color: .black.opacity(0.05), radius: 12, x: 0, y: 7)
+        .shadow(color: .black.opacity(0.03), radius: 10, x: 0, y: 5)
     }
 }
 
@@ -333,7 +333,7 @@ private struct DailyRitualCards: View {
                 )
                 .overlay(
                     RoundedRectangle(cornerRadius: 22, style: .continuous)
-                        .stroke(LexoraColors.border, lineWidth: 0.9)
+                        .stroke(LexoraColors.border.opacity(0.72), lineWidth: 0.8)
                 )
         }
         .offset(y: isActive ? -2 : 9)

@@ -37,7 +37,7 @@ struct WordCard: View {
                         .clipShape(Circle())
                         .overlay(
                             Circle()
-                                .stroke(LexoraColors.border, lineWidth: 0.8)
+                                .stroke(LexoraColors.border.opacity(0.7), lineWidth: 0.7)
                         )
                 }
                 .buttonStyle(.plain)
@@ -54,7 +54,7 @@ struct WordCard: View {
                     .clipShape(Capsule())
                     .overlay(
                         Capsule()
-                            .stroke(LexoraColors.border, lineWidth: 0.7)
+                            .stroke(LexoraColors.border.opacity(0.68), lineWidth: 0.65)
                     )
             }
 
