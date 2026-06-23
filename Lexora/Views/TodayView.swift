@@ -7,6 +7,7 @@ struct TodayView: View {
     @EnvironmentObject private var premium: PremiumManager
     @State private var shareCardItem: ShareCardItem?
     @State private var shareErrorMessage: String?
+    @State private var favoriteLimitMessage: String?
 
     private let dailyService = DailyWordService()
 
@@ -32,23 +33,31 @@ struct TodayView: View {
                                 word: word,
                                 isFavorite: favorites.isFavorite(word),
                                 isHero: true,
-                                onFavoriteTapped: { favorites.toggle(word) }
+                                onFavoriteTapped: { handleFavoriteToggle(for: word) }
                             )
 
-                            Button {
-                                shareCard(for: word)
-                            } label: {
-                                HStack(spacing: 10) {
-                                    Image(systemName: "square.and.arrow.up")
-                                        .font(.callout.weight(.semibold))
-                                    Text("Share as Card")
-                                        .font(.lexoraHeadline)
-                                    Spacer()
-                                }
-                                .foregroundStyle(LexoraColors.accent)
-                                .lexoraCard(background: LexoraColors.cardBackgroundSoft, padding: 16)
+                            if let favoriteLimitMessage {
+                                Text(favoriteLimitMessage)
+                                    .font(.lexoraFootnote)
+                                    .foregroundStyle(LexoraColors.secondaryText)
+                                    .padding(.horizontal, 4)
                             }
-                            .buttonStyle(.plain)
+
+                            if premium.hasPremium {
+                                Button {
+                                    shareCard(for: word)
+                                } label: {
+                                    ShareCardActionLabel(isLocked: false)
+                                }
+                                .buttonStyle(.plain)
+                            } else {
+                                NavigationLink {
+                                    PaywallView()
+                                } label: {
+                                    ShareCardActionLabel(isLocked: true)
+                                }
+                                .buttonStyle(.plain)
+                            }
 
                             if let shareErrorMessage {
                                 Text(shareErrorMessage)
@@ -94,9 +103,37 @@ struct TodayView: View {
 
         shareCardItem = ShareCardItem(image: image)
     }
+
+    private func handleFavoriteToggle(for word: Word) {
+        let result = favorites.toggle(word, hasPremium: premium.hasPremium)
+        favoriteLimitMessage = result == .blockedAtFreeLimit ? "Free can save up to \(LexoraPremiumRules.freeFavoritesLimit) words." : nil
+    }
 }
 
 private struct ShareCardItem: Identifiable {
     let id = UUID()
     let image: UIImage
+}
+
+private struct ShareCardActionLabel: View {
+    let isLocked: Bool
+
+    var body: some View {
+        HStack(spacing: 10) {
+            Image(systemName: isLocked ? "lock.fill" : "square.and.arrow.up")
+                .font(.callout.weight(.semibold))
+            VStack(alignment: .leading, spacing: 3) {
+                Text("Share as Card")
+                    .font(.lexoraHeadline)
+                if isLocked {
+                    Text("Premium unlocks vintage share cards.")
+                        .font(.lexoraFootnote)
+                        .foregroundStyle(LexoraColors.secondaryText)
+                }
+            }
+            Spacer()
+        }
+        .foregroundStyle(LexoraColors.accent)
+        .lexoraCard(background: LexoraColors.cardBackgroundSoft, padding: 16)
+    }
 }

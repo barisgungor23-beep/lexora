@@ -1,4 +1,12 @@
 import Foundation
+import WidgetKit
+
+enum LexoraPremiumRules {
+    static let freeExploreLimit = 20
+    static let freeFavoritesLimit = 5
+    static let appGroupIdentifier = "group.com.baris.Lexora"
+    static let sharedPremiumKey = "phaseOneMockPremiumEnabled"
+}
 
 @MainActor
 final class PremiumManager: ObservableObject {
@@ -10,23 +18,28 @@ final class PremiumManager: ObservableObject {
     @Published var isMockPremiumEnabled: Bool {
         didSet {
             defaults.set(isMockPremiumEnabled, forKey: mockPremiumKey)
-            hasPremium = isMockPremiumEnabled
+            sharedDefaults?.set(isMockPremiumEnabled, forKey: LexoraPremiumRules.sharedPremiumKey)
+            updatePremiumState()
+            WidgetCenter.shared.reloadAllTimelines()
             statusMessage = isMockPremiumEnabled ? "Mock premium is on for Phase 1 testing." : "Mock premium is off. Free state is active."
         }
     }
 
     private let defaults: UserDefaults
+    private let sharedDefaults: UserDefaults?
     private let mockPremiumKey = "phaseOneMockPremiumEnabled"
 
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
+        self.sharedDefaults = UserDefaults(suiteName: LexoraPremiumRules.appGroupIdentifier)
         self.isMockPremiumEnabled = defaults.bool(forKey: mockPremiumKey)
+        self.sharedDefaults?.set(isMockPremiumEnabled, forKey: LexoraPremiumRules.sharedPremiumKey)
         self.hasPremium = isMockPremiumEnabled
     }
 
     func configure() {
         // Phase 1 intentionally does not configure RevenueCat, StoreKit, products, or real purchases.
-        hasPremium = isMockPremiumEnabled
+        updatePremiumState()
     }
 
     func setMockPremium(_ isEnabled: Bool) {
@@ -54,5 +67,9 @@ final class PremiumManager: ObservableObject {
         setMockPremium(true)
         statusMessage = "Development promo applied. Mock premium is on."
         return true
+    }
+
+    private func updatePremiumState() {
+        hasPremium = isMockPremiumEnabled
     }
 }

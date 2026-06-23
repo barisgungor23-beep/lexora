@@ -9,13 +9,22 @@ struct PaywallView: View {
                 .font(.system(size: 44))
                 .foregroundStyle(LexoraColors.accent)
 
-            Text("Unlock deeper word details")
+            Text("Unlock Lexora Premium")
                 .font(.lexoraTitle)
 
-            Text("Premium will show full meaning, cultural notes, origin notes, usage notes, and the related feeling for each word.")
+            Text("Premium expands the daily word experience without changing the calm, local-first app.")
                 .font(.lexoraBody)
                 .foregroundStyle(LexoraColors.secondaryText)
                 .lineSpacing(4)
+
+            VStack(alignment: .leading, spacing: 12) {
+                PremiumBenefitRow(icon: "books.vertical", text: "Full word archive")
+                PremiumBenefitRow(icon: "text.book.closed", text: "Deeper notes")
+                PremiumBenefitRow(icon: "heart", text: "Unlimited favorites")
+                PremiumBenefitRow(icon: "rectangle.inset.filled", text: "Daily word widget")
+                PremiumBenefitRow(icon: "square.and.arrow.up", text: "Share as Card")
+            }
+            .lexoraCard(background: LexoraColors.cardBackgroundSoft, padding: 16)
 
             Button {
                 premium.handlePurchaseTapped()
@@ -52,6 +61,24 @@ struct PaywallView: View {
         .navigationTitle("Premium")
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(LexoraColors.pageBackground, for: .navigationBar)
+    }
+}
+
+private struct PremiumBenefitRow: View {
+    let icon: String
+    let text: String
+
+    var body: some View {
+        HStack(spacing: 10) {
+            Image(systemName: icon)
+                .font(.callout.weight(.semibold))
+                .foregroundStyle(LexoraColors.accent)
+                .frame(width: 22)
+
+            Text(text)
+                .font(.lexoraBody)
+                .foregroundStyle(LexoraColors.primaryText)
+        }
     }
 }
 

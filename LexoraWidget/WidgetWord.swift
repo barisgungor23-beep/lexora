@@ -1,5 +1,14 @@
 import Foundation
 
+enum WidgetPremiumAccess {
+    private static let appGroupIdentifier = "group.com.baris.Lexora"
+    private static let sharedPremiumKey = "phaseOneMockPremiumEnabled"
+
+    static var hasPremium: Bool {
+        UserDefaults(suiteName: appGroupIdentifier)?.bool(forKey: sharedPremiumKey) ?? false
+    }
+}
+
 struct WidgetWord: Codable {
     let id: String
     let word: String

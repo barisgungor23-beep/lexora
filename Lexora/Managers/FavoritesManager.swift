@@ -1,5 +1,11 @@
 import Foundation
 
+enum FavoriteToggleResult {
+    case added
+    case removed
+    case blockedAtFreeLimit
+}
+
 final class FavoritesManager: ObservableObject {
     @Published private(set) var favoriteIDs: Set<String> = []
 
@@ -15,12 +21,28 @@ final class FavoritesManager: ObservableObject {
         favoriteIDs.contains(word.id)
     }
 
-    func toggle(_ word: Word) {
+    @discardableResult
+    func toggle(_ word: Word, hasPremium: Bool = true) -> FavoriteToggleResult {
         if favoriteIDs.contains(word.id) {
             favoriteIDs.remove(word.id)
-        } else {
-            favoriteIDs.insert(word.id)
+            persist()
+            return .removed
         }
+
+        guard hasPremium || favoriteIDs.count < LexoraPremiumRules.freeFavoritesLimit else {
+            return .blockedAtFreeLimit
+        }
+
+        favoriteIDs.insert(word.id)
+        persist()
+        return .added
+    }
+
+    func canAddFavorite(hasPremium: Bool) -> Bool {
+        hasPremium || favoriteIDs.count < LexoraPremiumRules.freeFavoritesLimit
+    }
+
+    private func persist() {
         defaults.set(Array(favoriteIDs).sorted(), forKey: key)
     }
 }

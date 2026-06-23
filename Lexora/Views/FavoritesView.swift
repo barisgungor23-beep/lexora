@@ -31,18 +31,41 @@ struct FavoritesView: View {
                     .padding(24)
                     .lexoraPageBackground()
                 } else {
-                    List(favoriteWords) { word in
-                        NavigationLink {
-                            WordDetailView(word: word)
-                        } label: {
-                            WordRowCard(word: word, isLocked: word.isPremiumDetail && !premium.hasPremium, showsFavorite: true)
+                    List {
+                        if !premium.hasPremium {
+                            Section {
+                                NavigationLink {
+                                    PaywallView()
+                                } label: {
+                                    VStack(alignment: .leading, spacing: 5) {
+                                        Text(favorites.favoriteIDs.count >= LexoraPremiumRules.freeFavoritesLimit ? "Favorite limit reached" : "Free favorites")
+                                            .font(.lexoraHeadline)
+                                            .foregroundStyle(LexoraColors.primaryText)
+                                        Text("Free can save up to \(LexoraPremiumRules.freeFavoritesLimit) words. Premium unlocks unlimited favorites.")
+                                            .font(.lexoraSubheadline)
+                                            .foregroundStyle(LexoraColors.secondaryText)
+                                    }
+                                    .padding(.vertical, 8)
+                                }
+                            }
+                            .listRowBackground(LexoraColors.cardBackground)
                         }
-                        .listRowBackground(LexoraColors.cardBackground)
-                        .swipeActions(edge: .trailing) {
-                            Button(role: .destructive) {
-                                favorites.toggle(word)
-                            } label: {
-                                Label("Remove", systemImage: "heart.slash")
+
+                        Section {
+                            ForEach(favoriteWords) { word in
+                                NavigationLink {
+                                    WordDetailView(word: word)
+                                } label: {
+                                    WordRowCard(word: word, isLocked: word.isPremiumDetail && !premium.hasPremium, showsFavorite: true)
+                                }
+                                .listRowBackground(LexoraColors.cardBackground)
+                                .swipeActions(edge: .trailing) {
+                                    Button(role: .destructive) {
+                                        favorites.toggle(word, hasPremium: premium.hasPremium)
+                                    } label: {
+                                        Label("Remove", systemImage: "heart.slash")
+                                    }
+                                }
                             }
                         }
                     }
