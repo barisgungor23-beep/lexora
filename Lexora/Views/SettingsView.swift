@@ -14,6 +14,12 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             Form {
+                Section {
+                    PremiumStatusBanner()
+                }
+                .listRowInsets(EdgeInsets(top: 14, leading: 16, bottom: 8, trailing: 16))
+                .listRowBackground(Color.clear)
+
                 Section("Daily notification") {
                     Toggle("Enable daily word", isOn: $notifications.isEnabled)
                     DatePicker("Time", selection: $notifications.notificationDate, displayedComponents: .hourAndMinute)
@@ -22,26 +28,6 @@ struct SettingsView: View {
                         Task {
                             await notifications.updateSchedule(using: dailyService.word(words: repository.words))
                         }
-                    }
-                }
-                .listRowBackground(LexoraColors.cardBackground)
-
-                Section("Premium") {
-                    NavigationLink(premium.hasPremium ? "Premium active" : "Premium") {
-                        PaywallView()
-                    }
-
-                    Button("Restore purchases") {
-                        Task {
-                            await premium.restorePurchases()
-                        }
-                    }
-                    .disabled(premium.isProcessingPurchase)
-
-                    if let status = premium.statusMessage, !status.isEmpty {
-                        Text(status)
-                            .font(.lexoraFootnote)
-                            .foregroundStyle(LexoraColors.secondaryText)
                     }
                 }
                 .listRowBackground(LexoraColors.cardBackground)
@@ -104,5 +90,77 @@ struct SettingsView: View {
             }
         }
         .tint(LexoraColors.accent)
+    }
+}
+
+private struct PremiumStatusBanner: View {
+    @EnvironmentObject private var premium: PremiumManager
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            HStack(alignment: .top, spacing: 12) {
+                Image(systemName: premium.hasPremium ? "checkmark.seal.fill" : "seal")
+                    .font(.system(size: 28, weight: .regular))
+                    .foregroundStyle(LexoraColors.accent)
+                    .frame(width: 34)
+
+                VStack(alignment: .leading, spacing: 6) {
+                    HStack(alignment: .firstTextBaseline) {
+                        Text("Lexora Premium")
+                            .font(.lexoraHeadline)
+                            .foregroundStyle(LexoraColors.primaryText)
+
+                        Spacer(minLength: 12)
+
+                        Text(premium.hasPremium ? "Active" : "Not active")
+                            .font(.lexoraFootnote)
+                            .foregroundStyle(LexoraColors.accent)
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 5)
+                            .background(LexoraColors.cardBackgroundSoft.opacity(0.72))
+                            .clipShape(Capsule())
+                    }
+
+                    Text(premium.hasPremium ? "Full archive, stories, widget, and sharing are unlocked." : "Unlock deeper notes, stories, the full archive, widget, and Share as Card.")
+                        .font(.lexoraCallout)
+                        .foregroundStyle(LexoraColors.secondaryText)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+            }
+
+            HStack(spacing: 12) {
+                if !premium.hasPremium {
+                    NavigationLink {
+                        PaywallView()
+                    } label: {
+                        Label("View Premium", systemImage: "sparkle")
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(LexoraColors.accent)
+                }
+
+                Button {
+                    Task {
+                        await premium.restorePurchases()
+                    }
+                } label: {
+                    Label("Restore", systemImage: "arrow.clockwise")
+                        .frame(maxWidth: premium.hasPremium ? .infinity : nil)
+                }
+                .buttonStyle(.bordered)
+                .tint(LexoraColors.accent)
+                .disabled(premium.isProcessingPurchase)
+            }
+
+            if let status = premium.statusMessage, !status.isEmpty {
+                Text(status)
+                    .font(.lexoraFootnote)
+                    .foregroundStyle(LexoraColors.secondaryText)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+        .lexoraCard(background: LexoraColors.cardBackground, padding: 18)
+        .listRowSeparator(.hidden)
     }
 }
