@@ -31,9 +31,11 @@ struct SettingsView: View {
                         PaywallView()
                     }
 
+                    #if DEBUG
                     Button("Restore purchases (Phase 2)") {
                         premium.handleRestoreTapped()
                     }
+                    #endif
 
                     if let status = premium.statusMessage {
                         Text(status)
@@ -77,7 +79,7 @@ struct SettingsView: View {
                 #endif
 
                 Section("Privacy") {
-                    Text("Lexora has no account, no server, no AI, and no analytics in this MVP.")
+                    Text("Lexora works without an account. Your favorites and preferences stay on your device, with no server, AI, or analytics.")
                         .font(.lexoraFootnote)
                         .foregroundStyle(LexoraColors.secondaryText)
                 }

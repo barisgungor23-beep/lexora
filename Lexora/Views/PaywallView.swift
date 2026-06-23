@@ -55,36 +55,27 @@ struct PaywallView: View {
                     .offset(y: hasAppeared ? 0 : 12)
                     .animation(.easeOut(duration: 0.42).delay(0.18), value: hasAppeared)
 
-                    VStack(spacing: 10) {
-                        Button {
-                            // Phase 2 TODO: Replace with RevenueCat package purchase once ASC products exist.
-                            premium.handlePurchaseTapped()
-                        } label: {
-                            Text("Purchases deferred to Phase 2")
-                                .font(.lexoraHeadline)
-                                .frame(maxWidth: .infinity)
-                                .padding(.vertical, 2)
-                        }
-                        .buttonStyle(.borderedProminent)
-
-                        Button {
-                            // Phase 2 TODO: Replace with RevenueCat restorePurchases and entitlement sync.
-                            premium.handleRestoreTapped()
-                        } label: {
-                            Text("Restore deferred to Phase 2")
-                                .font(.lexoraBody)
-                        }
-                    }
-                    .opacity(hasAppeared ? 1 : 0)
-                    .scaleEffect(hasAppeared ? 1 : 0.98)
-                    .animation(.easeOut(duration: 0.42).delay(0.28), value: hasAppeared)
-
-                    Text("RevenueCat will connect here after App Store Connect products are ready.")
+                    #if DEBUG
+                    phaseTwoPurchaseControls
+                        .opacity(hasAppeared ? 1 : 0)
+                        .scaleEffect(hasAppeared ? 1 : 0.98)
+                        .animation(.easeOut(duration: 0.42).delay(0.28), value: hasAppeared)
+                    #else
+                    Text("Premium purchases will be available here soon.")
                         .font(.lexoraFootnote)
                         .foregroundStyle(LexoraColors.secondaryText)
                         .lineSpacing(3)
+                        .padding(12)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(LexoraColors.cardBackgroundSoft)
+                        .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .stroke(LexoraColors.border.opacity(0.7), lineWidth: 0.65)
+                        )
                         .opacity(hasAppeared ? 1 : 0)
                         .animation(.easeOut(duration: 0.35).delay(0.34), value: hasAppeared)
+                    #endif
 
                     if let status = premium.statusMessage {
                         Text(status)
@@ -115,6 +106,36 @@ struct PaywallView: View {
             }
         }
     }
+
+    #if DEBUG
+    private var phaseTwoPurchaseControls: some View {
+        VStack(spacing: 10) {
+            Button {
+                // Phase 2 TODO: Replace with RevenueCat package purchase once ASC products exist.
+                premium.handlePurchaseTapped()
+            } label: {
+                Text("Purchases deferred to Phase 2")
+                    .font(.lexoraHeadline)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 2)
+            }
+            .buttonStyle(.borderedProminent)
+
+            Button {
+                // Phase 2 TODO: Replace with RevenueCat restorePurchases and entitlement sync.
+                premium.handleRestoreTapped()
+            } label: {
+                Text("Restore deferred to Phase 2")
+                    .font(.lexoraBody)
+            }
+
+            Text("RevenueCat will connect here after App Store Connect products are ready.")
+                .font(.lexoraFootnote)
+                .foregroundStyle(LexoraColors.secondaryText)
+                .lineSpacing(3)
+        }
+    }
+    #endif
 }
 
 private struct PremiumHeroCard: View {

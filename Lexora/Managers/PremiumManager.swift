@@ -14,14 +14,18 @@ final class PremiumManager: ObservableObject {
     static let entitlementIdentifier = "premium"
 
     @Published private(set) var hasPremium = false
-    @Published var statusMessage: String? = "Phase 1 uses local mock premium only."
+    @Published var statusMessage: String?
     @Published var isMockPremiumEnabled: Bool {
         didSet {
             defaults.set(isMockPremiumEnabled, forKey: mockPremiumKey)
             sharedDefaults?.set(isMockPremiumEnabled, forKey: LexoraPremiumRules.sharedPremiumKey)
             updatePremiumState()
             WidgetCenter.shared.reloadAllTimelines()
+            #if DEBUG
             statusMessage = isMockPremiumEnabled ? "Mock premium is on for Phase 1 testing." : "Mock premium is off. Free state is active."
+            #else
+            statusMessage = nil
+            #endif
         }
     }
 
@@ -48,24 +52,36 @@ final class PremiumManager: ObservableObject {
 
     func handlePurchaseTapped() {
         // Phase 2 TODO: Start the real RevenueCat purchase flow here.
+        #if DEBUG
         statusMessage = "Purchases are deferred to Phase 2. Use Mock Premium in Settings to test premium UI."
+        #else
+        statusMessage = nil
+        #endif
     }
 
     func handleRestoreTapped() {
         // Phase 2 TODO: Call RevenueCat restorePurchases and refresh entitlementIdentifier.
+        #if DEBUG
         statusMessage = "Restore is deferred to Phase 2. Use Mock Premium in Settings to test premium UI."
+        #else
+        statusMessage = nil
+        #endif
     }
 
     func applyDevelopmentPromoCode(_ code: String) -> Bool {
         // Phase 2 TODO: Replace this local-only development helper with real promo/redeem logic.
         let normalizedCode = code.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         guard normalizedCode == "LEXORADEV" else {
+            #if DEBUG
             statusMessage = "Invalid or expired code."
+            #endif
             return false
         }
 
         setMockPremium(true)
+        #if DEBUG
         statusMessage = "Development promo applied. Mock premium is on."
+        #endif
         return true
     }
 
