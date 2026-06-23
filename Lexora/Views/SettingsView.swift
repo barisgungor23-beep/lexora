@@ -27,17 +27,18 @@ struct SettingsView: View {
                 .listRowBackground(LexoraColors.cardBackground)
 
                 Section("Premium") {
-                    NavigationLink("Premium") {
+                    NavigationLink(premium.hasPremium ? "Premium active" : "Premium") {
                         PaywallView()
                     }
 
-                    #if DEBUG
-                    Button("Restore purchases (Phase 2)") {
-                        premium.handleRestoreTapped()
+                    Button("Restore purchases") {
+                        Task {
+                            await premium.restorePurchases()
+                        }
                     }
-                    #endif
+                    .disabled(premium.isProcessingPurchase)
 
-                    if let status = premium.statusMessage {
+                    if let status = premium.statusMessage, !status.isEmpty {
                         Text(status)
                             .font(.lexoraFootnote)
                             .foregroundStyle(LexoraColors.secondaryText)
@@ -52,7 +53,7 @@ struct SettingsView: View {
                         .autocorrectionDisabled()
 
                     Button("Apply") {
-                        // Phase 1 local-only testing. Real promo redemption belongs in Phase 2 or later.
+                        // DEBUG-only local testing. Public promo redemption should use App Store / RevenueCat.
                         let didApply = premium.applyDevelopmentPromoCode(promoCode)
                         promoMessage = didApply ? "Mock premium enabled." : "Invalid or expired code."
                     }
@@ -71,7 +72,7 @@ struct SettingsView: View {
                         set: { premium.setMockPremium($0) }
                     ))
 
-                    Text("Use this local-only toggle to check locked and unlocked premium states before RevenueCat is added in Phase 2.")
+                    Text("Use this local-only toggle to check locked and unlocked premium states without making a test purchase.")
                         .font(.lexoraFootnote)
                         .foregroundStyle(LexoraColors.secondaryText)
                 }

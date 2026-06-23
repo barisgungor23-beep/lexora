@@ -2,6 +2,7 @@ import SwiftUI
 
 @main
 struct LexoraApp: App {
+    @Environment(\.scenePhase) private var scenePhase
     @StateObject private var repository = WordRepository()
     @StateObject private var favorites = FavoritesManager()
     @StateObject private var notifications = NotificationManager()
@@ -28,6 +29,12 @@ struct LexoraApp: App {
                 .preferredColorScheme(.light)
                 .task {
                     premium.configure()
+                }
+                .onChange(of: scenePhase) { _, newPhase in
+                    guard newPhase == .active else { return }
+                    Task {
+                        await premium.refreshCustomerInfo(silent: true)
+                    }
                 }
         }
     }

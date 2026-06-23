@@ -1,28 +1,30 @@
 import Foundation
+import RevenueCat
 import WidgetKit
 
 enum LexoraPremiumRules {
     static let freeExploreLimit = 20
     static let freeFavoritesLimit = 5
     static let appGroupIdentifier = "group.com.baris.Lexora"
+    // Shared with the widget as the effective premium state.
     static let sharedPremiumKey = "phaseOneMockPremiumEnabled"
 }
 
 @MainActor
 final class PremiumManager: ObservableObject {
-    // Phase 2 TODO: Use this entitlement identifier when RevenueCat is added.
     static let entitlementIdentifier = "premium"
 
     @Published private(set) var hasPremium = false
+    @Published private(set) var availablePackages: [LexoraPremiumPackage] = []
+    @Published private(set) var isLoadingPackages = false
+    @Published private(set) var isProcessingPurchase = false
     @Published var statusMessage: String?
     @Published var isMockPremiumEnabled: Bool {
         didSet {
             defaults.set(isMockPremiumEnabled, forKey: mockPremiumKey)
-            sharedDefaults?.set(isMockPremiumEnabled, forKey: LexoraPremiumRules.sharedPremiumKey)
             updatePremiumState()
-            WidgetCenter.shared.reloadAllTimelines()
             #if DEBUG
-            statusMessage = isMockPremiumEnabled ? "Mock premium is on for Phase 1 testing." : "Mock premium is off. Free state is active."
+            statusMessage = isMockPremiumEnabled ? "Mock premium is on for testing." : "Mock premium is off. RevenueCat entitlement state is active."
             #else
             statusMessage = nil
             #endif
@@ -32,44 +34,99 @@ final class PremiumManager: ObservableObject {
     private let defaults: UserDefaults
     private let sharedDefaults: UserDefaults?
     private let mockPremiumKey = "phaseOneMockPremiumEnabled"
+    private let revenueCatService: RevenueCatService
+    private var revenueCatHasPremium: Bool
 
-    init(defaults: UserDefaults = .standard) {
+    init(defaults: UserDefaults = .standard, revenueCatService: RevenueCatService? = nil) {
         self.defaults = defaults
         self.sharedDefaults = UserDefaults(suiteName: LexoraPremiumRules.appGroupIdentifier)
+        self.revenueCatService = revenueCatService ?? .shared
         self.isMockPremiumEnabled = defaults.bool(forKey: mockPremiumKey)
-        self.sharedDefaults?.set(isMockPremiumEnabled, forKey: LexoraPremiumRules.sharedPremiumKey)
-        self.hasPremium = isMockPremiumEnabled
+        self.revenueCatHasPremium = sharedDefaults?.bool(forKey: LexoraPremiumRules.sharedPremiumKey) ?? false
+        updatePremiumState()
     }
 
     func configure() {
-        // Phase 1 intentionally does not configure RevenueCat, StoreKit, products, or real purchases.
+        revenueCatService.configureIfReady()
         updatePremiumState()
+        Task {
+            await refreshCustomerInfo(silent: true)
+            await loadPremiumPackages(silent: true)
+        }
     }
 
     func setMockPremium(_ isEnabled: Bool) {
         isMockPremiumEnabled = isEnabled
     }
 
-    func handlePurchaseTapped() {
-        // Phase 2 TODO: Start the real RevenueCat purchase flow here.
-        #if DEBUG
-        statusMessage = "Purchases are deferred to Phase 2. Use Mock Premium in Settings to test premium UI."
-        #else
-        statusMessage = nil
-        #endif
+    func loadPremiumPackages(silent: Bool = false) async {
+        guard !isLoadingPackages else { return }
+        isLoadingPackages = true
+        defer { isLoadingPackages = false }
+
+        do {
+            availablePackages = try await revenueCatService.fetchPremiumPackages()
+            if availablePackages.isEmpty && !silent {
+                statusMessage = "Premium options are unavailable right now. Please try again later."
+            }
+        } catch {
+            if !silent {
+                statusMessage = friendlyMessage(for: error)
+            }
+        }
     }
 
-    func handleRestoreTapped() {
-        // Phase 2 TODO: Call RevenueCat restorePurchases and refresh entitlementIdentifier.
-        #if DEBUG
-        statusMessage = "Restore is deferred to Phase 2. Use Mock Premium in Settings to test premium UI."
-        #else
+    func purchase(_ premiumPackage: LexoraPremiumPackage) async -> Bool {
+        guard !isProcessingPurchase else { return false }
+        isProcessingPurchase = true
         statusMessage = nil
-        #endif
+        defer { isProcessingPurchase = false }
+
+        do {
+            let result = try await revenueCatService.purchase(premiumPackage)
+            applyRevenueCatPremiumState(revenueCatService.hasPremiumEntitlement(result.customerInfo))
+            if result.userCancelled {
+                statusMessage = nil
+                return false
+            }
+            statusMessage = hasPremium ? "Premium is active." : "Purchase completed, but premium is not active yet. Please try Restore Purchases."
+            return hasPremium
+        } catch {
+            statusMessage = friendlyMessage(for: error)
+            return false
+        }
+    }
+
+    func restorePurchases() async -> Bool {
+        guard !isProcessingPurchase else { return false }
+        isProcessingPurchase = true
+        statusMessage = nil
+        defer { isProcessingPurchase = false }
+
+        do {
+            let customerInfo = try await revenueCatService.restorePurchases()
+            applyRevenueCatPremiumState(revenueCatService.hasPremiumEntitlement(customerInfo))
+            statusMessage = hasPremium ? "Premium is active." : "No active premium purchase was found."
+            return hasPremium
+        } catch {
+            statusMessage = friendlyMessage(for: error)
+            return false
+        }
+    }
+
+    func refreshCustomerInfo(silent: Bool = false) async {
+        do {
+            let customerInfo = try await revenueCatService.refreshCustomerInfo()
+            applyRevenueCatPremiumState(revenueCatService.hasPremiumEntitlement(customerInfo))
+        } catch {
+            if !silent {
+                statusMessage = friendlyMessage(for: error)
+            }
+        }
     }
 
     func applyDevelopmentPromoCode(_ code: String) -> Bool {
-        // Phase 2 TODO: Replace this local-only development helper with real promo/redeem logic.
+        // Local DEBUG-only testing helper. Public promo redemption should go through App Store / RevenueCat.
         let normalizedCode = code.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         guard normalizedCode == "LEXORADEV" else {
             #if DEBUG
@@ -86,6 +143,31 @@ final class PremiumManager: ObservableObject {
     }
 
     private func updatePremiumState() {
-        hasPremium = isMockPremiumEnabled
+        #if DEBUG
+        hasPremium = revenueCatHasPremium || isMockPremiumEnabled
+        #else
+        hasPremium = revenueCatHasPremium
+        #endif
+        sharedDefaults?.set(hasPremium, forKey: LexoraPremiumRules.sharedPremiumKey)
+        WidgetCenter.shared.reloadAllTimelines()
+    }
+
+    private func applyRevenueCatPremiumState(_ isActive: Bool) {
+        revenueCatHasPremium = isActive
+        updatePremiumState()
+    }
+
+    private func friendlyMessage(for error: Error) -> String {
+        if let revenueCatError = error as? ErrorCode, revenueCatError == .purchaseCancelledError {
+            return ""
+        }
+
+        if let localizedError = error as? LocalizedError,
+           let message = localizedError.errorDescription,
+           !message.isEmpty {
+            return message
+        }
+
+        return "Something went wrong. Please try again."
     }
 }

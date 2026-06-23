@@ -1,8 +1,10 @@
 import SwiftUI
 
 struct PaywallView: View {
+    @Environment(\.dismiss) private var dismiss
     @EnvironmentObject private var premium: PremiumManager
     @State private var hasAppeared = false
+    @State private var selectedPackageID: LexoraPremiumPackage.ID?
 
     private let benefits = [
         "Deeper notes",
@@ -55,29 +57,12 @@ struct PaywallView: View {
                     .offset(y: hasAppeared ? 0 : 12)
                     .animation(.easeOut(duration: 0.42).delay(0.18), value: hasAppeared)
 
-                    #if DEBUG
-                    phaseTwoPurchaseControls
+                    purchaseControls
                         .opacity(hasAppeared ? 1 : 0)
                         .scaleEffect(hasAppeared ? 1 : 0.98)
                         .animation(.easeOut(duration: 0.42).delay(0.28), value: hasAppeared)
-                    #else
-                    Text("Premium purchases will be available here soon.")
-                        .font(.lexoraFootnote)
-                        .foregroundStyle(LexoraColors.secondaryText)
-                        .lineSpacing(3)
-                        .padding(12)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .background(LexoraColors.cardBackgroundSoft)
-                        .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                .stroke(LexoraColors.border.opacity(0.7), lineWidth: 0.65)
-                        )
-                        .opacity(hasAppeared ? 1 : 0)
-                        .animation(.easeOut(duration: 0.35).delay(0.34), value: hasAppeared)
-                    #endif
 
-                    if let status = premium.statusMessage {
+                    if let status = premium.statusMessage, !status.isEmpty {
                         Text(status)
                             .font(.lexoraFootnote)
                             .foregroundStyle(LexoraColors.secondaryText)
@@ -100,6 +85,13 @@ struct PaywallView: View {
         .navigationTitle("Premium")
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(LexoraColors.pageBackground, for: .navigationBar)
+        .task {
+            await premium.loadPremiumPackages()
+            selectDefaultPackageIfNeeded()
+        }
+        .onChange(of: premium.availablePackages.map(\.id)) { _, _ in
+            selectDefaultPackageIfNeeded()
+        }
         .onAppear {
             withAnimation(.easeOut(duration: 0.55)) {
                 hasAppeared = true
@@ -107,35 +99,165 @@ struct PaywallView: View {
         }
     }
 
-    #if DEBUG
-    private var phaseTwoPurchaseControls: some View {
-        VStack(spacing: 10) {
-            Button {
-                // Phase 2 TODO: Replace with RevenueCat package purchase once ASC products exist.
-                premium.handlePurchaseTapped()
-            } label: {
-                Text("Purchases deferred to Phase 2")
-                    .font(.lexoraHeadline)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 2)
+    private var selectedPackage: LexoraPremiumPackage? {
+        premium.availablePackages.first { $0.id == selectedPackageID }
+    }
+
+    private var purchaseControls: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            if premium.hasPremium {
+                HStack(spacing: 10) {
+                    Image(systemName: "checkmark.seal")
+                        .foregroundStyle(LexoraColors.accent)
+
+                    Text("Premium is active")
+                        .font(.lexoraHeadline)
+                        .foregroundStyle(LexoraColors.primaryText)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .lexoraCard(background: LexoraColors.cardBackgroundSoft, padding: 16)
+            } else if premium.isLoadingPackages && premium.availablePackages.isEmpty {
+                HStack(spacing: 10) {
+                    ProgressView()
+
+                    Text("Loading premium options...")
+                        .font(.lexoraBody)
+                        .foregroundStyle(LexoraColors.secondaryText)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .lexoraCard(background: LexoraColors.cardBackgroundSoft, padding: 16)
+            } else if premium.availablePackages.isEmpty {
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Premium options are unavailable right now.")
+                        .font(.lexoraBody)
+                        .foregroundStyle(LexoraColors.primaryText)
+
+                    Button("Try again") {
+                        Task {
+                            await premium.loadPremiumPackages()
+                            selectDefaultPackageIfNeeded()
+                        }
+                    }
+                    .font(.lexoraBody)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .lexoraCard(background: LexoraColors.cardBackgroundSoft, padding: 16)
+            } else {
+                VStack(spacing: 10) {
+                    ForEach(premium.availablePackages) { premiumPackage in
+                        PremiumPackageRow(
+                            premiumPackage: premiumPackage,
+                            isSelected: premiumPackage.id == selectedPackageID
+                        ) {
+                            selectedPackageID = premiumPackage.id
+                        }
+                    }
+                }
+
+                Button {
+                    guard let selectedPackage else { return }
+                    Task {
+                        let didActivate = await premium.purchase(selectedPackage)
+                        if didActivate {
+                            dismiss()
+                        }
+                    }
+                } label: {
+                    HStack {
+                        if premium.isProcessingPurchase {
+                            ProgressView()
+                                .tint(.white)
+                        }
+
+                        Text(premium.isProcessingPurchase ? "Processing..." : "Continue")
+                            .font(.lexoraHeadline)
+                            .frame(maxWidth: .infinity)
+                    }
+                    .padding(.vertical, 3)
+                }
+                .buttonStyle(.borderedProminent)
+                .disabled(selectedPackage == nil || premium.isProcessingPurchase)
             }
-            .buttonStyle(.borderedProminent)
 
             Button {
-                // Phase 2 TODO: Replace with RevenueCat restorePurchases and entitlement sync.
-                premium.handleRestoreTapped()
+                Task {
+                    let didRestore = await premium.restorePurchases()
+                    if didRestore {
+                        dismiss()
+                    }
+                }
             } label: {
-                Text("Restore deferred to Phase 2")
+                Text("Restore purchases")
                     .font(.lexoraBody)
             }
-
-            Text("RevenueCat will connect here after App Store Connect products are ready.")
-                .font(.lexoraFootnote)
-                .foregroundStyle(LexoraColors.secondaryText)
-                .lineSpacing(3)
+            .disabled(premium.isProcessingPurchase)
         }
     }
-    #endif
+
+    private func selectDefaultPackageIfNeeded() {
+        guard selectedPackageID == nil || selectedPackage == nil else { return }
+        selectedPackageID = premium.availablePackages.first { $0.kind == .annual }?.id ?? premium.availablePackages.first?.id
+    }
+}
+
+private struct PremiumPackageRow: View {
+    let premiumPackage: LexoraPremiumPackage
+    let isSelected: Bool
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            HStack(spacing: 12) {
+                Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
+                    .font(.title3)
+                    .foregroundStyle(isSelected ? LexoraColors.accent : LexoraColors.secondaryText)
+                    .frame(width: 26)
+
+                VStack(alignment: .leading, spacing: 4) {
+                    HStack(spacing: 8) {
+                        Text(premiumPackage.title)
+                            .font(.lexoraHeadline)
+                            .foregroundStyle(LexoraColors.primaryText)
+
+                        if let badge = premiumPackage.badge {
+                            Text(badge)
+                                .font(.lexoraCaption)
+                                .textCase(.uppercase)
+                                .tracking(0.8)
+                                .foregroundStyle(LexoraColors.accent)
+                                .padding(.horizontal, 8)
+                                .padding(.vertical, 3)
+                                .background(LexoraColors.cardBackground)
+                                .clipShape(Capsule())
+                                .overlay(
+                                    Capsule()
+                                        .stroke(LexoraColors.accent.opacity(0.22), lineWidth: 0.7)
+                                )
+                        }
+                    }
+
+                    Text(premiumPackage.subtitle)
+                        .font(.lexoraSubheadline)
+                        .foregroundStyle(LexoraColors.secondaryText)
+                }
+
+                Spacer()
+
+                Text(premiumPackage.price)
+                    .font(.lexoraHeadline)
+                    .foregroundStyle(LexoraColors.primaryText)
+            }
+            .padding(15)
+            .background(isSelected ? LexoraColors.cardBackground : LexoraColors.cardBackgroundSoft)
+            .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    .stroke(isSelected ? LexoraColors.accent.opacity(0.42) : LexoraColors.border.opacity(0.72), lineWidth: isSelected ? 1 : 0.7)
+            )
+            .shadow(color: .black.opacity(isSelected ? 0.035 : 0.015), radius: isSelected ? 10 : 5, x: 0, y: isSelected ? 4 : 2)
+        }
+        .buttonStyle(.plain)
+    }
 }
 
 private struct PremiumHeroCard: View {
