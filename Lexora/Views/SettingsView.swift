@@ -128,8 +128,8 @@ private struct PremiumStatusBanner: View {
                 }
             }
 
-            HStack(spacing: 12) {
-                if !premium.hasPremium {
+            if !premium.hasPremium {
+                HStack(spacing: 12) {
                     NavigationLink {
                         PaywallView()
                     } label: {
@@ -138,19 +138,18 @@ private struct PremiumStatusBanner: View {
                     }
                     .buttonStyle(.borderedProminent)
                     .tint(LexoraColors.accent)
-                }
 
-                Button {
-                    Task {
-                        await premium.restorePurchases()
+                    Button {
+                        Task {
+                            await premium.restorePurchases()
+                        }
+                    } label: {
+                        Label("Restore", systemImage: "arrow.clockwise")
                     }
-                } label: {
-                    Label("Restore", systemImage: "arrow.clockwise")
-                        .frame(maxWidth: premium.hasPremium ? .infinity : nil)
+                    .buttonStyle(.bordered)
+                    .tint(LexoraColors.accent)
+                    .disabled(premium.isProcessingPurchase)
                 }
-                .buttonStyle(.bordered)
-                .tint(LexoraColors.accent)
-                .disabled(premium.isProcessingPurchase)
             }
 
             if let status = premium.statusMessage, !status.isEmpty {
