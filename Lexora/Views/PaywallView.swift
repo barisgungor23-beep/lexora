@@ -65,9 +65,9 @@ struct PaywallTeaserView: View {
                     .font(.title3)
                     .foregroundStyle(LexoraColors.accent)
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("Details locked in free mode")
+                    Text("Deeper notes are part of Premium")
                         .font(.lexoraHeadline)
-                    Text("Use Mock Premium in Settings during Phase 1 to preview the full detail layout.")
+                    Text("Open Premium to preview the full meaning, cultural note, origin note, usage note, and related feeling.")
                         .font(.lexoraSubheadline)
                         .foregroundStyle(LexoraColors.secondaryText)
                 }

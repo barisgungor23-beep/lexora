@@ -11,7 +11,6 @@ struct WordDetailView: View {
                 WordCard(
                     word: word,
                     isFavorite: favorites.isFavorite(word),
-                    showsPremiumHint: !premium.hasPremium,
                     isHero: false,
                     onFavoriteTapped: { favorites.toggle(word) }
                 )

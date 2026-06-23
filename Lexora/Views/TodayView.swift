@@ -28,25 +28,9 @@ struct TodayView: View {
                             WordCard(
                                 word: word,
                                 isFavorite: favorites.isFavorite(word),
-                                showsPremiumHint: !premium.hasPremium,
                                 isHero: true,
                                 onFavoriteTapped: { favorites.toggle(word) }
                             )
-
-                            NavigationLink {
-                                WordDetailView(word: word)
-                            } label: {
-                                HStack {
-                                    Text("Open word detail")
-                                        .font(.lexoraHeadline)
-                                    Spacer()
-                                    Image(systemName: "chevron.right")
-                                        .font(.footnote.weight(.semibold))
-                                }
-                                .foregroundStyle(LexoraColors.accent)
-                                .lexoraCard(background: LexoraColors.cardBackgroundSoft, padding: 16)
-                            }
-                            .buttonStyle(.plain)
 
                             if premium.hasPremium {
                                 PremiumDetailsView(word: word)

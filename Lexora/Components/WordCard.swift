@@ -3,7 +3,6 @@ import SwiftUI
 struct WordCard: View {
     let word: Word
     let isFavorite: Bool
-    let showsPremiumHint: Bool
     var isHero = false
     let onFavoriteTapped: () -> Void
 
@@ -64,13 +63,6 @@ struct WordCard: View {
                 .foregroundStyle(LexoraColors.primaryText)
                 .lineSpacing(5)
                 .fixedSize(horizontal: false, vertical: true)
-
-            if showsPremiumHint {
-                Label("Deeper meaning, cultural note, origin note, usage, and feeling are premium details.", systemImage: "lock.fill")
-                    .font(.lexoraFootnote)
-                    .foregroundStyle(LexoraColors.secondaryText)
-                    .padding(.top, 4)
-            }
         }
         .lexoraCard(background: isHero ? LexoraColors.cardBackground : LexoraColors.cardBackgroundSoft, padding: isHero ? 24 : 20)
     }
