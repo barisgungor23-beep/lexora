@@ -50,15 +50,15 @@ struct OnboardingView: View {
 
                 VStack(spacing: 22) {
                     OnboardingRitualPage(
-                        title: "Make it a daily ritual",
-                        text: "Discover one meaningful word each day. Premium opens deeper notes, stories, widgets, and share cards.",
+                        title: "Return to one word each day",
+                        text: "A small daily ritual for discovering words that carry memory, feeling, and place.",
                         kind: .ritual,
                         isActive: hasAppeared && selectedPage == 2,
                         usesFlexibleSpace: false,
-                        visualHeight: 230
+                        visualHeight: 210
                     )
 
-                    Toggle("Daily reminder", isOn: $wantsDailyReminder)
+                    Toggle("Optional daily reminder", isOn: $wantsDailyReminder)
                         .font(.lexoraBody)
                         .foregroundStyle(LexoraColors.primaryText)
                         .padding(.horizontal, 18)
@@ -309,12 +309,24 @@ private struct DailyRitualCards: View {
                             .textCase(.uppercase)
                             .tracking(1.5)
                             .foregroundStyle(LexoraColors.secondaryText)
+
                         Text("Yugen")
                             .font(.lexoraDisplay)
                             .foregroundStyle(LexoraColors.primaryText)
+
                         Text("a quiet sense of wonder")
                             .font(.lexoraSubheadline)
                             .multilineTextAlignment(.center)
+                            .foregroundStyle(LexoraColors.secondaryText)
+
+                        Rectangle()
+                            .fill(LexoraColors.border)
+                            .frame(width: 88, height: 0.8)
+
+                        Text("one word each day")
+                            .font(.lexoraCaption)
+                            .textCase(.uppercase)
+                            .tracking(1.4)
                             .foregroundStyle(LexoraColors.secondaryText)
                     }
                     .padding()
@@ -323,23 +335,6 @@ private struct DailyRitualCards: View {
                     RoundedRectangle(cornerRadius: 22, style: .continuous)
                         .stroke(LexoraColors.border, lineWidth: 0.9)
                 )
-
-            HStack(spacing: 10) {
-                Image(systemName: "rectangle.inset.filled")
-                Image(systemName: "square.and.arrow.up")
-                Image(systemName: "book.pages")
-            }
-            .font(.callout.weight(.semibold))
-            .foregroundStyle(LexoraColors.accent)
-            .padding(.horizontal, 16)
-            .padding(.vertical, 10)
-            .background(LexoraColors.cardBackgroundSoft)
-            .clipShape(Capsule())
-            .overlay(
-                Capsule()
-                    .stroke(LexoraColors.border, lineWidth: 0.8)
-            )
-            .offset(y: 112)
         }
         .offset(y: isActive ? -2 : 9)
         .animation(.easeInOut(duration: 2.0).repeatForever(autoreverses: true), value: isActive)

@@ -5,12 +5,12 @@ struct PaywallView: View {
     @State private var hasAppeared = false
 
     private let benefits = [
-        "Full word archive",
         "Deeper notes",
-        "Reflective word stories",
+        "Reflective stories for selected words",
+        "Full word archive",
         "Unlimited favorites",
-        "Daily word widget",
-        "Share as Card"
+        "Share as Card",
+        "Daily word widget"
     ]
 
     var body: some View {
@@ -23,6 +23,11 @@ struct PaywallView: View {
                         .opacity(hasAppeared ? 1 : 0)
                         .offset(y: hasAppeared ? 0 : 18)
                         .animation(.easeOut(duration: 0.55), value: hasAppeared)
+
+                    PremiumPreviewCard()
+                        .opacity(hasAppeared ? 1 : 0)
+                        .offset(y: hasAppeared ? 0 : 12)
+                        .animation(.easeOut(duration: 0.45).delay(0.12), value: hasAppeared)
 
                     VStack(alignment: .leading, spacing: 12) {
                         ForEach(Array(benefits.enumerated()), id: \.offset) { index, benefit in
@@ -48,6 +53,7 @@ struct PaywallView: View {
                     )
                     .opacity(hasAppeared ? 1 : 0)
                     .offset(y: hasAppeared ? 0 : 12)
+                    .animation(.easeOut(duration: 0.42).delay(0.18), value: hasAppeared)
 
                     VStack(spacing: 10) {
                         Button {
@@ -122,7 +128,7 @@ private struct PremiumHeroCard: View {
                         .font(.lexoraTitle)
                         .foregroundStyle(LexoraColors.primaryText)
 
-                    Text("A deeper daily ritual for the words that stay with you.")
+                    Text("Go deeper into the words that stay with you.")
                         .font(.lexoraBody)
                         .foregroundStyle(LexoraColors.secondaryText)
                         .lineSpacing(5)
@@ -145,7 +151,7 @@ private struct PremiumHeroCard: View {
                             .stroke(LexoraColors.accent.opacity(0.38), lineWidth: 0.9)
                     )
                     .scaleEffect(isActive ? 1 : 0.92)
-                    .animation(.easeInOut(duration: 1.8).repeatForever(autoreverses: true), value: isActive)
+                    .animation(.easeOut(duration: 0.55), value: isActive)
             }
 
             VStack(alignment: .leading, spacing: 10) {
@@ -159,7 +165,7 @@ private struct PremiumHeroCard: View {
                     .font(.lexoraHeadline)
                     .foregroundStyle(LexoraColors.primaryText)
 
-                Text("Premium expands each day with full notes, reflective stories, favorites without limits, the widget, and shareable cards.")
+                Text("Premium opens richer notes, selected reflective stories, the full archive, favorites without limits, the widget, and shareable cards.")
                     .font(.lexoraSubheadline)
                     .foregroundStyle(LexoraColors.secondaryText)
                     .lineSpacing(4)
@@ -194,6 +200,61 @@ private struct PremiumHeroCard: View {
             RoundedRectangle(cornerRadius: 18, style: .continuous)
                 .stroke(LexoraColors.accent.opacity(0.22), lineWidth: 1)
         )
+    }
+}
+
+private struct PremiumPreviewCard: View {
+    var body: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            HStack(alignment: .firstTextBaseline) {
+                Text("Premium preview")
+                    .font(.lexoraCaption)
+                    .textCase(.uppercase)
+                    .tracking(1.5)
+                    .foregroundStyle(LexoraColors.secondaryText)
+
+                Spacer()
+
+                Text("selected story")
+                    .font(.lexoraCaption)
+                    .textCase(.uppercase)
+                    .tracking(1.1)
+                    .foregroundStyle(LexoraColors.accent)
+            }
+
+            VStack(alignment: .leading, spacing: 6) {
+                Text("Komorebi")
+                    .font(.lexoraTitle)
+                    .foregroundStyle(LexoraColors.primaryText)
+
+                Text("Sunlight filtering through trees.")
+                    .font(.lexoraSubheadline)
+                    .foregroundStyle(LexoraColors.secondaryText)
+            }
+
+            Rectangle()
+                .fill(LexoraColors.border)
+                .frame(height: 0.8)
+
+            Text("A narrow path waited behind the house, quiet except for leaves turning in a mild wind. She walked slowly, not because the path was long, but because the light kept changing.")
+                .font(.lexoraBody)
+                .foregroundStyle(LexoraColors.primaryText)
+                .lineSpacing(5)
+        }
+        .padding(18)
+        .background(
+            LinearGradient(
+                colors: [LexoraColors.cardBackground, Color(red: 0.972, green: 0.928, blue: 0.836)],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+        )
+        .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                .stroke(LexoraColors.accent.opacity(0.24), lineWidth: 0.9)
+        )
+        .shadow(color: .black.opacity(0.04), radius: 14, x: 0, y: 6)
     }
 }
 
@@ -233,14 +294,16 @@ private struct PaywallBackgroundOrnaments: View {
             Circle()
                 .stroke(LexoraColors.accent.opacity(0.10), lineWidth: 1)
                 .frame(width: 210, height: 210)
-                .offset(x: 130, y: isActive ? -220 : -205)
-                .animation(.easeInOut(duration: 5).repeatForever(autoreverses: true), value: isActive)
+                .offset(x: 130, y: -220)
+                .opacity(isActive ? 1 : 0)
+                .animation(.easeOut(duration: 0.65), value: isActive)
 
             Circle()
                 .fill(LexoraColors.cardBackground.opacity(0.38))
                 .frame(width: 150, height: 150)
-                .offset(x: -145, y: isActive ? 230 : 214)
-                .animation(.easeInOut(duration: 6).repeatForever(autoreverses: true), value: isActive)
+                .offset(x: -145, y: 230)
+                .opacity(isActive ? 1 : 0)
+                .animation(.easeOut(duration: 0.65).delay(0.08), value: isActive)
         }
     }
 }
@@ -257,7 +320,7 @@ struct PaywallTeaserView: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Deeper notes are part of Premium")
                         .font(.lexoraHeadline)
-                    Text("Unlock reflective stories, the full archive, widgets, and share cards.")
+                    Text("Unlock selected reflective stories, the full archive, widgets, and share cards.")
                         .font(.lexoraSubheadline)
                         .foregroundStyle(LexoraColors.secondaryText)
                 }
