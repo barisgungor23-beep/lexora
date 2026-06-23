@@ -6,6 +6,7 @@ struct LexoraApp: App {
     @StateObject private var favorites = FavoritesManager()
     @StateObject private var notifications = NotificationManager()
     @StateObject private var premium = PremiumManager()
+    @StateObject private var appearance = AppearanceManager()
 
     var body: some Scene {
         WindowGroup {
@@ -14,8 +15,10 @@ struct LexoraApp: App {
                 .environmentObject(favorites)
                 .environmentObject(notifications)
                 .environmentObject(premium)
+                .environmentObject(appearance)
                 .font(.lexoraBody)
                 .tint(LexoraColors.accent)
+                .preferredColorScheme(appearance.selection.colorScheme)
                 .task {
                     premium.configure()
                 }

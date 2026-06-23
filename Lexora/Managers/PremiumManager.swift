@@ -42,4 +42,17 @@ final class PremiumManager: ObservableObject {
         // Phase 2 TODO: Call RevenueCat restorePurchases and refresh entitlementIdentifier.
         statusMessage = "Restore is deferred to Phase 2. Use Mock Premium in Settings to test premium UI."
     }
+
+    func applyDevelopmentPromoCode(_ code: String) -> Bool {
+        // Phase 2 TODO: Replace this local-only development helper with real promo/redeem logic.
+        let normalizedCode = code.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        guard normalizedCode == "LEXORADEV" else {
+            statusMessage = "Invalid or expired code."
+            return false
+        }
+
+        setMockPremium(true)
+        statusMessage = "Development promo applied. Mock premium is on."
+        return true
+    }
 }

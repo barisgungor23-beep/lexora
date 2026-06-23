@@ -32,6 +32,8 @@
 		100000000000000000000018 /* LexoraCardStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000001A /* LexoraCardStyle.swift */; };
 		100000000000000000000019 /* LexoraWidgetDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000001B /* LexoraWidgetDesign.swift */; };
 		10000000000000000000001A /* WordRowCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000001C /* WordRowCard.swift */; };
+		10000000000000000000001B /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000001D /* AppearanceManager.swift */; };
+		10000000000000000000001C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000011 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,7 @@
 		20000000000000000000001A /* LexoraCardStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexoraCardStyle.swift; sourceTree = "<group>"; };
 		20000000000000000000001B /* LexoraWidgetDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexoraWidgetDesign.swift; sourceTree = "<group>"; };
 		20000000000000000000001C /* WordRowCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordRowCard.swift; sourceTree = "<group>"; };
+		20000000000000000000001D /* AppearanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +159,7 @@
 				200000000000000000000005 /* FavoritesManager.swift */,
 				200000000000000000000006 /* NotificationManager.swift */,
 				200000000000000000000007 /* PremiumManager.swift */,
+				20000000000000000000001D /* AppearanceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -303,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				100000000000000000000010 /* words.json in Resources */,
+				10000000000000000000001C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +336,7 @@
 				100000000000000000000005 /* FavoritesManager.swift in Sources */,
 				100000000000000000000006 /* NotificationManager.swift in Sources */,
 				100000000000000000000007 /* PremiumManager.swift in Sources */,
+				10000000000000000000001B /* AppearanceManager.swift in Sources */,
 				100000000000000000000008 /* WordCard.swift in Sources */,
 				10000000000000000000001A /* WordRowCard.swift in Sources */,
 				100000000000000000000009 /* TodayView.swift in Sources */,
@@ -482,6 +488,7 @@
 		C00000000000000000000003 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KJXJX8M943;
@@ -509,6 +516,7 @@
 		C00000000000000000000004 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KJXJX8M943;
