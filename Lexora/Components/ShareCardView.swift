@@ -5,14 +5,14 @@ struct ShareCardView: View {
 
     var body: some View {
         ZStack {
-            Color(red: 0.953, green: 0.910, blue: 0.812)
+            LexoraColors.pageBackground
 
             RoundedRectangle(cornerRadius: 46, style: .continuous)
-                .fill(Color(red: 0.984, green: 0.957, blue: 0.902))
+                .fill(LexoraColors.cardBackground)
                 .padding(54)
                 .overlay(
                     RoundedRectangle(cornerRadius: 46, style: .continuous)
-                        .stroke(Color(red: 0.705, green: 0.596, blue: 0.423), lineWidth: 3)
+                        .stroke(LexoraColors.border.opacity(0.78), lineWidth: 3)
                         .padding(54)
                 )
 
@@ -21,7 +21,7 @@ struct ShareCardView: View {
                     .font(.custom("Times New Roman", size: 38))
                     .textCase(.uppercase)
                     .tracking(8)
-                    .foregroundStyle(Color(red: 0.430, green: 0.346, blue: 0.235))
+                    .foregroundStyle(LexoraColors.secondaryText)
 
                 Spacer(minLength: 70)
 
@@ -30,30 +30,30 @@ struct ShareCardView: View {
                         .font(.custom("Times New Roman", size: 28))
                         .textCase(.uppercase)
                         .tracking(5)
-                        .foregroundStyle(Color(red: 0.430, green: 0.346, blue: 0.235))
+                        .foregroundStyle(LexoraColors.secondaryText)
 
                     Text(word.word)
                         .font(.custom("Times New Roman", size: 112))
                         .minimumScaleFactor(0.58)
                         .lineLimit(2)
                         .multilineTextAlignment(.center)
-                        .foregroundStyle(Color(red: 0.176, green: 0.141, blue: 0.102))
+                        .foregroundStyle(LexoraColors.primaryText)
 
                     Text(word.language)
                         .font(.custom("Times New Roman", size: 36))
-                        .foregroundStyle(Color(red: 0.430, green: 0.346, blue: 0.235))
+                        .foregroundStyle(LexoraColors.secondaryText)
 
                     if let pronunciation = word.pronunciation, !pronunciation.isEmpty {
                         Text(pronunciation)
                             .font(.custom("Times New Roman", size: 34))
-                            .foregroundStyle(Color(red: 0.430, green: 0.346, blue: 0.235))
+                            .foregroundStyle(LexoraColors.secondaryText)
                             .padding(.horizontal, 28)
                             .padding(.vertical, 12)
-                            .background(Color(red: 0.965, green: 0.918, blue: 0.824))
+                            .background(LexoraColors.cardBackgroundSoft)
                             .clipShape(Capsule())
                             .overlay(
                                 Capsule()
-                                    .stroke(Color(red: 0.705, green: 0.596, blue: 0.423), lineWidth: 2)
+                                    .stroke(LexoraColors.border.opacity(0.78), lineWidth: 2)
                             )
                     }
                 }
@@ -63,7 +63,7 @@ struct ShareCardView: View {
                     .lineSpacing(10)
                     .minimumScaleFactor(0.72)
                     .multilineTextAlignment(.center)
-                    .foregroundStyle(Color(red: 0.176, green: 0.141, blue: 0.102))
+                    .foregroundStyle(LexoraColors.primaryText)
                     .padding(.horizontal, 72)
                     .fixedSize(horizontal: false, vertical: true)
 
@@ -73,7 +73,7 @@ struct ShareCardView: View {
                     .font(.custom("Times New Roman", size: 30))
                     .textCase(.uppercase)
                     .tracking(4)
-                    .foregroundStyle(Color(red: 0.430, green: 0.346, blue: 0.235))
+                    .foregroundStyle(LexoraColors.secondaryText)
             }
             .padding(.horizontal, 72)
             .padding(.vertical, 76)

@@ -189,7 +189,7 @@ private struct PremiumHeroCard: View {
             RoundedRectangle(cornerRadius: 18, style: .continuous)
                 .fill(
                     LinearGradient(
-                        colors: [LexoraColors.cardBackground, Color(red: 0.966, green: 0.922, blue: 0.832)],
+                        colors: [LexoraColors.cardBackground, Color(red: 0.957, green: 0.944, blue: 0.906)],
                         startPoint: .topLeading,
                         endPoint: .bottomTrailing
                     )
@@ -244,7 +244,7 @@ private struct PremiumPreviewCard: View {
         .padding(18)
         .background(
             LinearGradient(
-                colors: [LexoraColors.cardBackground, Color(red: 0.984, green: 0.948, blue: 0.880)],
+                colors: [LexoraColors.cardBackground, Color(red: 0.965, green: 0.951, blue: 0.914)],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
@@ -283,7 +283,7 @@ private struct PaywallBackgroundOrnaments: View {
             LinearGradient(
                 colors: [
                     LexoraColors.pageBackground,
-                    Color(red: 0.986, green: 0.956, blue: 0.900),
+                    Color(red: 0.982, green: 0.974, blue: 0.949),
                     LexoraColors.pageBackground
                 ],
                 startPoint: .topLeading,
