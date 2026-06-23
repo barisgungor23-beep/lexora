@@ -4,7 +4,6 @@ struct SettingsView: View {
     @EnvironmentObject private var repository: WordRepository
     @EnvironmentObject private var notifications: NotificationManager
     @EnvironmentObject private var premium: PremiumManager
-    @EnvironmentObject private var appearance: AppearanceManager
     #if DEBUG
     @State private var promoCode = ""
     @State private var promoMessage: String?
@@ -15,17 +14,6 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section("Appearance") {
-                    Picker("Mode", selection: $appearance.selection) {
-                        ForEach(AppearanceOption.allCases) { option in
-                            Text(option.title)
-                                .tag(option)
-                        }
-                    }
-                    .pickerStyle(.segmented)
-                }
-                .listRowBackground(LexoraColors.cardBackground)
-
                 Section("Daily notification") {
                     Toggle("Enable daily word", isOn: $notifications.isEnabled)
                     DatePicker("Time", selection: $notifications.notificationDate, displayedComponents: .hourAndMinute)

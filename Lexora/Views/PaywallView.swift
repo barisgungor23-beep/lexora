@@ -6,48 +6,40 @@ struct PaywallView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 22) {
-                Image(systemName: "sparkle.magnifyingglass")
-                    .font(.system(size: 42))
-                    .foregroundStyle(LexoraColors.accent)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-
-                VStack(alignment: .leading, spacing: 10) {
-                    Text("Unlock Lexora Premium")
-                        .font(.lexoraTitle)
-
-                    Text("A fuller archive, deeper notes, and quiet daily tools for people who like keeping words close.")
-                        .font(.lexoraBody)
-                        .foregroundStyle(LexoraColors.secondaryText)
-                        .lineSpacing(4)
-                }
+                PremiumHeroCard()
 
                 VStack(alignment: .leading, spacing: 12) {
-                    PremiumBenefitRow(icon: "books.vertical", text: "Full word archive")
-                    PremiumBenefitRow(icon: "text.book.closed", text: "Deeper notes")
-                    PremiumBenefitRow(icon: "book.pages", text: "Reflective word stories")
-                    PremiumBenefitRow(icon: "heart", text: "Unlimited favorites")
-                    PremiumBenefitRow(icon: "rectangle.inset.filled", text: "Daily word widget")
-                    PremiumBenefitRow(icon: "square.and.arrow.up", text: "Share as Card")
+                    PremiumBenefitRow(text: "Full word archive")
+                    PremiumBenefitRow(text: "Deeper notes")
+                    PremiumBenefitRow(text: "Reflective word stories")
+                    PremiumBenefitRow(text: "Unlimited favorites")
+                    PremiumBenefitRow(text: "Daily word widget")
+                    PremiumBenefitRow(text: "Share as Card")
                 }
                 .lexoraCard(background: LexoraColors.cardBackgroundSoft, padding: 18)
 
                 VStack(spacing: 10) {
                     Button {
+                        // Phase 2 TODO: Replace with RevenueCat package purchase once ASC products exist.
                         premium.handlePurchaseTapped()
                     } label: {
                         Text("Purchases deferred to Phase 2")
                             .font(.lexoraHeadline)
                             .frame(maxWidth: .infinity)
+                            .padding(.vertical, 2)
                     }
                     .buttonStyle(.borderedProminent)
 
-                    Button("Restore deferred to Phase 2") {
+                    Button {
+                        // Phase 2 TODO: Replace with RevenueCat restorePurchases and entitlement sync.
                         premium.handleRestoreTapped()
+                    } label: {
+                        Text("Restore deferred to Phase 2")
+                            .font(.lexoraBody)
                     }
-                    .font(.lexoraBody)
                 }
 
-                Text("RevenueCat and real purchases will be connected in Phase 2.")
+                Text("RevenueCat will connect here after App Store Connect products are ready.")
                     .font(.lexoraFootnote)
                     .foregroundStyle(LexoraColors.secondaryText)
                     .lineSpacing(3)
@@ -75,16 +67,72 @@ struct PaywallView: View {
     }
 }
 
+private struct PremiumHeroCard: View {
+    var body: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            HStack(alignment: .top) {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Lexora Premium")
+                        .font(.lexoraTitle)
+                        .foregroundStyle(LexoraColors.primaryText)
+
+                    Text("A deeper daily ritual for the words that stay with you.")
+                        .font(.lexoraBody)
+                        .foregroundStyle(LexoraColors.secondaryText)
+                        .lineSpacing(5)
+                }
+
+                Spacer(minLength: 16)
+
+                Image(systemName: "book.closed")
+                    .font(.title2.weight(.regular))
+                    .foregroundStyle(LexoraColors.accent)
+                    .frame(width: 48, height: 48)
+                    .background(LexoraColors.cardBackgroundSoft)
+                    .clipShape(Circle())
+                    .overlay(
+                        Circle()
+                            .stroke(LexoraColors.border, lineWidth: 0.8)
+                    )
+            }
+
+            VStack(alignment: .leading, spacing: 10) {
+                Text("Today")
+                    .font(.lexoraCaption)
+                    .foregroundStyle(LexoraColors.secondaryText)
+                    .textCase(.uppercase)
+                    .tracking(1.4)
+
+                Text("one word, fully opened")
+                    .font(.lexoraHeadline)
+                    .foregroundStyle(LexoraColors.primaryText)
+
+                Text("Premium expands each day with full notes, reflective stories, favorites without limits, the widget, and shareable cards.")
+                    .font(.lexoraSubheadline)
+                    .foregroundStyle(LexoraColors.secondaryText)
+                    .lineSpacing(4)
+            }
+            .padding(16)
+            .background(LexoraColors.cardBackground)
+            .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .stroke(LexoraColors.border, lineWidth: 0.8)
+            )
+        }
+        .lexoraCard(background: LexoraColors.cardBackground, padding: 20)
+    }
+}
+
 private struct PremiumBenefitRow: View {
-    let icon: String
     let text: String
 
     var body: some View {
-        HStack(spacing: 10) {
-            Image(systemName: icon)
+        HStack(spacing: 11) {
+            Image(systemName: "checkmark.seal")
                 .font(.callout.weight(.semibold))
                 .foregroundStyle(LexoraColors.accent)
-                .frame(width: 22)
+                .frame(width: 23)
 
             Text(text)
                 .font(.lexoraBody)
@@ -105,7 +153,7 @@ struct PaywallTeaserView: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Deeper notes are part of Premium")
                         .font(.lexoraHeadline)
-                    Text("Unlock deeper notes and reflective stories behind selected words.")
+                    Text("Unlock reflective stories, the full archive, widgets, and share cards.")
                         .font(.lexoraSubheadline)
                         .foregroundStyle(LexoraColors.secondaryText)
                 }
