@@ -11,6 +11,7 @@ struct Word: Identifiable, Codable, Hashable {
     let originNote: String
     let usageNote: String
     let relatedFeeling: String
+    let reflectiveStory: String?
     let category: String
     let isPremiumDetail: Bool
 }

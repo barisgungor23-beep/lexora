@@ -24,6 +24,7 @@ struct PaywallView: View {
                 VStack(alignment: .leading, spacing: 12) {
                     PremiumBenefitRow(icon: "books.vertical", text: "Full word archive")
                     PremiumBenefitRow(icon: "text.book.closed", text: "Deeper notes")
+                    PremiumBenefitRow(icon: "book.pages", text: "Reflective word stories")
                     PremiumBenefitRow(icon: "heart", text: "Unlimited favorites")
                     PremiumBenefitRow(icon: "rectangle.inset.filled", text: "Daily word widget")
                     PremiumBenefitRow(icon: "square.and.arrow.up", text: "Share as Card")
@@ -104,7 +105,7 @@ struct PaywallTeaserView: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Deeper notes are part of Premium")
                         .font(.lexoraHeadline)
-                    Text("Open Premium to preview the full meaning, cultural note, origin note, usage note, and related feeling.")
+                    Text("Unlock deeper notes and reflective stories behind selected words.")
                         .font(.lexoraSubheadline)
                         .foregroundStyle(LexoraColors.secondaryText)
                 }

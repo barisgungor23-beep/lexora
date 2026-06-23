@@ -25,7 +25,8 @@
     "usageNote": "Best suited for describing a visible moment outdoors rather than a broad mood by itself.",
     "relatedFeeling": "Calm attention",
     "category": "Nature",
-    "isPremiumDetail": true
+    "isPremiumDetail": true,
+    "reflectiveStory": "A narrow path waited behind the house, quiet except for leaves turning in a mild wind. She walked slowly, not because the path was long, but because the light kept changing. Gold broke into pieces on her sleeve, then gathered again on the ground. For a moment, nothing asked to be solved. The trees held their shadows loosely, and the day seemed to breathe through them. She stood there until the brightness moved on, carrying the small calm with her."
   },
   {
     "id": "sobremesa",
@@ -39,7 +40,8 @@
     "usageNote": "May be used for the lingering shared time, not simply dessert or dinner.",
     "relatedFeeling": "Warm togetherness",
     "category": "Connection",
-    "isPremiumDetail": true
+    "isPremiumDetail": true,
+    "reflectiveStory": "The plates had been cleared, but nobody rose from the table. A spoon rested beside an empty cup. Someone told a story that wandered, forgot its point, and found another. The late light leaned across the room, softening the edges of chairs and hands. No one was hungry anymore, yet the table still held them together. The meal had ended, but the evening had opened a quieter room inside itself, where laughter could arrive slowly and stay."
   },
   {
     "id": "ubuntu",
@@ -81,7 +83,8 @@
     "usageNote": "May be used for cooking, making, designing, or caring work done with visible attention.",
     "relatedFeeling": "Devoted craft",
     "category": "Creativity",
-    "isPremiumDetail": true
+    "isPremiumDetail": true,
+    "reflectiveStory": "He repaired the old wooden box at the kitchen table, sanding one corner longer than anyone else would notice. The radio murmured beside him. Glue dried in a thin amber line, and his hands smelled faintly of cedar. It was not valuable, not rare, not meant for display. Still, he polished the lid until it caught the window light. Care had a sound: the soft cloth moving in circles, the pause before setting the box down, the quiet satisfaction of making something whole."
   },
   {
     "id": "hiraeth",
@@ -109,7 +112,8 @@
     "usageNote": "May be used when the reflection forms a visible line or pathway.",
     "relatedFeeling": "Quiet wonder",
     "category": "Nature",
-    "isPremiumDetail": true
+    "isPremiumDetail": true,
+    "reflectiveStory": "The lake was almost black when the moon found it. A silver path stretched from the far shore to her feet, though she knew it could not be walked. She stood with her coat pulled tight, listening to water fold over stones. The night offered no answer, only a bright road that disappeared when she moved. Still, the sight was enough. Some invitations are not meant to be accepted; they are meant to remind us that distance can shine."
   },
   {
     "id": "forelsket",
@@ -137,7 +141,8 @@
     "usageNote": "May be used when absence and affection are both part of the feeling.",
     "relatedFeeling": "Melancholic affection",
     "category": "Longing",
-    "isPremiumDetail": true
+    "isPremiumDetail": true,
+    "reflectiveStory": "In the drawer, he found a ticket from a train station that no longer sounded the same in memory. The paper had softened at the corners. He held it without meaning to keep it and without being able to throw it away. Outside, rain tapped the balcony rail. The room was full of ordinary things, yet one absence sat among them like a guest. He smiled, almost sadly, because what was gone had not vanished completely. It had become a weather of its own."
   },
   {
     "id": "ikigai",
@@ -165,7 +170,8 @@
     "usageNote": "May be useful for design, food, effort, or pace that feels well measured.",
     "relatedFeeling": "Balanced ease",
     "category": "Balance",
-    "isPremiumDetail": true
+    "isPremiumDetail": true,
+    "reflectiveStory": "She poured tea until the cup felt right in her hand, not full enough to spill, not so little that it cooled too quickly. The morning list waited beside her, written in a careful line. She crossed out one task before beginning, then opened the window. Air entered the room with the smell of wet stone. The day did not need to be mastered all at once. It could be met in measures: enough work, enough rest, enough quiet to hear herself think."
   },
   {
     "id": "wabi-sabi",
@@ -207,7 +213,8 @@
     "usageNote": "May be used for the affectionate gesture, not simply touching hair.",
     "relatedFeeling": "Tender care",
     "category": "Love",
-    "isPremiumDetail": true
+    "isPremiumDetail": true,
+    "reflectiveStory": "The child fell asleep halfway through the story, one hand still open on the blanket. His grandmother kept reading for another sentence before closing the book. Then she sat beside him, passing her fingers through his hair with a care too light to wake him. The room held its breath around them. Outside, a car moved down the street and faded. Love was not an announcement there. It was the patient rhythm of a hand, saying stay asleep, stay safe, I am here."
   },
   {
     "id": "goya",
@@ -221,7 +228,8 @@
     "usageNote": "May be used carefully around storytelling, imagination, or suspension of disbelief.",
     "relatedFeeling": "Immersion",
     "category": "Story",
-    "isPremiumDetail": true
+    "isPremiumDetail": true,
+    "reflectiveStory": "By the time the story reached the storm, the room had disappeared. The cracked ceiling, the lamp, the winter coats by the door were gone, replaced by a road, a horse, and a traveler who could not turn back. Everyone listened as if the rain in the tale might wet their own sleeves. When the speaker paused, no one moved. The imagined world hung in the air a little longer, delicate and complete, before the room slowly returned around them."
   },
   {
     "id": "tarab",
@@ -263,7 +271,8 @@
     "usageNote": "May be used for steady endurance, especially under pressure.",
     "relatedFeeling": "Inner strength",
     "category": "Resilience",
-    "isPremiumDetail": true
+    "isPremiumDetail": true,
+    "reflectiveStory": "The hill looked smaller from the window than it felt beneath his boots. Snow pressed against his ankles, and the wind kept erasing the tracks behind him. He stopped once, breathing hard, then laughed because there was no audience for either complaint or courage. The mailbox waited at the top, red against the white. He took another step, then another. Some strength did not arrive as thunder. It arrived as the plain decision to continue while the weather argued otherwise."
   },
   {
     "id": "gokotta",
@@ -277,7 +286,8 @@
     "usageNote": "May be used for a quiet morning ritual centered on birdsong.",
     "relatedFeeling": "Dawn listening",
     "category": "Nature",
-    "isPremiumDetail": true
+    "isPremiumDetail": true,
+    "reflectiveStory": "Before the rest of the house woke, she slipped into the blue hour with a wool scarf and a cup of coffee. The garden was damp, the grass dark around her shoes. At first there was only one bird, hidden somewhere in the hedge. Then another answered, and another, until the morning seemed to stitch itself together in song. She did not take a picture. She simply stood there, warming her hands, letting the day begin before anyone named it."
   },
   {
     "id": "huzur",
@@ -291,7 +301,8 @@
     "usageNote": "May be used for a home, evening, or state of mind that feels settled.",
     "relatedFeeling": "Settled calm",
     "category": "Calm",
-    "isPremiumDetail": true
+    "isPremiumDetail": true,
+    "reflectiveStory": "The afternoon settled into the room like a folded blanket. A kettle clicked off in the kitchen. On the wall, a patch of sunlight moved slowly across the books. He sat without reaching for his phone, listening to the small sounds of the apartment: pipes, pages, a neighbor closing a door. Nothing remarkable happened, which was why it felt so generous. Peace was not always a grand silence. Sometimes it was a room that asked nothing more than your presence."
   },
   {
     "id": "hasret",
@@ -319,7 +330,8 @@
     "usageNote": "May be used for a night sea scene that feels quietly radiant.",
     "relatedFeeling": "Night wonder",
     "category": "Wonder",
-    "isPremiumDetail": true
+    "isPremiumDetail": true,
+    "reflectiveStory": "The boat moved slowly, and the dark water opened around it in small silver sparks. She leaned over the rail, watching the light appear and vanish with each ripple. The city behind her had become a low necklace of lamps. Ahead, the sea kept its own language, brief and shimmering. She thought of messages written and erased before anyone could read them. The night did not explain itself. It only glittered for a second, then trusted the next wave to begin again."
   },
   {
     "id": "sakinah",
@@ -431,7 +443,8 @@
     "usageNote": "May be used when memory returns with warmth, not only sadness.",
     "relatedFeeling": "Warm memory",
     "category": "Memory",
-    "isPremiumDetail": true
+    "isPremiumDetail": true,
+    "reflectiveStory": "The song came from a shop doorway, thin and bright through the afternoon traffic. She had not heard it in years. At once she was younger, carrying a school bag with a broken zipper, waiting for rain under a narrow awning. The memory did not hurt exactly; it opened like an old notebook. She stood still until the chorus ended, smiling at the strangeness of time. The past had not returned. It had simply brushed her sleeve and kept walking."
   },
   {
     "id": "yugen",
@@ -641,7 +654,8 @@
     "usageNote": "May be used when fresh air helps loosen thoughts.",
     "relatedFeeling": "Wind-cleared mind",
     "category": "Nature",
-    "isPremiumDetail": true
+    "isPremiumDetail": true,
+    "reflectiveStory": "He went to the shore because the room had become too full of his own thoughts. Wind met him before the water did, pushing his coat open, pulling heat from his face. The clouds moved quickly, rearranging the whole sky. He walked until the sentences in his head lost their sharp edges. Gulls tilted above the dunes. By the time he turned back, nothing had been solved, but everything had more space around it. The wind had done its honest work."
   },
   {
     "id": "voorpret",
@@ -851,7 +865,8 @@
     "usageNote": "May be used for informal conversation with time to wander.",
     "relatedFeeling": "Conversational ease",
     "category": "Connection",
-    "isPremiumDetail": true
+    "isPremiumDetail": true,
+    "reflectiveStory": "The conversation began with a book and somehow reached a broken bicycle, a song from last summer, and the best place to buy mangoes before rain. Nobody was in charge of it. Words crossed the table, doubled back, interrupted themselves, and made room. A ceiling fan turned above the cups. Outside, the street kept moving, but inside the afternoon loosened its belt. The point was not to arrive anywhere. The point was to stay in the lively middle together."
   },
   {
     "id": "abhiman",
@@ -893,7 +908,8 @@
     "usageNote": "May be used when missing feels affectionate and direct.",
     "relatedFeeling": "Missing fondly",
     "category": "Longing",
-    "isPremiumDetail": true
+    "isPremiumDetail": true,
+    "reflectiveStory": "She saw his name while searching for something else, tucked in an old message thread beneath errands and addresses. For a moment, the room changed temperature. She did not write. She did not need to. The feeling was already there, walking softly through the space between then and now. On the table, a glass of water caught the light. She let herself miss him without making a plan from it. Some longings ask only to be held carefully and set down again."
   },
   {
     "id": "gotong-royong",
@@ -949,7 +965,8 @@
     "usageNote": "May be used when enjoyment is part of the way something is done.",
     "relatedFeeling": "Light enjoyment",
     "category": "Joy",
-    "isPremiumDetail": true
+    "isPremiumDetail": true,
+    "reflectiveStory": "The rain cancelled the picnic, so they spread the blanket on the living room floor. Someone opened the windows anyway to hear the weather. Sandwiches leaned against one another on a chipped plate, and the youngest child declared the rug an island. Soon everyone was laughing harder than the occasion deserved. The afternoon had lost its original shape, but not its pleasure. Joy did not wait for the right setting. It slipped in through the changed plan and made itself comfortable."
   },
   {
     "id": "sabai",
@@ -963,7 +980,8 @@
     "usageNote": "May be used for relaxed comfort and ease.",
     "relatedFeeling": "Easy comfort",
     "category": "Calm",
-    "isPremiumDetail": true
+    "isPremiumDetail": true,
+    "reflectiveStory": "The chair by the doorway had one loose cane strip, but it held him well enough. Heat moved slowly through the yard. A dog slept in the shade with one ear lifted, as if half-listening to the world. He drank water, stretched his feet, and let the hour pass without improving it. Nothing in the scene was perfect, and nothing needed to be. Ease arrived as a small agreement between the body, the weather, and the permission to stop hurrying."
   },
   {
     "id": "mai-pen-rai",
@@ -1075,7 +1093,8 @@
     "usageNote": "May be used when the break itself matters, not only the drink.",
     "relatedFeeling": "Shared pause",
     "category": "Calm",
-    "isPremiumDetail": true
+    "isPremiumDetail": true,
+    "reflectiveStory": "At three, the work paused without apology. Two cups appeared on the small table by the window, along with a plate of cinnamon rolls cut into uneven halves. They talked first about a deadline, then about a plant that refused to grow straight, then about nothing important at all. The coffee cooled slowly. The pause did not steal time from the day; it gave the day a handle. When they returned to their desks, the room felt less like a machine."
   },
   {
     "id": "friluftsliv",
@@ -1229,7 +1248,8 @@
     "usageNote": "May be used when slowness is patient or practical.",
     "relatedFeeling": "Gentle pace",
     "category": "Time",
-    "isPremiumDetail": true
+    "isPremiumDetail": true,
+    "reflectiveStory": "The road climbed through dust and pale grass, and the village roofs appeared only when the path turned. She had been trying to walk quickly, measuring the distance against the sun. Then an old man ahead of her slowed to greet every person he passed. By the third greeting, she stopped counting steps. A breeze moved over the hillside. The day widened. There was still a place to reach, but it no longer had to be reached in a rush. The road could be part of arriving."
   },
   {
     "id": "rafiki",

@@ -25,6 +25,10 @@ struct PremiumDetailsView: View {
             DetailRow(title: "Origin note", text: word.originNote)
             DetailRow(title: "Usage note", text: word.usageNote)
             DetailRow(title: "Related feeling", text: word.relatedFeeling)
+
+            if let reflectiveStory = word.reflectiveStory, !reflectiveStory.isEmpty {
+                DetailRow(title: "Reflective story", text: reflectiveStory)
+            }
         }
         .lexoraCard(background: LexoraColors.cardBackgroundSoft)
     }
