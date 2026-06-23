@@ -53,7 +53,9 @@ struct OnboardingView: View {
                         title: "Make it a daily ritual",
                         text: "Discover one meaningful word each day. Premium opens deeper notes, stories, widgets, and share cards.",
                         kind: .ritual,
-                        isActive: hasAppeared && selectedPage == 2
+                        isActive: hasAppeared && selectedPage == 2,
+                        usesFlexibleSpace: false,
+                        visualHeight: 230
                     )
 
                     Toggle("Daily reminder", isOn: $wantsDailyReminder)
@@ -68,6 +70,7 @@ struct OnboardingView: View {
                                 .stroke(LexoraColors.border, lineWidth: 0.8)
                         )
                         .padding(.horizontal, 28)
+                        .padding(.bottom, 4)
                         .opacity(hasAppeared && selectedPage == 2 ? 1 : 0)
                         .offset(y: hasAppeared && selectedPage == 2 ? 0 : 12)
                         .animation(.easeOut(duration: 0.45).delay(0.18), value: selectedPage)
@@ -139,10 +142,14 @@ private struct OnboardingRitualPage: View {
     let text: String
     let kind: OnboardingVisualKind
     let isActive: Bool
+    var usesFlexibleSpace = true
+    var visualHeight: CGFloat = 310
 
     var body: some View {
         VStack(spacing: 28) {
-            Spacer(minLength: 24)
+            if usesFlexibleSpace {
+                Spacer(minLength: 24)
+            }
 
             ZStack {
                 PaperAccent()
@@ -160,7 +167,7 @@ private struct OnboardingRitualPage: View {
                     .scaleEffect(isActive ? 1 : 0.96)
                     .offset(y: isActive ? 0 : 18)
             }
-            .frame(height: 310)
+            .frame(height: visualHeight)
             .animation(.easeOut(duration: 0.65), value: isActive)
 
             VStack(spacing: 13) {
@@ -182,8 +189,11 @@ private struct OnboardingRitualPage: View {
             .offset(y: isActive ? 0 : 12)
             .animation(.easeOut(duration: 0.5).delay(0.1), value: isActive)
 
-            Spacer(minLength: 24)
+            if usesFlexibleSpace {
+                Spacer(minLength: 24)
+            }
         }
+        .padding(.vertical, usesFlexibleSpace ? 0 : 8)
     }
 
     @ViewBuilder
