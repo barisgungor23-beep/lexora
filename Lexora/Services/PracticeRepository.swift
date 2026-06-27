@@ -15,7 +15,7 @@ enum PracticeRepositoryError: LocalizedError {
 }
 
 struct PracticeRepository {
-    static let remoteCatalogURL = URL(string: "https://barisgungor23-beep.github.io/lexora/practice/daily-practice.json")!
+    static let remoteCatalogURL = URL(string: "https://barisgungor23-beep.github.io/lexora/docs/practice/daily-practice.json")!
 
     private let decoder: JSONDecoder
     private let calendar: Calendar
@@ -143,4 +143,3 @@ struct PracticeRepository {
         dayFormatter.date(from: value) != nil
     }
 }
-
