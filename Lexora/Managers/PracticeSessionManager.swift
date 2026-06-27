@@ -68,6 +68,19 @@ final class PracticeSessionManager: ObservableObject {
         return selectedAnswers[currentQuestion.id]
     }
 
+    var hasAnsweredCurrentQuestion: Bool {
+        selectedAnswerForCurrentQuestion != nil
+    }
+
+    var canMoveBackward: Bool {
+        currentQuestionIndex > 0
+    }
+
+    var allQuestionsAnswered: Bool {
+        guard let practiceSet else { return false }
+        return practiceSet.questions.allSatisfy { selectedAnswers[$0.id] != nil }
+    }
+
     var scoreLabel: String {
         Self.scoreLabel(for: score ?? 0)
     }
@@ -127,15 +140,26 @@ final class PracticeSessionManager: ObservableObject {
 
     func selectAnswer(_ index: Int) {
         guard let question = currentQuestion, attemptState != .completed else { return }
+        guard selectedAnswers[question.id] == nil else { return }
         selectedAnswers[question.id] = index
         attempt?.selectedAnswers = selectedAnswers
         saveAttempt()
     }
 
+    func moveBackward() {
+        guard attemptState != .completed, currentQuestionIndex > 0 else { return }
+        currentQuestionIndex -= 1
+        attempt?.currentQuestionIndex = currentQuestionIndex
+        saveAttempt()
+        publishAttemptState()
+    }
+
     func advance() {
         guard let practiceSet, attemptState != .completed else { return }
+        guard hasAnsweredCurrentQuestion else { return }
 
         if currentQuestionIndex >= practiceSet.questions.count - 1 {
+            guard allQuestionsAnswered else { return }
             completeAttempt()
             return
         }

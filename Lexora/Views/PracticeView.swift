@@ -109,6 +109,10 @@ private struct PracticeQuestionView: View {
         practice.currentQuestionIndex >= practice.questionCount - 1
     }
 
+    private var selectedAnswerIndex: Int? {
+        practice.selectedAnswerForCurrentQuestion
+    }
+
     var body: some View {
         VStack(alignment: .leading, spacing: 18) {
             HStack {
@@ -145,67 +149,220 @@ private struct PracticeQuestionView: View {
                 ForEach(question.choices.indices, id: \.self) { index in
                     PracticeChoiceButton(
                         text: question.choices[index],
-                        isSelected: practice.selectedAnswerForCurrentQuestion == index
+                        feedback: feedback(for: index)
                     ) {
                         practice.selectAnswer(index)
                     }
                 }
             }
 
-            Button {
-                practice.advance()
-            } label: {
-                Text(isLastQuestion ? "Finish Practice" : "Continue")
-                    .font(.lexoraHeadline)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 12)
-                    .background(canContinue ? LexoraColors.primaryText : LexoraColors.border.opacity(0.35))
-                    .foregroundStyle(canContinue ? LexoraColors.cardBackground : LexoraColors.secondaryText)
-                    .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+            HStack(spacing: 10) {
+                Button {
+                    practice.moveBackward()
+                } label: {
+                    Label("Back", systemImage: "chevron.left")
+                        .font(.lexoraHeadline)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 12)
+                        .background(practice.canMoveBackward ? LexoraColors.cardBackgroundSoft : LexoraColors.border.opacity(0.24))
+                        .foregroundStyle(practice.canMoveBackward ? LexoraColors.accent : LexoraColors.secondaryText.opacity(0.72))
+                        .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                .stroke(LexoraColors.border.opacity(0.68), lineWidth: 0.8)
+                        )
+                }
+                .buttonStyle(.plain)
+                .disabled(!practice.canMoveBackward)
+                .accessibilityLabel("Back")
+
+                Button {
+                    practice.advance()
+                } label: {
+                    Text(nextButtonTitle)
+                        .font(.lexoraHeadline)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 12)
+                        .background(canContinue ? LexoraColors.primaryText : LexoraColors.border.opacity(0.35))
+                        .foregroundStyle(canContinue ? LexoraColors.cardBackground : LexoraColors.secondaryText)
+                        .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+                }
+                .buttonStyle(.plain)
+                .disabled(!canContinue)
+                .accessibilityLabel(nextButtonTitle)
             }
-            .buttonStyle(.plain)
-            .disabled(!canContinue)
-            .accessibilityLabel(isLastQuestion ? "Finish Practice" : "Continue")
         }
         .lexoraCard()
     }
 
     private var canContinue: Bool {
-        practice.selectedAnswerForCurrentQuestion != nil
+        if isLastQuestion {
+            return practice.hasAnsweredCurrentQuestion && practice.allQuestionsAnswered
+        }
+
+        return practice.hasAnsweredCurrentQuestion
+    }
+
+    private var nextButtonTitle: String {
+        isLastQuestion ? "Complete Practice" : "Next"
+    }
+
+    private func feedback(for index: Int) -> PracticeChoiceFeedback {
+        guard let selectedAnswerIndex else { return .unanswered }
+
+        if index == question.correctIndex {
+            return index == selectedAnswerIndex ? .selectedCorrect : .correctAnswer
+        }
+
+        if index == selectedAnswerIndex {
+            return .selectedIncorrect
+        }
+
+        return .answeredNeutral
+    }
+}
+
+private enum PracticeChoiceFeedback {
+    case unanswered
+    case answeredNeutral
+    case selectedCorrect
+    case selectedIncorrect
+    case correctAnswer
+
+    var isLocked: Bool {
+        self != .unanswered
+    }
+
+    var isSelected: Bool {
+        switch self {
+        case .selectedCorrect, .selectedIncorrect:
+            return true
+        case .unanswered, .answeredNeutral, .correctAnswer:
+            return false
+        }
+    }
+
+    var background: Color {
+        switch self {
+        case .selectedCorrect, .correctAnswer:
+            return Color(red: 0.880, green: 0.925, blue: 0.850)
+        case .selectedIncorrect:
+            return Color(red: 0.950, green: 0.870, blue: 0.850)
+        case .answeredNeutral:
+            return LexoraColors.cardBackground.opacity(0.72)
+        case .unanswered:
+            return LexoraColors.cardBackground
+        }
+    }
+
+    var border: Color {
+        switch self {
+        case .selectedCorrect, .correctAnswer:
+            return Color(red: 0.420, green: 0.545, blue: 0.345)
+        case .selectedIncorrect:
+            return Color(red: 0.610, green: 0.305, blue: 0.270)
+        case .answeredNeutral, .unanswered:
+            return LexoraColors.border.opacity(0.62)
+        }
+    }
+
+    var foreground: Color {
+        switch self {
+        case .selectedCorrect, .correctAnswer:
+            return Color(red: 0.250, green: 0.380, blue: 0.205)
+        case .selectedIncorrect:
+            return Color(red: 0.500, green: 0.210, blue: 0.180)
+        case .answeredNeutral, .unanswered:
+            return LexoraColors.secondaryText
+        }
+    }
+
+    var iconName: String {
+        switch self {
+        case .selectedCorrect:
+            return "checkmark.circle.fill"
+        case .selectedIncorrect:
+            return "xmark.circle.fill"
+        case .correctAnswer:
+            return "checkmark.circle"
+        case .answeredNeutral:
+            return "circle"
+        case .unanswered:
+            return "circle"
+        }
+    }
+
+    var statusText: String? {
+        switch self {
+        case .selectedCorrect:
+            return "Correct"
+        case .selectedIncorrect:
+            return "Your answer"
+        case .correctAnswer:
+            return "Correct answer"
+        case .unanswered, .answeredNeutral:
+            return nil
+        }
+    }
+
+    var accessibilityStatus: String {
+        switch self {
+        case .selectedCorrect:
+            return "selected answer, correct"
+        case .selectedIncorrect:
+            return "selected answer, incorrect"
+        case .correctAnswer:
+            return "correct answer"
+        case .answeredNeutral:
+            return "not selected"
+        case .unanswered:
+            return "not selected"
+        }
     }
 }
 
 private struct PracticeChoiceButton: View {
     let text: String
-    let isSelected: Bool
+    let feedback: PracticeChoiceFeedback
     let action: () -> Void
 
     var body: some View {
         Button(action: action) {
             HStack(spacing: 12) {
-                Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
+                Image(systemName: feedback.iconName)
                     .font(.title3)
-                    .foregroundStyle(isSelected ? LexoraColors.accent : LexoraColors.secondaryText)
+                    .foregroundStyle(feedback.foreground)
 
-                Text(text)
-                    .font(.lexoraBody)
-                    .foregroundStyle(LexoraColors.primaryText)
-                    .multilineTextAlignment(.leading)
-                    .fixedSize(horizontal: false, vertical: true)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(text)
+                        .font(.lexoraBody)
+                        .foregroundStyle(LexoraColors.primaryText)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
+
+                    if let statusText = feedback.statusText {
+                        Text(statusText)
+                            .font(.lexoraFootnote)
+                            .foregroundStyle(feedback.foreground)
+                            .textCase(.uppercase)
+                            .tracking(0.8)
+                    }
+                }
 
                 Spacer(minLength: 0)
             }
             .padding(.vertical, 12)
             .padding(.horizontal, 14)
-            .background(isSelected ? LexoraColors.cardBackgroundSoft.opacity(0.82) : LexoraColors.cardBackground)
+            .background(feedback.background)
             .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
             .overlay(
                 RoundedRectangle(cornerRadius: 12, style: .continuous)
-                    .stroke(isSelected ? LexoraColors.accent.opacity(0.55) : LexoraColors.border.opacity(0.62), lineWidth: 0.9)
+                    .stroke(feedback.border.opacity(0.72), lineWidth: feedback.isSelected ? 1.1 : 0.9)
             )
         }
         .buttonStyle(.plain)
-        .accessibilityLabel(isSelected ? "\(text), selected" : text)
+        .disabled(feedback.isLocked)
+        .accessibilityLabel("\(text), \(feedback.accessibilityStatus)")
     }
 }
 
