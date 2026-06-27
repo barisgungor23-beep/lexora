@@ -41,11 +41,11 @@
           "question": "What does \"Lagom\" most closely suggest?",
           "choices": [
             "An intense musical feeling",
-            "Just the right amount",
             "Longing for faraway places",
+            "Just the right amount",
             "The sweetness of doing nothing"
           ],
-          "correctIndex": 1
+          "correctIndex": 2
         },
         {
           "id": "2026-06-28-04",
@@ -54,12 +54,12 @@
           "language": "Turkish",
           "question": "What feeling does \"Huzur\" most closely point to?",
           "choices": [
-            "A calm sense of inner peace",
             "A clever improvised solution",
             "A shared look of possibility",
-            "A fear that chances are running out"
+            "A fear that chances are running out",
+            "A calm sense of inner peace"
           ],
-          "correctIndex": 0
+          "correctIndex": 3
         },
         {
           "id": "2026-06-28-05",
@@ -82,12 +82,12 @@
           "language": "Spanish",
           "question": "What does \"Sobremesa\" describe?",
           "choices": [
-            "The relaxed conversation after a meal",
             "A winter sunlight warmth",
+            "The relaxed conversation after a meal",
             "A place where one feels rooted",
             "A gentle sadness at passing beauty"
           ],
-          "correctIndex": 0
+          "correctIndex": 1
         },
         {
           "id": "2026-06-28-07",
@@ -96,12 +96,12 @@
           "language": "Finnish",
           "question": "What is \"Sisu\" often used to express?",
           "choices": [
-            "Quiet grit in difficulty",
             "A cozy social atmosphere",
             "A joyful feeling before an event",
+            "Quiet grit in difficulty",
             "Affection built over time"
           ],
-          "correctIndex": 0
+          "correctIndex": 2
         },
         {
           "id": "2026-06-28-08",
@@ -110,12 +110,12 @@
           "language": "Turkish",
           "question": "What image is \"Yakamoz\" connected with?",
           "choices": [
-            "A shimmer seen on the sea at night",
             "Rain falling on dry earth",
             "A path through forest solitude",
-            "Coffee shared during a pause"
+            "Coffee shared during a pause",
+            "A shimmer seen on the sea at night"
           ],
-          "correctIndex": 0
+          "correctIndex": 3
         },
         {
           "id": "2026-06-28-09",
@@ -138,12 +138,12 @@
           "language": "Malay / Indonesian",
           "question": "What does \"Rindu\" most closely mean?",
           "choices": [
-            "To miss or long for someone",
             "To wander without hurry",
+            "To miss or long for someone",
             "To use something for the first time",
             "To accept what cannot be helped"
           ],
-          "correctIndex": 0
+          "correctIndex": 1
         }
       ]
     },
@@ -157,12 +157,12 @@
           "language": "German",
           "question": "What does \"Fernweh\" most closely describe?",
           "choices": [
-            "A longing for faraway places",
             "A warm social pause after dinner",
+            "A longing for faraway places",
             "A subtle mysterious beauty",
             "An easy feeling of comfort"
           ],
-          "correctIndex": 0
+          "correctIndex": 1
         },
         {
           "id": "2026-06-29-02",
@@ -171,12 +171,12 @@
           "language": "Japanese",
           "question": "What does \"Ikigai\" most closely point to?",
           "choices": [
-            "A reason that makes life feel worth living",
             "A clever makeshift solution",
             "A moonlit path on water",
+            "A reason that makes life feel worth living",
             "A lively conversation with friends"
           ],
-          "correctIndex": 0
+          "correctIndex": 2
         },
         {
           "id": "2026-06-29-03",
@@ -185,12 +185,12 @@
           "language": "Japanese",
           "question": "What is \"Wabi-sabi\" often associated with?",
           "choices": [
-            "Beauty in imperfection and impermanence",
             "The joy of another person's happiness",
             "A strong urge to squeeze something cute",
-            "A road-like reflection on water"
+            "A road-like reflection on water",
+            "Beauty in imperfection and impermanence"
           ],
-          "correctIndex": 0
+          "correctIndex": 3
         },
         {
           "id": "2026-06-29-04",
@@ -213,12 +213,12 @@
           "language": "Brazilian Portuguese",
           "question": "What does \"Cafune\" describe?",
           "choices": [
-            "Tenderly running fingers through someone's hair",
             "Rising early for birdsong",
+            "Tenderly running fingers through someone's hair",
             "A meaningful connection shaped by circumstance",
             "A relaxed state of doing nothing"
           ],
-          "correctIndex": 0
+          "correctIndex": 1
         },
         {
           "id": "2026-06-29-06",
@@ -227,12 +227,12 @@
           "language": "Urdu",
           "question": "What feeling does \"Goya\" point toward in Lexora?",
           "choices": [
-            "The transporting feeling of a story",
             "The calm after a difficult task",
             "The warmth of winter sunlight",
+            "The transporting feeling of a story",
             "The delight before an event"
           ],
-          "correctIndex": 0
+          "correctIndex": 2
         },
         {
           "id": "2026-06-29-07",
@@ -241,12 +241,12 @@
           "language": "Arabic",
           "question": "What does \"Tarab\" most closely describe?",
           "choices": [
-            "Musical enchantment or emotional ecstasy",
             "A tender longing for the absent",
             "A slow gentle pace",
-            "A cozy room during bad weather"
+            "A cozy room during bad weather",
+            "Musical enchantment or emotional ecstasy"
           ],
-          "correctIndex": 0
+          "correctIndex": 3
         },
         {
           "id": "2026-06-29-08",
@@ -269,12 +269,12 @@
           "language": "Swedish",
           "question": "What does \"Gökotta\" describe?",
           "choices": [
-            "Rising early to hear birdsong",
             "A fear of missed chances",
+            "Rising early to hear birdsong",
             "A deep ache of melancholy",
             "A first use of something new"
           ],
-          "correctIndex": 0
+          "correctIndex": 1
         },
         {
           "id": "2026-06-29-10",
@@ -283,12 +283,12 @@
           "language": "Turkish",
           "question": "What does \"Hasret\" most closely describe?",
           "choices": [
-            "Longing for someone or something absent",
             "Joy before something happens",
             "A comfortable state of ease",
+            "Longing for someone or something absent",
             "A subtle sense of beauty"
           ],
-          "correctIndex": 0
+          "correctIndex": 2
         }
       ]
     },
@@ -302,12 +302,12 @@
           "language": "Arabic",
           "question": "What does \"Sakinah\" most closely suggest?",
           "choices": [
-            "Tranquility or settled calm",
             "A lively social conversation",
             "A makeshift solution under pressure",
+            "Tranquility or settled calm",
             "The pleasure of a changed plan"
           ],
-          "correctIndex": 0
+          "correctIndex": 2
         },
         {
           "id": "2026-06-30-02",
@@ -316,12 +316,12 @@
           "language": "Arabic",
           "question": "What feeling is \"Barakah\" often connected with?",
           "choices": [
-            "Blessing or beneficial abundance",
             "A longing for far places",
             "A romantic flutter",
-            "A wind-cleared mind"
+            "A wind-cleared mind",
+            "Blessing or beneficial abundance"
           ],
-          "correctIndex": 0
+          "correctIndex": 3
         },
         {
           "id": "2026-06-30-03",
@@ -344,12 +344,12 @@
           "language": "German",
           "question": "What does \"Sehnsucht\" describe?",
           "choices": [
-            "A deep, searching longing",
             "An easy feeling of comfort",
+            "A deep, searching longing",
             "The joy of meeting again",
             "A sense of shared humanity"
           ],
-          "correctIndex": 0
+          "correctIndex": 1
         },
         {
           "id": "2026-06-30-05",
@@ -358,12 +358,12 @@
           "language": "German",
           "question": "What does \"Waldeinsamkeit\" describe?",
           "choices": [
-            "The solitude of being in the forest",
             "The sweetness of doing nothing",
             "Affection built through time",
+            "The solitude of being in the forest",
             "A daily coffee pause"
           ],
-          "correctIndex": 0
+          "correctIndex": 2
         },
         {
           "id": "2026-06-30-06",
@@ -372,12 +372,12 @@
           "language": "German",
           "question": "What does \"Torschlusspanik\" point to?",
           "choices": [
-            "Fear that time or chances are running out",
             "A calm sense of inner peace",
             "A generous joy for someone else",
-            "A room full of friendly conversation"
+            "A room full of friendly conversation",
+            "Fear that time or chances are running out"
           ],
-          "correctIndex": 0
+          "correctIndex": 3
         },
         {
           "id": "2026-06-30-07",
@@ -400,12 +400,12 @@
           "language": "Japanese",
           "question": "What does \"Natsukashii\" describe?",
           "choices": [
-            "A warm feeling of nostalgia",
             "A moonlit path on water",
+            "A warm feeling of nostalgia",
             "A balanced amount",
             "A friend or companion"
           ],
-          "correctIndex": 0
+          "correctIndex": 1
         },
         {
           "id": "2026-06-30-09",
@@ -414,12 +414,12 @@
           "language": "Japanese",
           "question": "What does \"Yugen\" most closely suggest?",
           "choices": [
-            "A subtle, mysterious sense of beauty",
             "An urgent fear of lost time",
             "A coffee break with time to pause",
+            "A subtle, mysterious sense of beauty",
             "A shared community effort"
           ],
-          "correctIndex": 0
+          "correctIndex": 2
         },
         {
           "id": "2026-06-30-10",
@@ -428,12 +428,12 @@
           "language": "Korean",
           "question": "What does \"Han\" point toward in Lexora?",
           "choices": [
-            "A complex sorrow shaped by memory and endurance",
             "A joyful pause before travel",
             "A simple thank-you",
-            "A bright romantic thrill"
+            "A bright romantic thrill",
+            "A complex sorrow shaped by memory and endurance"
           ],
-          "correctIndex": 0
+          "correctIndex": 3
         }
       ]
     },
@@ -447,12 +447,12 @@
           "language": "Korean",
           "question": "What does \"Jeong\" most closely describe?",
           "choices": [
-            "Deep attachment built over time",
             "Sunlight through leaves",
             "A winter sunlight warmth",
-            "A slow gentle pace"
+            "A slow gentle pace",
+            "Deep attachment built over time"
           ],
-          "correctIndex": 0
+          "correctIndex": 3
         },
         {
           "id": "2026-07-01-02",
@@ -475,12 +475,12 @@
           "language": "Yaghan",
           "question": "What does \"Mamihlapinatapai\" commonly point to?",
           "choices": [
-            "A shared look of unspoken possibility",
             "A comfortable, easy feeling",
+            "A shared look of unspoken possibility",
             "A feeling of blessed abundance",
             "A calm coffee pause"
           ],
-          "correctIndex": 0
+          "correctIndex": 1
         },
         {
           "id": "2026-07-01-04",
@@ -489,12 +489,12 @@
           "language": "Portuguese",
           "question": "What does \"Desenrascanço\" describe?",
           "choices": [
-            "Improvising a solution under pressure",
             "A gentle sadness at beauty passing",
             "A family group or home circle",
+            "Improvising a solution under pressure",
             "A quiet sense of inner peace"
           ],
-          "correctIndex": 0
+          "correctIndex": 2
         },
         {
           "id": "2026-07-01-05",
@@ -503,12 +503,12 @@
           "language": "Spanish",
           "question": "What does \"Duende\" most closely suggest?",
           "choices": [
-            "A deep, stirring artistic force",
             "A strong feeling of missing someone",
             "A joyful plan before an event",
-            "A word for health and peace"
+            "A word for health and peace",
+            "A deep, stirring artistic force"
           ],
-          "correctIndex": 0
+          "correctIndex": 3
         },
         {
           "id": "2026-07-01-06",
@@ -531,12 +531,12 @@
           "language": "Spanish",
           "question": "What does \"Estrenar\" mean?",
           "choices": [
-            "To use or wear something for the first time",
             "To clear the head in the wind",
+            "To use or wear something for the first time",
             "To fall out of love",
             "To rise early for birdsong"
           ],
-          "correctIndex": 0
+          "correctIndex": 1
         },
         {
           "id": "2026-07-01-08",
@@ -545,12 +545,12 @@
           "language": "French",
           "question": "What does \"Flâner\" describe?",
           "choices": [
-            "To wander without hurry",
             "To miss someone deeply",
             "To share a meal after talking",
+            "To wander without hurry",
             "To feel settled happiness"
           ],
-          "correctIndex": 0
+          "correctIndex": 2
         },
         {
           "id": "2026-07-01-09",
@@ -559,12 +559,12 @@
           "language": "French",
           "question": "What does \"Retrouvailles\" describe?",
           "choices": [
-            "The joy of meeting again",
             "A fear of missed chances",
             "A clever improvised fix",
-            "A calm acceptance of difficulty"
+            "A calm acceptance of difficulty",
+            "The joy of meeting again"
           ],
-          "correctIndex": 0
+          "correctIndex": 3
         },
         {
           "id": "2026-07-01-10",
@@ -606,12 +606,12 @@
           "language": "Dutch",
           "question": "What does \"Gezelligheid\" describe?",
           "choices": [
-            "A cozy atmosphere of togetherness",
             "A quiet forest solitude",
             "A sense of accepting what cannot be helped",
+            "A cozy atmosphere of togetherness",
             "A deep artistic force"
           ],
-          "correctIndex": 0
+          "correctIndex": 2
         },
         {
           "id": "2026-07-02-03",
@@ -620,12 +620,12 @@
           "language": "Dutch",
           "question": "What does \"Uitwaaien\" describe?",
           "choices": [
-            "Clearing the head in the wind",
             "Putting care into your work",
+            "Clearing the head in the wind",
             "A warm nostalgia",
             "The first use of something new"
           ],
-          "correctIndex": 0
+          "correctIndex": 1
         },
         {
           "id": "2026-07-02-04",
@@ -634,12 +634,12 @@
           "language": "Dutch",
           "question": "What does \"Voorpret\" most closely mean?",
           "choices": [
-            "Joy before something happens",
             "A calm, settled ease",
             "A light from within",
-            "A long sorrow shaped by memory"
+            "A long sorrow shaped by memory",
+            "Joy before something happens"
           ],
-          "correctIndex": 0
+          "correctIndex": 3
         },
         {
           "id": "2026-07-02-05",
@@ -662,12 +662,12 @@
           "language": "Norwegian",
           "question": "What does \"Koselig\" most closely suggest?",
           "choices": [
-            "Cozy in a warm, friendly way",
             "An intense musical response",
             "A shared look of possibility",
+            "Cozy in a warm, friendly way",
             "A clever shortcut"
           ],
-          "correctIndex": 0
+          "correctIndex": 2
         },
         {
           "id": "2026-07-02-07",
@@ -676,12 +676,12 @@
           "language": "Icelandic",
           "question": "What does \"Gluggaveður\" describe?",
           "choices": [
-            "Weather that looks better from indoors",
             "A room made lively by conversation",
+            "Weather that looks better from indoors",
             "A gentle sadness at passing beauty",
             "A balanced amount"
           ],
-          "correctIndex": 0
+          "correctIndex": 1
         },
         {
           "id": "2026-07-02-08",
@@ -690,12 +690,12 @@
           "language": "Finnish",
           "question": "What does \"Kaiho\" describe?",
           "choices": [
-            "A wistful longing",
             "A stone marker or guide",
             "A joyful feeling of fun",
-            "A shared self or fellow personhood"
+            "A shared self or fellow personhood",
+            "A wistful longing"
           ],
-          "correctIndex": 0
+          "correctIndex": 3
         },
         {
           "id": "2026-07-02-09",
@@ -718,12 +718,12 @@
           "language": "Irish",
           "question": "What does \"Craic\" most closely point to?",
           "choices": [
-            "Fun, lively talk, or good company",
             "A calm winter darkness",
             "A word for reciprocity",
+            "Fun, lively talk, or good company",
             "A subtle mysterious beauty"
           ],
-          "correctIndex": 0
+          "correctIndex": 2
         }
       ]
     },
@@ -737,12 +737,12 @@
           "language": "Polish",
           "question": "What does \"Tęsknota\" describe?",
           "choices": [
-            "A strong feeling of missing or longing",
             "A lively and playful activity",
+            "A strong feeling of missing or longing",
             "A clear feeling of health",
             "A warm act of hospitality"
           ],
-          "correctIndex": 0
+          "correctIndex": 1
         },
         {
           "id": "2026-07-03-02",
@@ -751,12 +751,12 @@
           "language": "Czech / Slovak",
           "question": "What does \"Pohoda\" most closely suggest?",
           "choices": [
-            "Ease, calm, or a pleasant relaxed state",
             "A deep sorrow shaped by endurance",
             "A meaningful connection by circumstance",
-            "A new object used for the first time"
+            "A new object used for the first time",
+            "Ease, calm, or a pleasant relaxed state"
           ],
-          "correctIndex": 0
+          "correctIndex": 3
         },
         {
           "id": "2026-07-03-03",
@@ -765,12 +765,12 @@
           "language": "Romanian",
           "question": "What does \"Dor\" describe?",
           "choices": [
-            "Longing mixed with affection or ache",
             "A careful daily purpose",
             "A group helping one another",
+            "Longing mixed with affection or ache",
             "A word for thank you"
           ],
-          "correctIndex": 0
+          "correctIndex": 2
         },
         {
           "id": "2026-07-03-04",
@@ -793,12 +793,12 @@
           "language": "Russian",
           "question": "What does \"Toska\" most closely describe?",
           "choices": [
-            "A deep ache of longing or melancholy",
             "A calm coffee pause",
+            "A deep ache of longing or melancholy",
             "A gentle pace little by little",
             "A shimmer on the night sea"
           ],
-          "correctIndex": 0
+          "correctIndex": 1
         },
         {
           "id": "2026-07-03-06",
@@ -807,12 +807,12 @@
           "language": "Persian",
           "question": "What does \"Mehr\" most closely suggest?",
           "choices": [
-            "Kindness, affection, or warmth",
             "A path of moonlight on water",
             "A room read through social awareness",
-            "A strong urge toward cuteness"
+            "A strong urge toward cuteness",
+            "Kindness, affection, or warmth"
           ],
-          "correctIndex": 0
+          "correctIndex": 3
         },
         {
           "id": "2026-07-03-07",
@@ -821,12 +821,12 @@
           "language": "Hindi / Punjabi",
           "question": "What does \"Jugaad\" describe?",
           "choices": [
-            "A clever makeshift solution",
             "A sorrowful nostalgia",
             "A family or extended family group",
+            "A clever makeshift solution",
             "A sense of literary mystery"
           ],
-          "correctIndex": 0
+          "correctIndex": 2
         },
         {
           "id": "2026-07-03-08",
@@ -849,12 +849,12 @@
           "language": "Bengali / Hindi",
           "question": "What does \"Abhiman\" point to?",
           "choices": [
-            "Hurt pride within a close relationship",
             "Joy in someone else's happiness",
+            "Hurt pride within a close relationship",
             "A simple thank-you",
             "Weather best seen from indoors"
           ],
-          "correctIndex": 0
+          "correctIndex": 1
         },
         {
           "id": "2026-07-03-10",
@@ -863,12 +863,12 @@
           "language": "Malay / Indonesian",
           "question": "What does \"Sayang\" often express?",
           "choices": [
-            "Affection, dear one, or tenderness",
             "A fear of lost chances",
             "A balanced amount",
-            "A forest solitude"
+            "A forest solitude",
+            "Affection, dear one, or tenderness"
           ],
-          "correctIndex": 0
+          "correctIndex": 3
         }
       ]
     },
@@ -882,12 +882,12 @@
           "language": "Indonesian / Malay",
           "question": "What does \"Gotong royong\" describe?",
           "choices": [
-            "Working together for a shared need",
             "A tender longing for the absent",
             "The first feeling of love",
+            "Working together for a shared need",
             "A calm word of acceptance"
           ],
-          "correctIndex": 0
+          "correctIndex": 2
         },
         {
           "id": "2026-07-04-02",
@@ -910,12 +910,12 @@
           "language": "Tagalog",
           "question": "What does \"Bayanihan\" describe?",
           "choices": [
-            "Community helping one another",
             "A winter sunlight warmth",
             "The joy before an event",
-            "A room after a meal"
+            "A room after a meal",
+            "Community helping one another"
           ],
-          "correctIndex": 0
+          "correctIndex": 3
         },
         {
           "id": "2026-07-04-04",
@@ -924,12 +924,12 @@
           "language": "Thai",
           "question": "What does \"Sanuk\" most closely suggest?",
           "choices": [
-            "Enjoyment or fun in what one does",
             "A deep ache of melancholy",
+            "Enjoyment or fun in what one does",
             "A stone marker in a landscape",
             "A settled purpose for life"
           ],
-          "correctIndex": 0
+          "correctIndex": 1
         },
         {
           "id": "2026-07-04-05",
@@ -938,12 +938,12 @@
           "language": "Thai",
           "question": "What does \"Sabai\" describe?",
           "choices": [
-            "Comfortable, easy, or well",
             "A longing for distant places",
             "A rich artistic force",
+            "Comfortable, easy, or well",
             "A sense of shared humanity"
           ],
-          "correctIndex": 0
+          "correctIndex": 2
         },
         {
           "id": "2026-07-04-06",
@@ -966,12 +966,12 @@
           "language": "Vietnamese",
           "question": "What can \"Duyên\" describe?",
           "choices": [
-            "Grace, charm, or a destined connection",
             "A forest solitude",
             "A coffee pause",
-            "A fear of missed chances"
+            "A fear of missed chances",
+            "Grace, charm, or a destined connection"
           ],
-          "correctIndex": 0
+          "correctIndex": 3
         },
         {
           "id": "2026-07-04-08",
@@ -980,12 +980,12 @@
           "language": "Vietnamese",
           "question": "What does \"Thương\" often express?",
           "choices": [
-            "Tender love, care, or compassion",
             "A moonlit road on water",
+            "Tender love, care, or compassion",
             "A room full of lively talk",
             "An urge to squeeze something cute"
           ],
-          "correctIndex": 0
+          "correctIndex": 1
         },
         {
           "id": "2026-07-04-09",
@@ -994,12 +994,12 @@
           "language": "Vietnamese",
           "question": "What does \"Tình\" most closely point to?",
           "choices": [
-            "Affection, feeling, or emotional bond",
             "A careful balance of amount",
             "A daily outdoor life",
+            "Affection, feeling, or emotional bond",
             "A simple thank-you"
           ],
-          "correctIndex": 0
+          "correctIndex": 2
         },
         {
           "id": "2026-07-04-10",
