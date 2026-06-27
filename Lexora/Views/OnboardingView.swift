@@ -51,7 +51,7 @@ struct OnboardingView: View {
                 VStack(spacing: 22) {
                     OnboardingRitualPage(
                         title: "Return to one word each day",
-                        text: "A small daily ritual for discovering words that carry memory, feeling, and place.",
+                        text: "Return for one word each day, and a short Practice when you want to remember what stayed with you.",
                         kind: .ritual,
                         isActive: hasAppeared && selectedPage == 2,
                         usesFlexibleSpace: false,

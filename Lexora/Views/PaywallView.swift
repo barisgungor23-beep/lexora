@@ -9,10 +9,10 @@ struct PaywallView: View {
     private let benefits = [
         "Deeper notes",
         "Reflective stories for selected words",
+        "Review Practice answers",
         "Full word archive",
         "Unlimited favorites",
-        "Share as Card",
-        "Daily word widget"
+        "Widget and Share as Card"
     ]
 
     var body: some View {
@@ -308,7 +308,7 @@ private struct PremiumHeroCard: View {
                     .font(.lexoraHeadline)
                     .foregroundStyle(LexoraColors.primaryText)
 
-                Text("Premium opens richer notes, selected reflective stories, the full archive, favorites without limits, the widget, and shareable cards.")
+                Text("Premium opens richer notes, selected reflective stories, Practice answer review, the full archive, favorites without limits, the widget, and shareable cards.")
                     .font(.lexoraSubheadline)
                     .foregroundStyle(LexoraColors.secondaryText)
                     .lineSpacing(4)

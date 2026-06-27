@@ -32,6 +32,23 @@ struct SettingsView: View {
                 }
                 .listRowBackground(LexoraColors.cardBackground)
 
+                Section("Practice Reminder") {
+                    Toggle("Optional Practice reminder", isOn: $notifications.isPracticeReminderEnabled)
+
+                    Text("A quiet reminder for today’s 10-word practice.")
+                        .font(.lexoraFootnote)
+                        .foregroundStyle(LexoraColors.secondaryText)
+
+                    DatePicker("Time", selection: $notifications.practiceReminderDate, displayedComponents: .hourAndMinute)
+
+                    Button("Schedule Practice reminder") {
+                        Task {
+                            await notifications.updatePracticeReminderSchedule()
+                        }
+                    }
+                }
+                .listRowBackground(LexoraColors.cardBackground)
+
                 #if DEBUG
                 Section("Promo code") {
                     TextField("Code", text: $promoCode)
@@ -97,6 +114,17 @@ struct SettingsView: View {
                 guard notifications.isEnabled else { return }
                 Task {
                     await notifications.updateSchedule(using: dailyService.word(words: repository.words))
+                }
+            }
+            .onChange(of: notifications.isPracticeReminderEnabled) { _, _ in
+                Task {
+                    await notifications.updatePracticeReminderSchedule()
+                }
+            }
+            .onChange(of: notifications.practiceReminderDate) { _, _ in
+                guard notifications.isPracticeReminderEnabled else { return }
+                Task {
+                    await notifications.updatePracticeReminderSchedule()
                 }
             }
         }
