@@ -8,6 +8,7 @@ struct LexoraApp: App {
     @StateObject private var notifications = NotificationManager()
     @StateObject private var premium = PremiumManager()
     @StateObject private var practice = PracticeSessionManager()
+    @StateObject private var reviewPrompts = ReviewPromptManager()
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
 
     var body: some Scene {
@@ -26,9 +27,13 @@ struct LexoraApp: App {
                 .environmentObject(notifications)
                 .environmentObject(premium)
                 .environmentObject(practice)
+                .environmentObject(reviewPrompts)
                 .font(.lexoraBody)
                 .tint(LexoraColors.accent)
                 .preferredColorScheme(.light)
+                .onAppear {
+                    reviewPrompts.registerAppLaunch()
+                }
                 .task {
                     premium.configure()
                     await practice.loadPracticeIfNeeded()

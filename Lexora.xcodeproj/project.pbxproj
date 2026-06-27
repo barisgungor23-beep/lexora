@@ -44,6 +44,7 @@
 		100000000000000000000025 /* fallback-practice.json in Resources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000025 /* fallback-practice.json */; };
 		100000000000000000000026 /* PracticeSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000026 /* PracticeSessionManager.swift */; };
 		100000000000000000000027 /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000027 /* PracticeView.swift */; };
+		100000000000000000000028 /* ReviewPromptManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000028 /* ReviewPromptManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		200000000000000000000025 /* fallback-practice.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "fallback-practice.json"; sourceTree = "<group>"; };
 		200000000000000000000026 /* PracticeSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeSessionManager.swift; sourceTree = "<group>"; };
 		200000000000000000000027 /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
+		200000000000000000000028 /* ReviewPromptManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPromptManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 				200000000000000000000006 /* NotificationManager.swift */,
 				200000000000000000000007 /* PremiumManager.swift */,
 				200000000000000000000026 /* PracticeSessionManager.swift */,
+				200000000000000000000028 /* ReviewPromptManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				100000000000000000000006 /* NotificationManager.swift in Sources */,
 				100000000000000000000007 /* PremiumManager.swift in Sources */,
 				100000000000000000000026 /* PracticeSessionManager.swift in Sources */,
+				100000000000000000000028 /* ReviewPromptManager.swift in Sources */,
 				100000000000000000000008 /* WordCard.swift in Sources */,
 				10000000000000000000001A /* WordRowCard.swift in Sources */,
 				10000000000000000000001D /* ShareCardView.swift in Sources */,

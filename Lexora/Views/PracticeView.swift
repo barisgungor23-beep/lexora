@@ -3,6 +3,7 @@ import SwiftUI
 struct PracticeView: View {
     @EnvironmentObject private var practice: PracticeSessionManager
     @EnvironmentObject private var premium: PremiumManager
+    @EnvironmentObject private var reviewPrompts: ReviewPromptManager
     @Environment(\.dismiss) private var dismiss
     @State private var showPaywall = false
 
@@ -51,6 +52,10 @@ struct PracticeView: View {
         }
         .sheet(isPresented: $showPaywall) {
             PaywallView()
+        }
+        .onChange(of: practice.attemptState) { _, newState in
+            guard newState == .completed, let score = practice.score else { return }
+            reviewPrompts.requestAfterPracticeIfAppropriate(score: score, total: practice.questionCount)
         }
     }
 }
