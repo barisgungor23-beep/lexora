@@ -7,6 +7,7 @@ struct LexoraApp: App {
     @StateObject private var favorites = FavoritesManager()
     @StateObject private var notifications = NotificationManager()
     @StateObject private var premium = PremiumManager()
+    @StateObject private var practice = PracticeSessionManager()
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
 
     var body: some Scene {
@@ -24,11 +25,13 @@ struct LexoraApp: App {
                 .environmentObject(favorites)
                 .environmentObject(notifications)
                 .environmentObject(premium)
+                .environmentObject(practice)
                 .font(.lexoraBody)
                 .tint(LexoraColors.accent)
                 .preferredColorScheme(.light)
                 .task {
                     premium.configure()
+                    await practice.loadPracticeIfNeeded()
                 }
                 .onChange(of: scenePhase) { _, newPhase in
                     guard newPhase == .active else { return }
