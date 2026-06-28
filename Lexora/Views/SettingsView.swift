@@ -168,7 +168,7 @@ private struct PremiumStatusBanner: View {
             }
 
             if !premium.hasPremium {
-                HStack(spacing: 12) {
+                VStack(spacing: 12) {
                     NavigationLink {
                         PaywallView()
                     } label: {
@@ -178,16 +178,36 @@ private struct PremiumStatusBanner: View {
                     .buttonStyle(.borderedProminent)
                     .tint(LexoraColors.accent)
 
-                    Button {
-                        Task {
-                            await premium.restorePurchases()
+                    HStack(spacing: 12) {
+                        Button {
+                            Task {
+                                await premium.restorePurchases()
+                            }
+                        } label: {
+                            Label("Restore", systemImage: "arrow.clockwise")
+                                .frame(maxWidth: .infinity)
                         }
-                    } label: {
-                        Label("Restore", systemImage: "arrow.clockwise")
+                        .buttonStyle(.bordered)
+                        .tint(LexoraColors.accent)
+                        .disabled(premium.isProcessingPurchase)
+
+                        Button {
+                            Task {
+                                await premium.redeemOfferCode()
+                            }
+                        } label: {
+                            Label("Redeem Code", systemImage: "ticket")
+                                .frame(maxWidth: .infinity)
+                        }
+                        .buttonStyle(.bordered)
+                        .tint(LexoraColors.accent)
+                        .disabled(premium.isProcessingPurchase)
                     }
-                    .buttonStyle(.bordered)
-                    .tint(LexoraColors.accent)
-                    .disabled(premium.isProcessingPurchase)
+
+                    Text("Redeem an App Store offer code for Lexora Premium.")
+                        .font(.lexoraFootnote)
+                        .foregroundStyle(LexoraColors.secondaryText)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
             }
 

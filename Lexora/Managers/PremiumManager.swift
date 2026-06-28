@@ -35,12 +35,18 @@ final class PremiumManager: ObservableObject {
     private let sharedDefaults: UserDefaults?
     private let mockPremiumKey = "phaseOneMockPremiumEnabled"
     private let revenueCatService: RevenueCatService
+    private let offerCodeRedemptionManager: StoreKitOfferCodeRedemptionManager
     private var revenueCatHasPremium: Bool
 
-    init(defaults: UserDefaults = .standard, revenueCatService: RevenueCatService? = nil) {
+    init(
+        defaults: UserDefaults = .standard,
+        revenueCatService: RevenueCatService? = nil,
+        offerCodeRedemptionManager: StoreKitOfferCodeRedemptionManager = .shared
+    ) {
         self.defaults = defaults
         self.sharedDefaults = UserDefaults(suiteName: LexoraPremiumRules.appGroupIdentifier)
         self.revenueCatService = revenueCatService ?? .shared
+        self.offerCodeRedemptionManager = offerCodeRedemptionManager
         self.isMockPremiumEnabled = defaults.bool(forKey: mockPremiumKey)
         self.revenueCatHasPremium = sharedDefaults?.bool(forKey: LexoraPremiumRules.sharedPremiumKey) ?? false
         updatePremiumState()
@@ -107,6 +113,25 @@ final class PremiumManager: ObservableObject {
             let customerInfo = try await revenueCatService.restorePurchases()
             applyRevenueCatPremiumState(revenueCatService.hasPremiumEntitlement(customerInfo))
             statusMessage = hasPremium ? "Premium is active." : "No active premium purchase was found."
+            return hasPremium
+        } catch {
+            statusMessage = friendlyMessage(for: error)
+            return false
+        }
+    }
+
+    func redeemOfferCode() async -> Bool {
+        guard !isProcessingPurchase else { return false }
+        isProcessingPurchase = true
+        statusMessage = nil
+        defer { isProcessingPurchase = false }
+
+        do {
+            try await offerCodeRedemptionManager.presentRedemptionSheet()
+            statusMessage = "Checking Premium access..."
+            let customerInfo = try await revenueCatService.refreshCustomerInfo()
+            applyRevenueCatPremiumState(revenueCatService.hasPremiumEntitlement(customerInfo))
+            statusMessage = hasPremium ? "Premium is active." : "If your code was redeemed, Premium may take a moment to update. Try Restore Purchases if needed."
             return hasPremium
         } catch {
             statusMessage = friendlyMessage(for: error)

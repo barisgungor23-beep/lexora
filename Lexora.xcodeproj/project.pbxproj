@@ -45,6 +45,7 @@
 		100000000000000000000026 /* PracticeSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000026 /* PracticeSessionManager.swift */; };
 		100000000000000000000027 /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000027 /* PracticeView.swift */; };
 		100000000000000000000028 /* ReviewPromptManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000028 /* ReviewPromptManager.swift */; };
+		100000000000000000000029 /* StoreKitOfferCodeRedemptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000029 /* StoreKitOfferCodeRedemptionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		200000000000000000000026 /* PracticeSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeSessionManager.swift; sourceTree = "<group>"; };
 		200000000000000000000027 /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
 		200000000000000000000028 /* ReviewPromptManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPromptManager.swift; sourceTree = "<group>"; };
+		200000000000000000000029 /* StoreKitOfferCodeRedemptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitOfferCodeRedemptionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 				200000000000000000000007 /* PremiumManager.swift */,
 				200000000000000000000026 /* PracticeSessionManager.swift */,
 				200000000000000000000028 /* ReviewPromptManager.swift */,
+				200000000000000000000029 /* StoreKitOfferCodeRedemptionManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				100000000000000000000007 /* PremiumManager.swift in Sources */,
 				100000000000000000000026 /* PracticeSessionManager.swift in Sources */,
 				100000000000000000000028 /* ReviewPromptManager.swift in Sources */,
+				100000000000000000000029 /* StoreKitOfferCodeRedemptionManager.swift in Sources */,
 				100000000000000000000008 /* WordCard.swift in Sources */,
 				10000000000000000000001A /* WordRowCard.swift in Sources */,
 				10000000000000000000001D /* ShareCardView.swift in Sources */,
