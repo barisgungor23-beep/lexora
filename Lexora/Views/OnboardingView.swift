@@ -3,6 +3,7 @@ import SwiftUI
 struct OnboardingView: View {
     @EnvironmentObject private var repository: WordRepository
     @EnvironmentObject private var notifications: NotificationManager
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var selectedPage = 0
     @State private var wantsDailyReminder = false
     @State private var hasAppeared = false
@@ -72,8 +73,8 @@ struct OnboardingView: View {
                         .padding(.horizontal, 28)
                         .padding(.bottom, 4)
                         .opacity(hasAppeared && selectedPage == 2 ? 1 : 0)
-                        .offset(y: hasAppeared && selectedPage == 2 ? 0 : 12)
-                        .animation(.easeOut(duration: 0.45).delay(0.18), value: selectedPage)
+                        .offset(y: reduceMotion || (hasAppeared && selectedPage == 2) ? 0 : 12)
+                        .animation(reduceMotion ? nil : .easeOut(duration: 0.45).delay(0.18), value: selectedPage)
                 }
                 .tag(2)
             }
@@ -85,7 +86,8 @@ struct OnboardingView: View {
                         Capsule()
                             .fill(index == selectedPage ? LexoraColors.accent : LexoraColors.border)
                             .frame(width: index == selectedPage ? 28 : 8, height: 8)
-                            .animation(.easeInOut(duration: 0.25), value: selectedPage)
+                            .animation(reduceMotion ? nil : .easeInOut(duration: 0.25), value: selectedPage)
+                            .accessibilityHidden(true)
                     }
                 }
 
@@ -105,7 +107,7 @@ struct OnboardingView: View {
         }
         .lexoraPageBackground()
         .onAppear {
-            withAnimation(.easeOut(duration: 0.55)) {
+            withAnimation(reduceMotion ? nil : .easeOut(duration: 0.55)) {
                 hasAppeared = true
             }
         }
@@ -113,7 +115,7 @@ struct OnboardingView: View {
 
     private func continueTapped() {
         guard selectedPage == 2 else {
-            withAnimation(.easeInOut(duration: 0.35)) {
+            withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.35)) {
                 selectedPage += 1
             }
             return
@@ -138,6 +140,8 @@ private enum OnboardingVisualKind {
 }
 
 private struct OnboardingRitualPage: View {
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
     let title: String
     let text: String
     let kind: OnboardingVisualKind
@@ -155,20 +159,22 @@ private struct OnboardingRitualPage: View {
                 PaperAccent()
                     .offset(x: -112, y: -86)
                     .opacity(isActive ? 0.42 : 0)
-                    .offset(y: isActive ? 0 : 14)
+                    .offset(y: reduceMotion || isActive ? 0 : 14)
+                    .accessibilityHidden(true)
 
                 PaperAccent(width: 86, height: 118)
                     .offset(x: 118, y: 78)
                     .opacity(isActive ? 0.28 : 0)
                     .rotationEffect(.degrees(9))
+                    .accessibilityHidden(true)
 
                 visual
                     .opacity(isActive ? 1 : 0)
-                    .scaleEffect(isActive ? 1 : 0.96)
-                    .offset(y: isActive ? 0 : 18)
+                    .scaleEffect(reduceMotion || isActive ? 1 : 0.96)
+                    .offset(y: reduceMotion || isActive ? 0 : 18)
             }
             .frame(height: visualHeight)
-            .animation(.easeOut(duration: 0.65), value: isActive)
+            .animation(reduceMotion ? nil : .easeOut(duration: 0.65), value: isActive)
 
             VStack(spacing: 13) {
                 Text(title)
@@ -186,8 +192,8 @@ private struct OnboardingRitualPage: View {
                     .fixedSize(horizontal: false, vertical: true)
             }
             .opacity(isActive ? 1 : 0)
-            .offset(y: isActive ? 0 : 12)
-            .animation(.easeOut(duration: 0.5).delay(0.1), value: isActive)
+            .offset(y: reduceMotion || isActive ? 0 : 12)
+            .animation(reduceMotion ? nil : .easeOut(duration: 0.5).delay(0.1), value: isActive)
 
             if usesFlexibleSpace {
                 Spacer(minLength: 24)
@@ -210,6 +216,8 @@ private struct OnboardingRitualPage: View {
 }
 
 private struct WordRitualCard: View {
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
     let isActive: Bool
 
     var body: some View {
@@ -244,12 +252,14 @@ private struct WordRitualCard: View {
                 .stroke(LexoraColors.border.opacity(0.72), lineWidth: 0.8)
         )
         .shadow(color: .black.opacity(0.035), radius: 14, x: 0, y: 6)
-        .offset(y: isActive ? -4 : 8)
-        .animation(.easeInOut(duration: 1.8).repeatForever(autoreverses: true), value: isActive)
+        .offset(y: reduceMotion ? 0 : (isActive ? -4 : 8))
+        .animation(reduceMotion ? nil : .easeInOut(duration: 1.8).repeatForever(autoreverses: true), value: isActive)
     }
 }
 
 private struct WordCollectionStack: View {
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
     let isActive: Bool
 
     var body: some View {
@@ -261,8 +271,8 @@ private struct WordCollectionStack: View {
             MiniWordCard(word: "Komorebi", note: "light", angle: -1)
                 .offset(y: -28)
         }
-        .offset(y: isActive ? -3 : 8)
-        .animation(.easeInOut(duration: 2.1).repeatForever(autoreverses: true), value: isActive)
+        .offset(y: reduceMotion ? 0 : (isActive ? -3 : 8))
+        .animation(reduceMotion ? nil : .easeInOut(duration: 2.1).repeatForever(autoreverses: true), value: isActive)
     }
 }
 
@@ -295,6 +305,8 @@ private struct MiniWordCard: View {
 }
 
 private struct DailyRitualCards: View {
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
     let isActive: Bool
 
     var body: some View {
@@ -336,8 +348,8 @@ private struct DailyRitualCards: View {
                         .stroke(LexoraColors.border.opacity(0.72), lineWidth: 0.8)
                 )
         }
-        .offset(y: isActive ? -2 : 9)
-        .animation(.easeInOut(duration: 2.0).repeatForever(autoreverses: true), value: isActive)
+        .offset(y: reduceMotion ? 0 : (isActive ? -2 : 9))
+        .animation(reduceMotion ? nil : .easeInOut(duration: 2.0).repeatForever(autoreverses: true), value: isActive)
     }
 }
 

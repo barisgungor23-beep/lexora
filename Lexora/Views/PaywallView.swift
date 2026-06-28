@@ -2,6 +2,7 @@ import SwiftUI
 
 struct PaywallView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @EnvironmentObject private var premium: PremiumManager
     @State private var hasAppeared = false
     @State private var selectedPackageID: LexoraPremiumPackage.ID?
@@ -23,20 +24,20 @@ struct PaywallView: View {
                 VStack(alignment: .leading, spacing: 22) {
                     PremiumHeroCard(isActive: hasAppeared)
                         .opacity(hasAppeared ? 1 : 0)
-                        .offset(y: hasAppeared ? 0 : 18)
-                        .animation(.easeOut(duration: 0.55), value: hasAppeared)
+                        .offset(y: reduceMotion || hasAppeared ? 0 : 18)
+                        .animation(reduceMotion ? nil : .easeOut(duration: 0.55), value: hasAppeared)
 
                     PremiumPreviewCard()
                         .opacity(hasAppeared ? 1 : 0)
-                        .offset(y: hasAppeared ? 0 : 12)
-                        .animation(.easeOut(duration: 0.45).delay(0.12), value: hasAppeared)
+                        .offset(y: reduceMotion || hasAppeared ? 0 : 12)
+                        .animation(reduceMotion ? nil : .easeOut(duration: 0.45).delay(0.12), value: hasAppeared)
 
                     VStack(alignment: .leading, spacing: 12) {
                         ForEach(Array(benefits.enumerated()), id: \.offset) { index, benefit in
                             PremiumBenefitRow(text: benefit)
                                 .opacity(hasAppeared ? 1 : 0)
-                                .offset(y: hasAppeared ? 0 : 10)
-                                .animation(.easeOut(duration: 0.38).delay(0.08 + Double(index) * 0.045), value: hasAppeared)
+                                .offset(y: reduceMotion || hasAppeared ? 0 : 10)
+                                .animation(reduceMotion ? nil : .easeOut(duration: 0.38).delay(0.08 + Double(index) * 0.045), value: hasAppeared)
                         }
                     }
                     .padding(18)
@@ -54,13 +55,13 @@ struct PaywallView: View {
                             .fill(LexoraColors.cardBackground.opacity(0.55))
                     )
                     .opacity(hasAppeared ? 1 : 0)
-                    .offset(y: hasAppeared ? 0 : 12)
-                    .animation(.easeOut(duration: 0.42).delay(0.18), value: hasAppeared)
+                    .offset(y: reduceMotion || hasAppeared ? 0 : 12)
+                    .animation(reduceMotion ? nil : .easeOut(duration: 0.42).delay(0.18), value: hasAppeared)
 
                     purchaseControls
                         .opacity(hasAppeared ? 1 : 0)
-                        .scaleEffect(hasAppeared ? 1 : 0.98)
-                        .animation(.easeOut(duration: 0.42).delay(0.28), value: hasAppeared)
+                        .scaleEffect(reduceMotion || hasAppeared ? 1 : 0.98)
+                        .animation(reduceMotion ? nil : .easeOut(duration: 0.42).delay(0.28), value: hasAppeared)
 
                     if let status = premium.statusMessage, !status.isEmpty {
                         Text(status)
@@ -75,7 +76,7 @@ struct PaywallView: View {
                                     .stroke(LexoraColors.border.opacity(0.7), lineWidth: 0.65)
                             )
                             .opacity(hasAppeared ? 1 : 0)
-                            .animation(.easeOut(duration: 0.35).delay(0.4), value: hasAppeared)
+                            .animation(reduceMotion ? nil : .easeOut(duration: 0.35).delay(0.4), value: hasAppeared)
                     }
                 }
                 .padding()
@@ -93,7 +94,7 @@ struct PaywallView: View {
             selectDefaultPackageIfNeeded()
         }
         .onAppear {
-            withAnimation(.easeOut(duration: 0.55)) {
+            withAnimation(reduceMotion ? nil : .easeOut(duration: 0.55)) {
                 hasAppeared = true
             }
         }
@@ -257,10 +258,15 @@ private struct PremiumPackageRow: View {
             .shadow(color: .black.opacity(isSelected ? 0.035 : 0.015), radius: isSelected ? 10 : 5, x: 0, y: isSelected ? 4 : 2)
         }
         .buttonStyle(.plain)
+        .accessibilityElement(children: .combine)
+        .accessibilityValue(isSelected ? "Selected" : "Not selected")
+        .accessibilityAddTraits(isSelected ? [.isSelected] : [])
     }
 }
 
 private struct PremiumHeroCard: View {
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
     let isActive: Bool
 
     var body: some View {
@@ -293,8 +299,9 @@ private struct PremiumHeroCard: View {
                         Circle()
                             .stroke(LexoraColors.accent.opacity(0.38), lineWidth: 0.9)
                     )
-                    .scaleEffect(isActive ? 1 : 0.92)
-                    .animation(.easeOut(duration: 0.55), value: isActive)
+                    .scaleEffect(reduceMotion || isActive ? 1 : 0.92)
+                    .animation(reduceMotion ? nil : .easeOut(duration: 0.55), value: isActive)
+                    .accessibilityHidden(true)
             }
 
             VStack(alignment: .leading, spacing: 10) {
@@ -410,6 +417,7 @@ private struct PremiumBenefitRow: View {
                 .font(.callout.weight(.semibold))
                 .foregroundStyle(LexoraColors.accent)
                 .frame(width: 23)
+                .accessibilityHidden(true)
 
             Text(text)
                 .font(.lexoraBody)
@@ -419,6 +427,8 @@ private struct PremiumBenefitRow: View {
 }
 
 private struct PaywallBackgroundOrnaments: View {
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
     let isActive: Bool
 
     var body: some View {
@@ -439,15 +449,18 @@ private struct PaywallBackgroundOrnaments: View {
                 .frame(width: 210, height: 210)
                 .offset(x: 130, y: -220)
                 .opacity(isActive ? 1 : 0)
-                .animation(.easeOut(duration: 0.65), value: isActive)
+                .animation(reduceMotion ? nil : .easeOut(duration: 0.65), value: isActive)
+                .accessibilityHidden(true)
 
             Circle()
                 .fill(LexoraColors.cardBackground.opacity(0.38))
                 .frame(width: 150, height: 150)
                 .offset(x: -145, y: 230)
                 .opacity(isActive ? 1 : 0)
-                .animation(.easeOut(duration: 0.65).delay(0.08), value: isActive)
+                .animation(reduceMotion ? nil : .easeOut(duration: 0.65).delay(0.08), value: isActive)
+                .accessibilityHidden(true)
         }
+        .accessibilityHidden(true)
     }
 }
 
