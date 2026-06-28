@@ -41,12 +41,12 @@ final class PremiumManager: ObservableObject {
     init(
         defaults: UserDefaults = .standard,
         revenueCatService: RevenueCatService? = nil,
-        offerCodeRedemptionManager: StoreKitOfferCodeRedemptionManager = .shared
+        offerCodeRedemptionManager: StoreKitOfferCodeRedemptionManager? = nil
     ) {
         self.defaults = defaults
         self.sharedDefaults = UserDefaults(suiteName: LexoraPremiumRules.appGroupIdentifier)
         self.revenueCatService = revenueCatService ?? .shared
-        self.offerCodeRedemptionManager = offerCodeRedemptionManager
+        self.offerCodeRedemptionManager = offerCodeRedemptionManager ?? .shared
         self.isMockPremiumEnabled = defaults.bool(forKey: mockPremiumKey)
         self.revenueCatHasPremium = sharedDefaults?.bool(forKey: LexoraPremiumRules.sharedPremiumKey) ?? false
         updatePremiumState()

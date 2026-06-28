@@ -1016,6 +1016,3341 @@
           "correctIndex": 0
         }
       ]
+    },
+    {
+      "date": "2026-07-05",
+      "questions": [
+        {
+          "id": "2026-07-05-01",
+          "wordId": "duyen",
+          "word": "Duyên",
+          "language": "Vietnamese",
+          "question": "Which meaning best fits \"Duyên\"?",
+          "choices": [
+            "Grace, charm, or a destined connection",
+            "Care, hospitality, and respect for others",
+            "Joy or happiness",
+            "Putting care and soul into what you do"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-05-02",
+          "wordId": "thuong",
+          "word": "Thương",
+          "language": "Vietnamese",
+          "question": "What can \"Thương\" express?",
+          "choices": [
+            "Family or extended family group",
+            "Tender love, care, or compassion",
+            "Purpose or intention",
+            "A deep longing for a place or time"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-05-03",
+          "wordId": "tinh",
+          "word": "Tình",
+          "language": "Vietnamese",
+          "question": "What does \"Tình\" describe?",
+          "choices": [
+            "Affection, feeling, or emotional bond",
+            "Reciprocity or mutual exchange",
+            "Heart, courage, or inner feeling",
+            "The moon's path of light on water"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-05-04",
+          "wordId": "petrichor",
+          "word": "Petrichor",
+          "language": "English",
+          "question": "What does \"Petrichor\" most closely suggest?",
+          "choices": [
+            "Being in-between",
+            "The smell after rain falls on dry earth",
+            "Heart, patience, or endurance",
+            "The early feeling of falling in love"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-05-05",
+          "wordId": "apricity",
+          "word": "Apricity",
+          "language": "English",
+          "question": "Which meaning best fits \"Apricity\"?",
+          "choices": [
+            "A stone marker or human-made landmark",
+            "Warm companionship or familiarity",
+            "A tender longing for something absent",
+            "The warmth of winter sunlight"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-05-06",
+          "wordId": "resfeber",
+          "word": "Resfeber",
+          "language": "Swedish",
+          "question": "What can \"Resfeber\" express?",
+          "choices": [
+            "Warm hospitality and kindness",
+            "Restless excitement before a journey",
+            "Sea or wide water",
+            "A reason that makes life feel worth living"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-05-07",
+          "wordId": "fika",
+          "word": "Fika",
+          "language": "Swedish",
+          "question": "What does \"Fika\" describe?",
+          "choices": [
+            "Returning to learn from the past",
+            "Thought, imagination, or care",
+            "A coffee break with time to pause",
+            "Just the right amount"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-05-08",
+          "wordId": "friluftsliv",
+          "word": "Friluftsliv",
+          "language": "Norwegian / Swedish",
+          "question": "What does \"Friluftsliv\" most closely suggest?",
+          "choices": [
+            "Open-air life close to nature",
+            "Letting unread books gather nearby",
+            "Memory, thought, or remembering",
+            "Beauty in imperfection and impermanence"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-05-09",
+          "wordId": "kaamos",
+          "word": "Kaamos",
+          "language": "Finnish",
+          "question": "Which meaning best fits \"Kaamos\"?",
+          "choices": [
+            "Spending attentive time among trees",
+            "Star or bright celestial presence",
+            "Joy in another person's happiness",
+            "The dark polar winter period"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-05-10",
+          "wordId": "gigil",
+          "word": "Gigil",
+          "language": "Tagalog",
+          "question": "What can \"Gigil\" express?",
+          "choices": [
+            "Repair that honors visible cracks",
+            "Love, compassion, or care",
+            "An intense urge to squeeze something cute",
+            "Tenderly running fingers through someone's hair"
+          ],
+          "correctIndex": 2
+        }
+      ]
+    },
+    {
+      "date": "2026-07-06",
+      "questions": [
+        {
+          "id": "2026-07-06-01",
+          "wordId": "kapwa",
+          "word": "Kapwa",
+          "language": "Tagalog",
+          "question": "What can \"Kapwa\" express?",
+          "choices": [
+            "Fate, destiny, or what may unfold",
+            "Shared self or fellow personhood",
+            "A lingering trace left behind",
+            "A calm sense of inner peace"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-06-02",
+          "wordId": "nakama",
+          "word": "Nakama",
+          "language": "Japanese",
+          "question": "What does \"Nakama\" describe?",
+          "choices": [
+            "A farewell or final parting",
+            "Companion, comrade, or close group member",
+            "A lucky find or delightful discovery",
+            "Longing for someone or something absent"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-06-03",
+          "wordId": "shoganai",
+          "word": "Shoganai",
+          "language": "Japanese",
+          "question": "What does \"Shoganai\" most closely suggest?",
+          "choices": [
+            "Pleased, comfortable, or at ease",
+            "Warm comfort and easy belonging",
+            "A glow or shimmer seen on the sea at night",
+            "It cannot be helped"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-06-04",
+          "wordId": "xingfu",
+          "word": "Xingfu",
+          "language": "Chinese",
+          "question": "Which meaning best fits \"Xingfu\"?",
+          "choices": [
+            "Cool-hearted calm",
+            "Happiness or blessed well-being",
+            "Happiness or good fortune",
+            "Tranquility or settled calm"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-06-05",
+          "wordId": "qing",
+          "word": "Qing",
+          "language": "Chinese",
+          "question": "What can \"Qing\" express?",
+          "choices": [
+            "Generous-hearted kindness",
+            "To cozy up or enjoy comfort",
+            "A sense of blessing or beneficial abundance",
+            "Feeling, affection, or emotional bond"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-06-06",
+          "wordId": "sarang",
+          "word": "Sarang",
+          "language": "Korean",
+          "question": "What does \"Sarang\" describe?",
+          "choices": [
+            "Love",
+            "Peace, relief, or inner calm",
+            "A dreamer who lives among clouds",
+            "Light, radiance, or illumination"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-06-07",
+          "wordId": "asante",
+          "word": "Asante",
+          "language": "Swahili",
+          "question": "What does \"Asante\" most closely suggest?",
+          "choices": [
+            "Grace, delicacy, or refinement",
+            "Calm freedom from disturbance",
+            "A deep, searching longing",
+            "Thank you"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-06-08",
+          "wordId": "polepole",
+          "word": "Polepole",
+          "language": "Swahili",
+          "question": "Which meaning best fits \"Polepole\"?",
+          "choices": [
+            "Friendship or close companionship",
+            "Joyful spirit or lively good mood",
+            "Slowly, gently, little by little",
+            "The solitude of being in the forest"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-06-09",
+          "wordId": "rafiki",
+          "word": "Rafiki",
+          "language": "Swahili",
+          "question": "What can \"Rafiki\" express?",
+          "choices": [
+            "Friend or companion",
+            "The will to keep living",
+            "Welcoming care for guests",
+            "Fear that time or chances are running out"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-06-10",
+          "wordId": "ife",
+          "word": "Ifẹ",
+          "language": "Yoruba",
+          "question": "What does \"Ifẹ\" describe?",
+          "choices": [
+            "Heritage or inheritance",
+            "Fine rain from a clear sky",
+            "Love or affection",
+            "A gentle sadness at passing beauty"
+          ],
+          "correctIndex": 2
+        }
+      ]
+    },
+    {
+      "date": "2026-07-07",
+      "questions": [
+        {
+          "id": "2026-07-07-01",
+          "wordId": "obi",
+          "word": "Obi",
+          "language": "Igbo",
+          "question": "What does \"Obi\" describe?",
+          "choices": [
+            "Warm companionship or familiarity",
+            "Dawn or music of daybreak",
+            "Heart or central home space, depending on context",
+            "A shared look of unspoken possibility"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-07-02",
+          "wordId": "lafiya",
+          "word": "Lafiya",
+          "language": "Hausa",
+          "question": "What does \"Lafiya\" most closely suggest?",
+          "choices": [
+            "Sea or wide water",
+            "A longing for faraway places",
+            "Improvising a solution under pressure",
+            "Health, peace, or well-being"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-07-03",
+          "wordId": "tesfa",
+          "word": "Tesfa",
+          "language": "Amharic",
+          "question": "Which meaning best fits \"Tesfa\"?",
+          "choices": [
+            "Hope",
+            "Thought, imagination, or care",
+            "Sunlight filtering through trees",
+            "A deep, stirring artistic force"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-07-04",
+          "wordId": "manaakitanga",
+          "word": "Manaakitanga",
+          "language": "Maori",
+          "question": "What can \"Manaakitanga\" express?",
+          "choices": [
+            "Care, hospitality, and respect for others",
+            "Memory, thought, or remembering",
+            "Time spent talking after a meal",
+            "A place where one feels safely rooted"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-07-05",
+          "wordId": "whanau",
+          "word": "Whanau",
+          "language": "Maori",
+          "question": "What does \"Whanau\" describe?",
+          "choices": [
+            "Star or bright celestial presence",
+            "A sense of shared humanity",
+            "Family or extended family group",
+            "To use or wear something for the first time"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-07-06",
+          "wordId": "ayni",
+          "word": "Ayni",
+          "language": "Quechua",
+          "question": "What does \"Ayni\" most closely suggest?",
+          "choices": [
+            "Love, compassion, or care",
+            "Reciprocity or mutual exchange",
+            "Cozy, friendly, and pleasantly social",
+            "To wander without hurry"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-07-07",
+          "wordId": "nepantla",
+          "word": "Nepantla",
+          "language": "Nahuatl",
+          "question": "Which meaning best fits \"Nepantla\"?",
+          "choices": [
+            "Guardianship or careful stewardship",
+            "Being in-between",
+            "Putting care and soul into what you do",
+            "The joy of meeting again"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-07-08",
+          "wordId": "inuksuk",
+          "word": "Inuksuk",
+          "language": "Inuktitut",
+          "question": "What can \"Inuksuk\" express?",
+          "choices": [
+            "A stone marker or human-made landmark",
+            "Open conversation or shared storytelling",
+            "A deep longing for a place or time",
+            "To rest in the afternoon shade"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-07-09",
+          "wordId": "morabeza",
+          "word": "Morabeza",
+          "language": "Cape Verdean Creole",
+          "question": "What does \"Morabeza\" describe?",
+          "choices": [
+            "A greeting of life and welcome",
+            "The moon's path of light on water",
+            "The sweetness of doing nothing",
+            "Warm hospitality and kindness"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-07-10",
+          "wordId": "sankofa",
+          "word": "Sankofa",
+          "language": "Akan",
+          "question": "What does \"Sankofa\" most closely suggest?",
+          "choices": [
+            "A cherished personal place",
+            "Returning to learn from the past",
+            "The early feeling of falling in love",
+            "A cozy atmosphere of togetherness"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "date": "2026-07-08",
+      "questions": [
+        {
+          "id": "2026-07-08-01",
+          "wordId": "tsundoku",
+          "word": "Tsundoku",
+          "language": "Japanese",
+          "question": "What does \"Tsundoku\" most closely suggest?",
+          "choices": [
+            "To cozy up or enjoy comfort",
+            "Letting unread books gather nearby",
+            "Tenderly running fingers through someone's hair",
+            "A wistful longing"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-08-02",
+          "wordId": "shinrin-yoku",
+          "word": "Shinrin-yoku",
+          "language": "Japanese",
+          "question": "Which meaning best fits \"Shinrin-yoku\"?",
+          "choices": [
+            "A dreamer who lives among clouds",
+            "As if; the transporting feeling of a story",
+            "Spending attentive time among trees",
+            "A deep sense of familiar place"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-08-03",
+          "wordId": "kintsugi",
+          "word": "Kintsugi",
+          "language": "Japanese",
+          "question": "What can \"Kintsugi\" express?",
+          "choices": [
+            "Calm freedom from disturbance",
+            "Musical enchantment or emotional ecstasy",
+            "Repair that honors visible cracks",
+            "Fun, lively talk, or good company"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-08-04",
+          "wordId": "seijaku",
+          "word": "Seijaku",
+          "language": "Japanese",
+          "question": "What does \"Seijaku\" describe?",
+          "choices": [
+            "Joyful spirit or lively good mood",
+            "Stillness or quiet composure",
+            "A meaningful connection shaped by circumstance",
+            "A strong feeling of missing or longing"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-08-05",
+          "wordId": "inyeon",
+          "word": "Inyeon",
+          "language": "Korean",
+          "question": "What does \"Inyeon\" most closely suggest?",
+          "choices": [
+            "Welcoming care for guests",
+            "Quiet grit in the face of difficulty",
+            "Ease, calm, or a pleasant relaxed state",
+            "A meaningful connection between people"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-08-06",
+          "wordId": "jia-you",
+          "word": "Jia you",
+          "language": "Chinese",
+          "question": "Which meaning best fits \"Jia you\"?",
+          "choices": [
+            "Fine rain from a clear sky",
+            "Encouragement to keep going",
+            "Rising early to hear birdsong",
+            "Longing mixed with affection or ache"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-08-07",
+          "wordId": "anran",
+          "word": "Anran",
+          "language": "Chinese",
+          "question": "What can \"Anran\" express?",
+          "choices": [
+            "Peaceful, safe, or at ease",
+            "Peace, ease, or tranquility",
+            "A calm sense of inner peace",
+            "To fall out of love"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-08-08",
+          "wordId": "alpas",
+          "word": "Alpas",
+          "language": "Tagalog",
+          "question": "What does \"Alpas\" describe?",
+          "choices": [
+            "A warm hug or safe little place",
+            "Longing for someone or something absent",
+            "A deep ache of longing or melancholy",
+            "Letting go or becoming free"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-08-09",
+          "wordId": "tadhana",
+          "word": "Tadhana",
+          "language": "Tagalog",
+          "question": "What does \"Tadhana\" most closely suggest?",
+          "choices": [
+            "Fate, destiny, or what may unfold",
+            "Grace that appears effortless",
+            "A glow or shimmer seen on the sea at night",
+            "Kindness, affection, or warmth"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-08-10",
+          "wordId": "pahimakas",
+          "word": "Pahimakas",
+          "language": "Tagalog",
+          "question": "Which meaning best fits \"Pahimakas\"?",
+          "choices": [
+            "A farewell or final parting",
+            "Drowsiness after a satisfying meal",
+            "Tranquility or settled calm",
+            "A clever makeshift solution"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-07-09",
+      "questions": [
+        {
+          "id": "2026-07-09-01",
+          "wordId": "senang",
+          "word": "Senang",
+          "language": "Malay / Indonesian",
+          "question": "Which meaning best fits \"Senang\"?",
+          "choices": [
+            "A sense of shared humanity",
+            "Pleased, comfortable, or at ease",
+            "A gentle sadness at passing beauty",
+            "A flutter of romantic excitement"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-09-02",
+          "wordId": "jai-yen",
+          "word": "Jai yen",
+          "language": "Thai",
+          "question": "What can \"Jai yen\" express?",
+          "choices": [
+            "Cozy, friendly, and pleasantly social",
+            "A warm feeling of nostalgia",
+            "Cool-hearted calm",
+            "Community helping one another"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-09-03",
+          "wordId": "nam-jai",
+          "word": "Nam jai",
+          "language": "Thai",
+          "question": "What does \"Nam jai\" describe?",
+          "choices": [
+            "Generous-hearted kindness",
+            "Putting care and soul into what you do",
+            "A subtle, mysterious sense of beauty",
+            "Enjoyment or fun in what one does"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-09-04",
+          "wordId": "sukoon",
+          "word": "Sukoon",
+          "language": "Hindi / Urdu",
+          "question": "What does \"Sukoon\" most closely suggest?",
+          "choices": [
+            "A deep longing for a place or time",
+            "A complex sorrow shaped by memory and endurance",
+            "Comfortable, easy, or well",
+            "Peace, relief, or inner calm"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-09-05",
+          "wordId": "nazakat",
+          "word": "Nazakat",
+          "language": "Urdu",
+          "question": "Which meaning best fits \"Nazakat\"?",
+          "choices": [
+            "The moon's path of light on water",
+            "Deep attachment built over time",
+            "It's okay; no need to worry",
+            "Grace, delicacy, or refinement"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-09-06",
+          "wordId": "yaari",
+          "word": "Yaari",
+          "language": "Hindi / Punjabi",
+          "question": "What can \"Yaari\" express?",
+          "choices": [
+            "Friendship or close companionship",
+            "The early feeling of falling in love",
+            "The sense of reading a room",
+            "Grace, charm, or a destined connection"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-09-07",
+          "wordId": "jijivisha",
+          "word": "Jijivisha",
+          "language": "Hindi / Sanskrit",
+          "question": "What does \"Jijivisha\" describe?",
+          "choices": [
+            "A tender longing for something absent",
+            "The will to keep living",
+            "A shared look of unspoken possibility",
+            "Tender love, care, or compassion"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-09-08",
+          "wordId": "virasat",
+          "word": "Virasat",
+          "language": "Hindi / Urdu",
+          "question": "What does \"Virasat\" most closely suggest?",
+          "choices": [
+            "A reason that makes life feel worth living",
+            "Improvising a solution under pressure",
+            "Affection, feeling, or emotional bond",
+            "Heritage or inheritance"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-09-09",
+          "wordId": "amani",
+          "word": "Amani",
+          "language": "Swahili",
+          "question": "Which meaning best fits \"Amani\"?",
+          "choices": [
+            "Just the right amount",
+            "A deep, stirring artistic force",
+            "Peace or peacefulness",
+            "The smell after rain falls on dry earth"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-09-10",
+          "wordId": "furaha",
+          "word": "Furaha",
+          "language": "Swahili",
+          "question": "What can \"Furaha\" express?",
+          "choices": [
+            "Beauty in imperfection and impermanence",
+            "Joy or happiness",
+            "A place where one feels safely rooted",
+            "The warmth of winter sunlight"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "date": "2026-07-10",
+      "questions": [
+        {
+          "id": "2026-07-10-01",
+          "wordId": "nia",
+          "word": "Nia",
+          "language": "Swahili",
+          "question": "What can \"Nia\" express?",
+          "choices": [
+            "Quiet grit in the face of difficulty",
+            "A cozy atmosphere of togetherness",
+            "Shared self or fellow personhood",
+            "Purpose or intention"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-10-02",
+          "wordId": "moyo",
+          "word": "Moyo",
+          "language": "Swahili",
+          "question": "What does \"Moyo\" describe?",
+          "choices": [
+            "Rising early to hear birdsong",
+            "To clear the head in the wind",
+            "Heart, courage, or inner feeling",
+            "Companion, comrade, or close group member"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-10-03",
+          "wordId": "akoma",
+          "word": "Akoma",
+          "language": "Akan",
+          "question": "What does \"Akoma\" most closely suggest?",
+          "choices": [
+            "Heart, patience, or endurance",
+            "A calm sense of inner peace",
+            "Joy before something happens",
+            "It cannot be helped"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-10-04",
+          "wordId": "uns",
+          "word": "Uns",
+          "language": "Arabic",
+          "question": "Which meaning best fits \"Uns\"?",
+          "choices": [
+            "Longing for someone or something absent",
+            "Warm companionship or familiarity",
+            "Cozy, pleasant, and warmly comfortable",
+            "Happiness or blessed well-being"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-10-05",
+          "wordId": "darya",
+          "word": "Darya",
+          "language": "Persian",
+          "question": "What can \"Darya\" express?",
+          "choices": [
+            "A glow or shimmer seen on the sea at night",
+            "Cozy in a warm, friendly way",
+            "Feeling, affection, or emotional bond",
+            "Sea or wide water"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-10-06",
+          "wordId": "khayal",
+          "word": "Khayal",
+          "language": "Hindi / Urdu",
+          "question": "What does \"Khayal\" describe?",
+          "choices": [
+            "Tranquility or settled calm",
+            "Thought, imagination, or care",
+            "Weather that looks better from indoors",
+            "Love"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-10-07",
+          "wordId": "yuyay",
+          "word": "Yuyay",
+          "language": "Quechua",
+          "question": "What does \"Yuyay\" most closely suggest?",
+          "choices": [
+            "A sense of blessing or beneficial abundance",
+            "A wistful longing",
+            "Memory, thought, or remembering",
+            "Thank you"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-10-08",
+          "wordId": "chaska",
+          "word": "Chaska",
+          "language": "Quechua",
+          "question": "Which meaning best fits \"Chaska\"?",
+          "choices": [
+            "Star or bright celestial presence",
+            "Light, radiance, or illumination",
+            "A deep sense of familiar place",
+            "Slowly, gently, little by little"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-10-09",
+          "wordId": "aroha",
+          "word": "Aroha",
+          "language": "Maori",
+          "question": "What can \"Aroha\" express?",
+          "choices": [
+            "A deep, searching longing",
+            "Fun, lively talk, or good company",
+            "Friend or companion",
+            "Love, compassion, or care"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-10-10",
+          "wordId": "kaitiakitanga",
+          "word": "Kaitiakitanga",
+          "language": "Maori",
+          "question": "What does \"Kaitiakitanga\" describe?",
+          "choices": [
+            "The solitude of being in the forest",
+            "A strong feeling of missing or longing",
+            "Guardianship or careful stewardship",
+            "Love or affection"
+          ],
+          "correctIndex": 2
+        }
+      ]
+    },
+    {
+      "date": "2026-07-11",
+      "questions": [
+        {
+          "id": "2026-07-11-01",
+          "wordId": "talanoa",
+          "word": "Talanoa",
+          "language": "Tongan / Fijian / Samoan",
+          "question": "What does \"Talanoa\" describe?",
+          "choices": [
+            "Deep attachment built over time",
+            "A clever makeshift solution",
+            "Reciprocity or mutual exchange",
+            "Open conversation or shared storytelling"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-11-02",
+          "wordId": "bula",
+          "word": "Bula",
+          "language": "Fijian",
+          "question": "What does \"Bula\" most closely suggest?",
+          "choices": [
+            "The sense of reading a room",
+            "Leisurely, spirited conversation",
+            "A greeting of life and welcome",
+            "Being in-between"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-11-03",
+          "wordId": "smultronstalle",
+          "word": "Smultronställe",
+          "language": "Swedish",
+          "question": "Which meaning best fits \"Smultronställe\"?",
+          "choices": [
+            "A cherished personal place",
+            "A shared look of unspoken possibility",
+            "Hurt pride within a close relationship",
+            "A stone marker or human-made landmark"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-11-04",
+          "wordId": "madrugada",
+          "word": "Madrugada",
+          "language": "Spanish / Portuguese",
+          "question": "What can \"Madrugada\" express?",
+          "choices": [
+            "Improvising a solution under pressure",
+            "The deep hours before dawn",
+            "Affection, dear one, or tenderness",
+            "Warm hospitality and kindness"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-11-05",
+          "wordId": "sillage",
+          "word": "Sillage",
+          "language": "French",
+          "question": "What does \"Sillage\" describe?",
+          "choices": [
+            "A deep, stirring artistic force",
+            "A lingering trace left behind",
+            "To miss or long for someone",
+            "Returning to learn from the past"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-11-06",
+          "wordId": "trouvaille",
+          "word": "Trouvaille",
+          "language": "French",
+          "question": "What does \"Trouvaille\" most closely suggest?",
+          "choices": [
+            "A lucky find or delightful discovery",
+            "A place where one feels safely rooted",
+            "Working together for a shared need",
+            "Letting unread books gather nearby"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-11-07",
+          "wordId": "gemutlichkeit",
+          "word": "Gemütlichkeit",
+          "language": "German",
+          "question": "Which meaning best fits \"Gemütlichkeit\"?",
+          "choices": [
+            "To use or wear something for the first time",
+            "A flutter of romantic excitement",
+            "Spending attentive time among trees",
+            "Warm comfort and easy belonging"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-11-08",
+          "wordId": "lykke",
+          "word": "Lykke",
+          "language": "Danish / Norwegian",
+          "question": "What can \"Lykke\" express?",
+          "choices": [
+            "To wander without hurry",
+            "Happiness or good fortune",
+            "Community helping one another",
+            "Repair that honors visible cracks"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-11-09",
+          "wordId": "mysa",
+          "word": "Mysa",
+          "language": "Swedish",
+          "question": "What does \"Mysa\" describe?",
+          "choices": [
+            "The joy of meeting again",
+            "Enjoyment or fun in what one does",
+            "To cozy up or enjoy comfort",
+            "Stillness or quiet composure"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-11-10",
+          "wordId": "nefelibata",
+          "word": "Nefelibata",
+          "language": "Portuguese",
+          "question": "What does \"Nefelibata\" most closely suggest?",
+          "choices": [
+            "A dreamer who lives among clouds",
+            "To rest in the afternoon shade",
+            "Comfortable, easy, or well",
+            "A meaningful connection between people"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-07-12",
+      "questions": [
+        {
+          "id": "2026-07-12-01",
+          "wordId": "ataraxia",
+          "word": "Ataraxia",
+          "language": "Greek",
+          "question": "What does \"Ataraxia\" most closely suggest?",
+          "choices": [
+            "Cozy in a warm, friendly way",
+            "The warmth of winter sunlight",
+            "Calm freedom from disturbance",
+            "Pleased, comfortable, or at ease"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-12-02",
+          "wordId": "kefi",
+          "word": "Kefi",
+          "language": "Greek",
+          "question": "Which meaning best fits \"Kefi\"?",
+          "choices": [
+            "Weather that looks better from indoors",
+            "Joyful spirit or lively good mood",
+            "Restless excitement before a journey",
+            "Cool-hearted calm"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-12-03",
+          "wordId": "philoxenia",
+          "word": "Philoxenia",
+          "language": "Greek",
+          "question": "What can \"Philoxenia\" express?",
+          "choices": [
+            "A wistful longing",
+            "A coffee break with time to pause",
+            "Generous-hearted kindness",
+            "Welcoming care for guests"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-12-04",
+          "wordId": "serein",
+          "word": "Serein",
+          "language": "French",
+          "question": "What does \"Serein\" describe?",
+          "choices": [
+            "Fine rain from a clear sky",
+            "A deep sense of familiar place",
+            "Open-air life close to nature",
+            "Peace, relief, or inner calm"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-12-05",
+          "wordId": "suaimhneas",
+          "word": "Suaimhneas",
+          "language": "Irish",
+          "question": "What does \"Suaimhneas\" most closely suggest?",
+          "choices": [
+            "Fun, lively talk, or good company",
+            "The dark polar winter period",
+            "Peace, ease, or tranquility",
+            "Grace, delicacy, or refinement"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-12-06",
+          "wordId": "cwtch",
+          "word": "Cwtch",
+          "language": "Welsh",
+          "question": "Which meaning best fits \"Cwtch\"?",
+          "choices": [
+            "A strong feeling of missing or longing",
+            "An intense urge to squeeze something cute",
+            "A warm hug or safe little place",
+            "Friendship or close companionship"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-12-07",
+          "wordId": "sprezzatura",
+          "word": "Sprezzatura",
+          "language": "Italian",
+          "question": "What can \"Sprezzatura\" express?",
+          "choices": [
+            "Ease, calm, or a pleasant relaxed state",
+            "Shared self or fellow personhood",
+            "The will to keep living",
+            "Grace that appears effortless"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-12-08",
+          "wordId": "abbiocco",
+          "word": "Abbiocco",
+          "language": "Italian",
+          "question": "What does \"Abbiocco\" describe?",
+          "choices": [
+            "Drowsiness after a satisfying meal",
+            "Longing mixed with affection or ache",
+            "Companion, comrade, or close group member",
+            "Heritage or inheritance"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-12-09",
+          "wordId": "passeggiata",
+          "word": "Passeggiata",
+          "language": "Italian",
+          "question": "What does \"Passeggiata\" most closely suggest?",
+          "choices": [
+            "To fall out of love",
+            "It cannot be helped",
+            "Peace or peacefulness",
+            "A leisurely walk or stroll"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-12-10",
+          "wordId": "alborada",
+          "word": "Alborada",
+          "language": "Spanish",
+          "question": "Which meaning best fits \"Alborada\"?",
+          "choices": [
+            "A deep ache of longing or melancholy",
+            "Dawn or music of daybreak",
+            "Happiness or blessed well-being",
+            "Joy or happiness"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "date": "2026-07-13",
+      "questions": [
+        {
+          "id": "2026-07-13-01",
+          "wordId": "fernweh",
+          "word": "Fernweh",
+          "language": "German",
+          "question": "Which meaning best fits \"Fernweh\"?",
+          "choices": [
+            "To miss or long for someone",
+            "Love or affection",
+            "A longing for faraway places",
+            "Thought, imagination, or care"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-13-02",
+          "wordId": "komorebi",
+          "word": "Komorebi",
+          "language": "Japanese",
+          "question": "What can \"Komorebi\" express?",
+          "choices": [
+            "Working together for a shared need",
+            "Heart or central home space, depending on context",
+            "Sunlight filtering through trees",
+            "Memory, thought, or remembering"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-13-03",
+          "wordId": "sobremesa",
+          "word": "Sobremesa",
+          "language": "Spanish",
+          "question": "What does \"Sobremesa\" describe?",
+          "choices": [
+            "A flutter of romantic excitement",
+            "Health, peace, or well-being",
+            "Star or bright celestial presence",
+            "Time spent talking after a meal"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-13-04",
+          "wordId": "ubuntu",
+          "word": "Ubuntu",
+          "language": "Nguni languages",
+          "question": "What does \"Ubuntu\" most closely suggest?",
+          "choices": [
+            "Community helping one another",
+            "Hope",
+            "A sense of shared humanity",
+            "Love, compassion, or care"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-13-05",
+          "wordId": "gezellig",
+          "word": "Gezellig",
+          "language": "Dutch",
+          "question": "Which meaning best fits \"Gezellig\"?",
+          "choices": [
+            "Enjoyment or fun in what one does",
+            "Care, hospitality, and respect for others",
+            "Guardianship or careful stewardship",
+            "Cozy, friendly, and pleasantly social"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-13-06",
+          "wordId": "meraki",
+          "word": "Meraki",
+          "language": "Greek",
+          "question": "What can \"Meraki\" express?",
+          "choices": [
+            "Comfortable, easy, or well",
+            "Putting care and soul into what you do",
+            "Family or extended family group",
+            "Open conversation or shared storytelling"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-13-07",
+          "wordId": "hiraeth",
+          "word": "Hiraeth",
+          "language": "Welsh",
+          "question": "What does \"Hiraeth\" describe?",
+          "choices": [
+            "It's okay; no need to worry",
+            "A deep longing for a place or time",
+            "Reciprocity or mutual exchange",
+            "A greeting of life and welcome"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-13-08",
+          "wordId": "mangata",
+          "word": "Mångata",
+          "language": "Swedish",
+          "question": "What does \"Mångata\" most closely suggest?",
+          "choices": [
+            "Grace, charm, or a destined connection",
+            "Being in-between",
+            "A cherished personal place",
+            "The moon's path of light on water"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-13-09",
+          "wordId": "forelsket",
+          "word": "Forelsket",
+          "language": "Norwegian",
+          "question": "Which meaning best fits \"Forelsket\"?",
+          "choices": [
+            "The early feeling of falling in love",
+            "Tender love, care, or compassion",
+            "A stone marker or human-made landmark",
+            "The deep hours before dawn"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-13-10",
+          "wordId": "saudade",
+          "word": "Saudade",
+          "language": "Portuguese",
+          "question": "What can \"Saudade\" express?",
+          "choices": [
+            "A tender longing for something absent",
+            "Affection, feeling, or emotional bond",
+            "Warm hospitality and kindness",
+            "A lingering trace left behind"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-07-14",
+      "questions": [
+        {
+          "id": "2026-07-14-01",
+          "wordId": "ikigai",
+          "word": "Ikigai",
+          "language": "Japanese",
+          "question": "What can \"Ikigai\" express?",
+          "choices": [
+            "The dark polar winter period",
+            "A reason that makes life feel worth living",
+            "A meaningful connection between people",
+            "Calm freedom from disturbance"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-14-02",
+          "wordId": "lagom",
+          "word": "Lagom",
+          "language": "Swedish",
+          "question": "What does \"Lagom\" describe?",
+          "choices": [
+            "An intense urge to squeeze something cute",
+            "Just the right amount",
+            "Encouragement to keep going",
+            "Joyful spirit or lively good mood"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-14-03",
+          "wordId": "wabi-sabi",
+          "word": "Wabi-sabi",
+          "language": "Japanese",
+          "question": "What does \"Wabi-sabi\" most closely suggest?",
+          "choices": [
+            "Shared self or fellow personhood",
+            "Peaceful, safe, or at ease",
+            "Welcoming care for guests",
+            "Beauty in imperfection and impermanence"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-14-04",
+          "wordId": "mudita",
+          "word": "Mudita",
+          "language": "Pali / Sanskrit",
+          "question": "Which meaning best fits \"Mudita\"?",
+          "choices": [
+            "Joy in another person's happiness",
+            "Companion, comrade, or close group member",
+            "Letting go or becoming free",
+            "Fine rain from a clear sky"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-14-05",
+          "wordId": "cafune",
+          "word": "Cafune",
+          "language": "Brazilian Portuguese",
+          "question": "What can \"Cafune\" express?",
+          "choices": [
+            "It cannot be helped",
+            "Fate, destiny, or what may unfold",
+            "Tenderly running fingers through someone's hair",
+            "Peace, ease, or tranquility"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-14-06",
+          "wordId": "goya",
+          "word": "Goya",
+          "language": "Urdu",
+          "question": "What does \"Goya\" describe?",
+          "choices": [
+            "Happiness or blessed well-being",
+            "A farewell or final parting",
+            "A warm hug or safe little place",
+            "As if; the transporting feeling of a story"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-14-07",
+          "wordId": "tarab",
+          "word": "Tarab",
+          "language": "Arabic",
+          "question": "What does \"Tarab\" most closely suggest?",
+          "choices": [
+            "Feeling, affection, or emotional bond",
+            "Pleased, comfortable, or at ease",
+            "Grace that appears effortless",
+            "Musical enchantment or emotional ecstasy"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-14-08",
+          "wordId": "yuanfen",
+          "word": "Yuanfen",
+          "language": "Chinese",
+          "question": "Which meaning best fits \"Yuanfen\"?",
+          "choices": [
+            "Love",
+            "A meaningful connection shaped by circumstance",
+            "Cool-hearted calm",
+            "Drowsiness after a satisfying meal"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-14-09",
+          "wordId": "sisu",
+          "word": "Sisu",
+          "language": "Finnish",
+          "question": "What can \"Sisu\" express?",
+          "choices": [
+            "Quiet grit in the face of difficulty",
+            "Thank you",
+            "Generous-hearted kindness",
+            "A leisurely walk or stroll"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-14-10",
+          "wordId": "gokotta",
+          "word": "Gökotta",
+          "language": "Swedish",
+          "question": "What does \"Gökotta\" describe?",
+          "choices": [
+            "Slowly, gently, little by little",
+            "Peace, relief, or inner calm",
+            "Rising early to hear birdsong",
+            "Dawn or music of daybreak"
+          ],
+          "correctIndex": 2
+        }
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "questions": [
+        {
+          "id": "2026-07-15-01",
+          "wordId": "huzur",
+          "word": "Huzur",
+          "language": "Turkish",
+          "question": "What does \"Huzur\" describe?",
+          "choices": [
+            "Care, hospitality, and respect for others",
+            "A calm sense of inner peace",
+            "Joy or happiness",
+            "Putting care and soul into what you do"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-15-02",
+          "wordId": "hasret",
+          "word": "Hasret",
+          "language": "Turkish",
+          "question": "What does \"Hasret\" most closely suggest?",
+          "choices": [
+            "Family or extended family group",
+            "Purpose or intention",
+            "A deep longing for a place or time",
+            "Longing for someone or something absent"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-15-03",
+          "wordId": "yakamoz",
+          "word": "Yakamoz",
+          "language": "Turkish",
+          "question": "Which meaning best fits \"Yakamoz\"?",
+          "choices": [
+            "Reciprocity or mutual exchange",
+            "Heart, courage, or inner feeling",
+            "A glow or shimmer seen on the sea at night",
+            "The moon's path of light on water"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-15-04",
+          "wordId": "sakinah",
+          "word": "Sakinah",
+          "language": "Arabic",
+          "question": "What can \"Sakinah\" express?",
+          "choices": [
+            "Being in-between",
+            "Heart, patience, or endurance",
+            "Tranquility or settled calm",
+            "The early feeling of falling in love"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-15-05",
+          "wordId": "barakah",
+          "word": "Barakah",
+          "language": "Arabic",
+          "question": "What does \"Barakah\" describe?",
+          "choices": [
+            "A sense of blessing or beneficial abundance",
+            "A stone marker or human-made landmark",
+            "Warm companionship or familiarity",
+            "A tender longing for something absent"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-15-06",
+          "wordId": "nour",
+          "word": "Nour",
+          "language": "Arabic",
+          "question": "What does \"Nour\" most closely suggest?",
+          "choices": [
+            "Warm hospitality and kindness",
+            "Light, radiance, or illumination",
+            "Sea or wide water",
+            "A reason that makes life feel worth living"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-15-07",
+          "wordId": "sehnsucht",
+          "word": "Sehnsucht",
+          "language": "German",
+          "question": "Which meaning best fits \"Sehnsucht\"?",
+          "choices": [
+            "A deep, searching longing",
+            "Returning to learn from the past",
+            "Thought, imagination, or care",
+            "Just the right amount"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-15-08",
+          "wordId": "waldeinsamkeit",
+          "word": "Waldeinsamkeit",
+          "language": "German",
+          "question": "What can \"Waldeinsamkeit\" express?",
+          "choices": [
+            "The solitude of being in the forest",
+            "Letting unread books gather nearby",
+            "Memory, thought, or remembering",
+            "Beauty in imperfection and impermanence"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-15-09",
+          "wordId": "torschlusspanik",
+          "word": "Torschlusspanik",
+          "language": "German",
+          "question": "What does \"Torschlusspanik\" describe?",
+          "choices": [
+            "Spending attentive time among trees",
+            "Star or bright celestial presence",
+            "Joy in another person's happiness",
+            "Fear that time or chances are running out"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-15-10",
+          "wordId": "mono-no-aware",
+          "word": "Mono no aware",
+          "language": "Japanese",
+          "question": "What does \"Mono no aware\" most closely suggest?",
+          "choices": [
+            "Repair that honors visible cracks",
+            "A gentle sadness at passing beauty",
+            "Love, compassion, or care",
+            "Tenderly running fingers through someone's hair"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "date": "2026-07-16",
+      "questions": [
+        {
+          "id": "2026-07-16-01",
+          "wordId": "natsukashii",
+          "word": "Natsukashii",
+          "language": "Japanese",
+          "question": "What does \"Natsukashii\" most closely suggest?",
+          "choices": [
+            "A warm feeling of nostalgia",
+            "Fate, destiny, or what may unfold",
+            "A lingering trace left behind",
+            "A calm sense of inner peace"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-16-02",
+          "wordId": "yugen",
+          "word": "Yugen",
+          "language": "Japanese",
+          "question": "Which meaning best fits \"Yugen\"?",
+          "choices": [
+            "A farewell or final parting",
+            "A lucky find or delightful discovery",
+            "Longing for someone or something absent",
+            "A subtle, mysterious sense of beauty"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-16-03",
+          "wordId": "han",
+          "word": "Han",
+          "language": "Korean",
+          "question": "What can \"Han\" express?",
+          "choices": [
+            "Pleased, comfortable, or at ease",
+            "A complex sorrow shaped by memory and endurance",
+            "Warm comfort and easy belonging",
+            "A glow or shimmer seen on the sea at night"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-16-04",
+          "wordId": "jeong",
+          "word": "Jeong",
+          "language": "Korean",
+          "question": "What does \"Jeong\" describe?",
+          "choices": [
+            "Cool-hearted calm",
+            "Deep attachment built over time",
+            "Happiness or good fortune",
+            "Tranquility or settled calm"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-16-05",
+          "wordId": "nun-chi",
+          "word": "Nun-chi",
+          "language": "Korean",
+          "question": "What does \"Nun-chi\" most closely suggest?",
+          "choices": [
+            "Generous-hearted kindness",
+            "To cozy up or enjoy comfort",
+            "A sense of blessing or beneficial abundance",
+            "The sense of reading a room"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-16-06",
+          "wordId": "mamihlapinatapai",
+          "word": "Mamihlapinatapai",
+          "language": "Yaghan",
+          "question": "Which meaning best fits \"Mamihlapinatapai\"?",
+          "choices": [
+            "Peace, relief, or inner calm",
+            "A dreamer who lives among clouds",
+            "A shared look of unspoken possibility",
+            "Light, radiance, or illumination"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-16-07",
+          "wordId": "desenrascanco",
+          "word": "Desenrascanço",
+          "language": "Portuguese",
+          "question": "What can \"Desenrascanço\" express?",
+          "choices": [
+            "Grace, delicacy, or refinement",
+            "Calm freedom from disturbance",
+            "A deep, searching longing",
+            "Improvising a solution under pressure"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-16-08",
+          "wordId": "duende",
+          "word": "Duende",
+          "language": "Spanish",
+          "question": "What does \"Duende\" describe?",
+          "choices": [
+            "A deep, stirring artistic force",
+            "Friendship or close companionship",
+            "Joyful spirit or lively good mood",
+            "The solitude of being in the forest"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-16-09",
+          "wordId": "querencia",
+          "word": "Querencia",
+          "language": "Spanish",
+          "question": "What does \"Querencia\" most closely suggest?",
+          "choices": [
+            "The will to keep living",
+            "Welcoming care for guests",
+            "A place where one feels safely rooted",
+            "Fear that time or chances are running out"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-16-10",
+          "wordId": "estrenar",
+          "word": "Estrenar",
+          "language": "Spanish",
+          "question": "Which meaning best fits \"Estrenar\"?",
+          "choices": [
+            "Heritage or inheritance",
+            "To use or wear something for the first time",
+            "Fine rain from a clear sky",
+            "A gentle sadness at passing beauty"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "date": "2026-07-17",
+      "questions": [
+        {
+          "id": "2026-07-17-01",
+          "wordId": "flaner",
+          "word": "Flâner",
+          "language": "French",
+          "question": "Which meaning best fits \"Flâner\"?",
+          "choices": [
+            "Warm companionship or familiarity",
+            "Dawn or music of daybreak",
+            "A shared look of unspoken possibility",
+            "To wander without hurry"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-17-02",
+          "wordId": "retrouvailles",
+          "word": "Retrouvailles",
+          "language": "French",
+          "question": "What can \"Retrouvailles\" express?",
+          "choices": [
+            "The joy of meeting again",
+            "Sea or wide water",
+            "A longing for faraway places",
+            "Improvising a solution under pressure"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-17-03",
+          "wordId": "meriggiare",
+          "word": "Meriggiare",
+          "language": "Italian",
+          "question": "What does \"Meriggiare\" describe?",
+          "choices": [
+            "Thought, imagination, or care",
+            "Sunlight filtering through trees",
+            "To rest in the afternoon shade",
+            "A deep, stirring artistic force"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-17-04",
+          "wordId": "dolce-far-niente",
+          "word": "Dolce far niente",
+          "language": "Italian",
+          "question": "What does \"Dolce far niente\" most closely suggest?",
+          "choices": [
+            "Memory, thought, or remembering",
+            "Time spent talking after a meal",
+            "A place where one feels safely rooted",
+            "The sweetness of doing nothing"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-17-05",
+          "wordId": "gezelligheid",
+          "word": "Gezelligheid",
+          "language": "Dutch",
+          "question": "Which meaning best fits \"Gezelligheid\"?",
+          "choices": [
+            "Star or bright celestial presence",
+            "A cozy atmosphere of togetherness",
+            "A sense of shared humanity",
+            "To use or wear something for the first time"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-17-06",
+          "wordId": "uitwaaien",
+          "word": "Uitwaaien",
+          "language": "Dutch",
+          "question": "What can \"Uitwaaien\" express?",
+          "choices": [
+            "Love, compassion, or care",
+            "To clear the head in the wind",
+            "Cozy, friendly, and pleasantly social",
+            "To wander without hurry"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-17-07",
+          "wordId": "voorpret",
+          "word": "Voorpret",
+          "language": "Dutch",
+          "question": "What does \"Voorpret\" describe?",
+          "choices": [
+            "Joy before something happens",
+            "Guardianship or careful stewardship",
+            "Putting care and soul into what you do",
+            "The joy of meeting again"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-17-08",
+          "wordId": "hyggelig",
+          "word": "Hyggelig",
+          "language": "Danish / Norwegian",
+          "question": "What does \"Hyggelig\" most closely suggest?",
+          "choices": [
+            "Open conversation or shared storytelling",
+            "A deep longing for a place or time",
+            "Cozy, pleasant, and warmly comfortable",
+            "To rest in the afternoon shade"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-17-09",
+          "wordId": "koselig",
+          "word": "Koselig",
+          "language": "Norwegian",
+          "question": "Which meaning best fits \"Koselig\"?",
+          "choices": [
+            "A greeting of life and welcome",
+            "The moon's path of light on water",
+            "The sweetness of doing nothing",
+            "Cozy in a warm, friendly way"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-17-10",
+          "wordId": "gluggavedur",
+          "word": "Gluggaveður",
+          "language": "Icelandic",
+          "question": "What can \"Gluggaveður\" express?",
+          "choices": [
+            "A cherished personal place",
+            "The early feeling of falling in love",
+            "Weather that looks better from indoors",
+            "A cozy atmosphere of togetherness"
+          ],
+          "correctIndex": 2
+        }
+      ]
+    },
+    {
+      "date": "2026-07-18",
+      "questions": [
+        {
+          "id": "2026-07-18-01",
+          "wordId": "kaiho",
+          "word": "Kaiho",
+          "language": "Finnish",
+          "question": "What can \"Kaiho\" express?",
+          "choices": [
+            "To cozy up or enjoy comfort",
+            "A wistful longing",
+            "Tenderly running fingers through someone's hair",
+            "Affection, feeling, or emotional bond"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-18-02",
+          "wordId": "cynefin",
+          "word": "Cynefin",
+          "language": "Welsh",
+          "question": "What does \"Cynefin\" describe?",
+          "choices": [
+            "A dreamer who lives among clouds",
+            "As if; the transporting feeling of a story",
+            "A deep sense of familiar place",
+            "The smell after rain falls on dry earth"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-18-03",
+          "wordId": "craic",
+          "word": "Craic",
+          "language": "Irish",
+          "question": "What does \"Craic\" most closely suggest?",
+          "choices": [
+            "Calm freedom from disturbance",
+            "Fun, lively talk, or good company",
+            "Musical enchantment or emotional ecstasy",
+            "The warmth of winter sunlight"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-18-04",
+          "wordId": "tesknota",
+          "word": "Tęsknota",
+          "language": "Polish",
+          "question": "Which meaning best fits \"Tęsknota\"?",
+          "choices": [
+            "Joyful spirit or lively good mood",
+            "A meaningful connection shaped by circumstance",
+            "Restless excitement before a journey",
+            "A strong feeling of missing or longing"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-18-05",
+          "wordId": "pohoda",
+          "word": "Pohoda",
+          "language": "Czech / Slovak",
+          "question": "What can \"Pohoda\" express?",
+          "choices": [
+            "Welcoming care for guests",
+            "Quiet grit in the face of difficulty",
+            "Ease, calm, or a pleasant relaxed state",
+            "A coffee break with time to pause"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-18-06",
+          "wordId": "dor",
+          "word": "Dor",
+          "language": "Romanian",
+          "question": "What does \"Dor\" describe?",
+          "choices": [
+            "Fine rain from a clear sky",
+            "Rising early to hear birdsong",
+            "Open-air life close to nature",
+            "Longing mixed with affection or ache"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-18-07",
+          "wordId": "razliubit",
+          "word": "Razliubit",
+          "language": "Russian",
+          "question": "What does \"Razliubit\" most closely suggest?",
+          "choices": [
+            "To fall out of love",
+            "Peace, ease, or tranquility",
+            "A calm sense of inner peace",
+            "The dark polar winter period"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-18-08",
+          "wordId": "toska",
+          "word": "Toska",
+          "language": "Russian",
+          "question": "Which meaning best fits \"Toska\"?",
+          "choices": [
+            "A deep ache of longing or melancholy",
+            "A warm hug or safe little place",
+            "Longing for someone or something absent",
+            "An intense urge to squeeze something cute"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-18-09",
+          "wordId": "mehr",
+          "word": "Mehr",
+          "language": "Persian",
+          "question": "What can \"Mehr\" express?",
+          "choices": [
+            "Grace that appears effortless",
+            "A glow or shimmer seen on the sea at night",
+            "Shared self or fellow personhood",
+            "Kindness, affection, or warmth"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-18-10",
+          "wordId": "jugaad",
+          "word": "Jugaad",
+          "language": "Hindi / Punjabi",
+          "question": "What does \"Jugaad\" describe?",
+          "choices": [
+            "Drowsiness after a satisfying meal",
+            "A clever makeshift solution",
+            "Tranquility or settled calm",
+            "Companion, comrade, or close group member"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "date": "2026-07-19",
+      "questions": [
+        {
+          "id": "2026-07-19-01",
+          "wordId": "adda",
+          "word": "Adda",
+          "language": "Bengali",
+          "question": "What does \"Adda\" describe?",
+          "choices": [
+            "A sense of shared humanity",
+            "A gentle sadness at passing beauty",
+            "A flutter of romantic excitement",
+            "Leisurely, spirited conversation"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-19-02",
+          "wordId": "abhiman",
+          "word": "Abhiman",
+          "language": "Bengali / Hindi",
+          "question": "What does \"Abhiman\" most closely suggest?",
+          "choices": [
+            "Hurt pride within a close relationship",
+            "Cozy, friendly, and pleasantly social",
+            "A warm feeling of nostalgia",
+            "Community helping one another"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-19-03",
+          "wordId": "sayang",
+          "word": "Sayang",
+          "language": "Malay / Indonesian",
+          "question": "Which meaning best fits \"Sayang\"?",
+          "choices": [
+            "Putting care and soul into what you do",
+            "A subtle, mysterious sense of beauty",
+            "Affection, dear one, or tenderness",
+            "Enjoyment or fun in what one does"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-19-04",
+          "wordId": "rindu",
+          "word": "Rindu",
+          "language": "Malay / Indonesian",
+          "question": "What can \"Rindu\" express?",
+          "choices": [
+            "To miss or long for someone",
+            "A deep longing for a place or time",
+            "A complex sorrow shaped by memory and endurance",
+            "Comfortable, easy, or well"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-19-05",
+          "wordId": "gotong-royong",
+          "word": "Gotong royong",
+          "language": "Indonesian / Malay",
+          "question": "What does \"Gotong royong\" describe?",
+          "choices": [
+            "Working together for a shared need",
+            "The moon's path of light on water",
+            "Deep attachment built over time",
+            "It's okay; no need to worry"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-19-06",
+          "wordId": "kilig",
+          "word": "Kilig",
+          "language": "Tagalog",
+          "question": "What does \"Kilig\" most closely suggest?",
+          "choices": [
+            "The early feeling of falling in love",
+            "A flutter of romantic excitement",
+            "The sense of reading a room",
+            "Grace, charm, or a destined connection"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-19-07",
+          "wordId": "bayanihan",
+          "word": "Bayanihan",
+          "language": "Tagalog",
+          "question": "Which meaning best fits \"Bayanihan\"?",
+          "choices": [
+            "A tender longing for something absent",
+            "A shared look of unspoken possibility",
+            "Tender love, care, or compassion",
+            "Community helping one another"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-19-08",
+          "wordId": "sanuk",
+          "word": "Sanuk",
+          "language": "Thai",
+          "question": "What can \"Sanuk\" express?",
+          "choices": [
+            "A reason that makes life feel worth living",
+            "Improvising a solution under pressure",
+            "Enjoyment or fun in what one does",
+            "Affection, feeling, or emotional bond"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-19-09",
+          "wordId": "sabai",
+          "word": "Sabai",
+          "language": "Thai",
+          "question": "What does \"Sabai\" describe?",
+          "choices": [
+            "Just the right amount",
+            "Comfortable, easy, or well",
+            "A deep, stirring artistic force",
+            "The smell after rain falls on dry earth"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-19-10",
+          "wordId": "mai-pen-rai",
+          "word": "Mai pen rai",
+          "language": "Thai",
+          "question": "What does \"Mai pen rai\" most closely suggest?",
+          "choices": [
+            "Beauty in imperfection and impermanence",
+            "It's okay; no need to worry",
+            "A place where one feels safely rooted",
+            "The warmth of winter sunlight"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "date": "2026-07-20",
+      "questions": [
+        {
+          "id": "2026-07-20-01",
+          "wordId": "duyen",
+          "word": "Duyên",
+          "language": "Vietnamese",
+          "question": "What does \"Duyên\" most closely suggest?",
+          "choices": [
+            "Quiet grit in the face of difficulty",
+            "Grace, charm, or a destined connection",
+            "A cozy atmosphere of togetherness",
+            "Shared self or fellow personhood"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-20-02",
+          "wordId": "thuong",
+          "word": "Thương",
+          "language": "Vietnamese",
+          "question": "Which meaning best fits \"Thương\"?",
+          "choices": [
+            "Rising early to hear birdsong",
+            "To clear the head in the wind",
+            "Tender love, care, or compassion",
+            "Companion, comrade, or close group member"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-20-03",
+          "wordId": "tinh",
+          "word": "Tình",
+          "language": "Vietnamese",
+          "question": "What can \"Tình\" express?",
+          "choices": [
+            "A calm sense of inner peace",
+            "Affection, feeling, or emotional bond",
+            "Joy before something happens",
+            "It cannot be helped"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-20-04",
+          "wordId": "petrichor",
+          "word": "Petrichor",
+          "language": "English",
+          "question": "What does \"Petrichor\" describe?",
+          "choices": [
+            "Longing for someone or something absent",
+            "Cozy, pleasant, and warmly comfortable",
+            "The smell after rain falls on dry earth",
+            "Happiness or blessed well-being"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-20-05",
+          "wordId": "apricity",
+          "word": "Apricity",
+          "language": "English",
+          "question": "What does \"Apricity\" most closely suggest?",
+          "choices": [
+            "The warmth of winter sunlight",
+            "A glow or shimmer seen on the sea at night",
+            "Cozy in a warm, friendly way",
+            "Feeling, affection, or emotional bond"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-20-06",
+          "wordId": "resfeber",
+          "word": "Resfeber",
+          "language": "Swedish",
+          "question": "Which meaning best fits \"Resfeber\"?",
+          "choices": [
+            "Tranquility or settled calm",
+            "Weather that looks better from indoors",
+            "Love",
+            "Restless excitement before a journey"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-20-07",
+          "wordId": "fika",
+          "word": "Fika",
+          "language": "Swedish",
+          "question": "What can \"Fika\" express?",
+          "choices": [
+            "A sense of blessing or beneficial abundance",
+            "A coffee break with time to pause",
+            "A wistful longing",
+            "Thank you"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-20-08",
+          "wordId": "friluftsliv",
+          "word": "Friluftsliv",
+          "language": "Norwegian / Swedish",
+          "question": "What does \"Friluftsliv\" describe?",
+          "choices": [
+            "Light, radiance, or illumination",
+            "A deep sense of familiar place",
+            "Slowly, gently, little by little",
+            "Open-air life close to nature"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-20-09",
+          "wordId": "kaamos",
+          "word": "Kaamos",
+          "language": "Finnish",
+          "question": "What does \"Kaamos\" most closely suggest?",
+          "choices": [
+            "The dark polar winter period",
+            "A deep, searching longing",
+            "Fun, lively talk, or good company",
+            "Friend or companion"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-20-10",
+          "wordId": "gigil",
+          "word": "Gigil",
+          "language": "Tagalog",
+          "question": "Which meaning best fits \"Gigil\"?",
+          "choices": [
+            "The solitude of being in the forest",
+            "A strong feeling of missing or longing",
+            "Love or affection",
+            "An intense urge to squeeze something cute"
+          ],
+          "correctIndex": 3
+        }
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "questions": [
+        {
+          "id": "2026-07-21-01",
+          "wordId": "kapwa",
+          "word": "Kapwa",
+          "language": "Tagalog",
+          "question": "Which meaning best fits \"Kapwa\"?",
+          "choices": [
+            "Deep attachment built over time",
+            "A clever makeshift solution",
+            "Reciprocity or mutual exchange",
+            "Shared self or fellow personhood"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-21-02",
+          "wordId": "nakama",
+          "word": "Nakama",
+          "language": "Japanese",
+          "question": "What can \"Nakama\" express?",
+          "choices": [
+            "The sense of reading a room",
+            "Leisurely, spirited conversation",
+            "Companion, comrade, or close group member",
+            "Being in-between"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-21-03",
+          "wordId": "shoganai",
+          "word": "Shoganai",
+          "language": "Japanese",
+          "question": "What does \"Shoganai\" describe?",
+          "choices": [
+            "It cannot be helped",
+            "A shared look of unspoken possibility",
+            "Hurt pride within a close relationship",
+            "A stone marker or human-made landmark"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-21-04",
+          "wordId": "xingfu",
+          "word": "Xingfu",
+          "language": "Chinese",
+          "question": "What does \"Xingfu\" most closely suggest?",
+          "choices": [
+            "Improvising a solution under pressure",
+            "Happiness or blessed well-being",
+            "Affection, dear one, or tenderness",
+            "Warm hospitality and kindness"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-21-05",
+          "wordId": "qing",
+          "word": "Qing",
+          "language": "Chinese",
+          "question": "Which meaning best fits \"Qing\"?",
+          "choices": [
+            "A deep, stirring artistic force",
+            "To miss or long for someone",
+            "Feeling, affection, or emotional bond",
+            "Returning to learn from the past"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-21-06",
+          "wordId": "sarang",
+          "word": "Sarang",
+          "language": "Korean",
+          "question": "What can \"Sarang\" express?",
+          "choices": [
+            "A place where one feels safely rooted",
+            "Working together for a shared need",
+            "Love",
+            "Letting unread books gather nearby"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-21-07",
+          "wordId": "asante",
+          "word": "Asante",
+          "language": "Swahili",
+          "question": "What does \"Asante\" describe?",
+          "choices": [
+            "Thank you",
+            "To use or wear something for the first time",
+            "A flutter of romantic excitement",
+            "Spending attentive time among trees"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-21-08",
+          "wordId": "polepole",
+          "word": "Polepole",
+          "language": "Swahili",
+          "question": "What does \"Polepole\" most closely suggest?",
+          "choices": [
+            "To wander without hurry",
+            "Slowly, gently, little by little",
+            "Community helping one another",
+            "Repair that honors visible cracks"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-21-09",
+          "wordId": "rafiki",
+          "word": "Rafiki",
+          "language": "Swahili",
+          "question": "Which meaning best fits \"Rafiki\"?",
+          "choices": [
+            "The joy of meeting again",
+            "Enjoyment or fun in what one does",
+            "Stillness or quiet composure",
+            "Friend or companion"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-21-10",
+          "wordId": "ife",
+          "word": "Ifẹ",
+          "language": "Yoruba",
+          "question": "What can \"Ifẹ\" express?",
+          "choices": [
+            "To rest in the afternoon shade",
+            "Comfortable, easy, or well",
+            "A meaningful connection between people",
+            "Love or affection"
+          ],
+          "correctIndex": 3
+        }
+      ]
+    },
+    {
+      "date": "2026-07-22",
+      "questions": [
+        {
+          "id": "2026-07-22-01",
+          "wordId": "obi",
+          "word": "Obi",
+          "language": "Igbo",
+          "question": "What can \"Obi\" express?",
+          "choices": [
+            "Cozy in a warm, friendly way",
+            "Heart or central home space, depending on context",
+            "The warmth of winter sunlight",
+            "Pleased, comfortable, or at ease"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-22-02",
+          "wordId": "lafiya",
+          "word": "Lafiya",
+          "language": "Hausa",
+          "question": "What does \"Lafiya\" describe?",
+          "choices": [
+            "Health, peace, or well-being",
+            "Weather that looks better from indoors",
+            "Restless excitement before a journey",
+            "Cool-hearted calm"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-22-03",
+          "wordId": "tesfa",
+          "word": "Tesfa",
+          "language": "Amharic",
+          "question": "What does \"Tesfa\" most closely suggest?",
+          "choices": [
+            "A wistful longing",
+            "A coffee break with time to pause",
+            "Generous-hearted kindness",
+            "Hope"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-22-04",
+          "wordId": "manaakitanga",
+          "word": "Manaakitanga",
+          "language": "Maori",
+          "question": "Which meaning best fits \"Manaakitanga\"?",
+          "choices": [
+            "A deep sense of familiar place",
+            "Open-air life close to nature",
+            "Peace, relief, or inner calm",
+            "Care, hospitality, and respect for others"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-22-05",
+          "wordId": "whanau",
+          "word": "Whanau",
+          "language": "Maori",
+          "question": "What can \"Whanau\" express?",
+          "choices": [
+            "Family or extended family group",
+            "Fun, lively talk, or good company",
+            "The dark polar winter period",
+            "Grace, delicacy, or refinement"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-22-06",
+          "wordId": "ayni",
+          "word": "Ayni",
+          "language": "Quechua",
+          "question": "What does \"Ayni\" describe?",
+          "choices": [
+            "A strong feeling of missing or longing",
+            "An intense urge to squeeze something cute",
+            "Reciprocity or mutual exchange",
+            "Friendship or close companionship"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-22-07",
+          "wordId": "nepantla",
+          "word": "Nepantla",
+          "language": "Nahuatl",
+          "question": "What does \"Nepantla\" most closely suggest?",
+          "choices": [
+            "Ease, calm, or a pleasant relaxed state",
+            "Being in-between",
+            "Shared self or fellow personhood",
+            "The will to keep living"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-22-08",
+          "wordId": "inuksuk",
+          "word": "Inuksuk",
+          "language": "Inuktitut",
+          "question": "Which meaning best fits \"Inuksuk\"?",
+          "choices": [
+            "Longing mixed with affection or ache",
+            "Companion, comrade, or close group member",
+            "Heritage or inheritance",
+            "A stone marker or human-made landmark"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-22-09",
+          "wordId": "morabeza",
+          "word": "Morabeza",
+          "language": "Cape Verdean Creole",
+          "question": "What can \"Morabeza\" express?",
+          "choices": [
+            "To fall out of love",
+            "It cannot be helped",
+            "Warm hospitality and kindness",
+            "Peace or peacefulness"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-22-10",
+          "wordId": "sankofa",
+          "word": "Sankofa",
+          "language": "Akan",
+          "question": "What does \"Sankofa\" describe?",
+          "choices": [
+            "A deep ache of longing or melancholy",
+            "Returning to learn from the past",
+            "Happiness or blessed well-being",
+            "Joy or happiness"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "date": "2026-07-23",
+      "questions": [
+        {
+          "id": "2026-07-23-01",
+          "wordId": "tsundoku",
+          "word": "Tsundoku",
+          "language": "Japanese",
+          "question": "What does \"Tsundoku\" describe?",
+          "choices": [
+            "To miss or long for someone",
+            "Letting unread books gather nearby",
+            "Love or affection",
+            "Thought, imagination, or care"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-23-02",
+          "wordId": "shinrin-yoku",
+          "word": "Shinrin-yoku",
+          "language": "Japanese",
+          "question": "What does \"Shinrin-yoku\" most closely suggest?",
+          "choices": [
+            "Working together for a shared need",
+            "Heart or central home space, depending on context",
+            "Memory, thought, or remembering",
+            "Spending attentive time among trees"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-23-03",
+          "wordId": "kintsugi",
+          "word": "Kintsugi",
+          "language": "Japanese",
+          "question": "Which meaning best fits \"Kintsugi\"?",
+          "choices": [
+            "A flutter of romantic excitement",
+            "Health, peace, or well-being",
+            "Repair that honors visible cracks",
+            "Star or bright celestial presence"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-23-04",
+          "wordId": "seijaku",
+          "word": "Seijaku",
+          "language": "Japanese",
+          "question": "What can \"Seijaku\" express?",
+          "choices": [
+            "Community helping one another",
+            "Hope",
+            "Love, compassion, or care",
+            "Stillness or quiet composure"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-23-05",
+          "wordId": "inyeon",
+          "word": "Inyeon",
+          "language": "Korean",
+          "question": "What does \"Inyeon\" describe?",
+          "choices": [
+            "Enjoyment or fun in what one does",
+            "A meaningful connection between people",
+            "Care, hospitality, and respect for others",
+            "Guardianship or careful stewardship"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-23-06",
+          "wordId": "jia-you",
+          "word": "Jia you",
+          "language": "Chinese",
+          "question": "What does \"Jia you\" most closely suggest?",
+          "choices": [
+            "Encouragement to keep going",
+            "Comfortable, easy, or well",
+            "Family or extended family group",
+            "Open conversation or shared storytelling"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-23-07",
+          "wordId": "anran",
+          "word": "Anran",
+          "language": "Chinese",
+          "question": "Which meaning best fits \"Anran\"?",
+          "choices": [
+            "Peaceful, safe, or at ease",
+            "It's okay; no need to worry",
+            "Reciprocity or mutual exchange",
+            "A greeting of life and welcome"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-23-08",
+          "wordId": "alpas",
+          "word": "Alpas",
+          "language": "Tagalog",
+          "question": "What can \"Alpas\" express?",
+          "choices": [
+            "Grace, charm, or a destined connection",
+            "Being in-between",
+            "Letting go or becoming free",
+            "A cherished personal place"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-23-09",
+          "wordId": "tadhana",
+          "word": "Tadhana",
+          "language": "Tagalog",
+          "question": "What does \"Tadhana\" describe?",
+          "choices": [
+            "Tender love, care, or compassion",
+            "Fate, destiny, or what may unfold",
+            "A stone marker or human-made landmark",
+            "The deep hours before dawn"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-23-10",
+          "wordId": "pahimakas",
+          "word": "Pahimakas",
+          "language": "Tagalog",
+          "question": "What does \"Pahimakas\" most closely suggest?",
+          "choices": [
+            "Affection, feeling, or emotional bond",
+            "Warm hospitality and kindness",
+            "A lingering trace left behind",
+            "A farewell or final parting"
+          ],
+          "correctIndex": 3
+        }
+      ]
+    },
+    {
+      "date": "2026-07-24",
+      "questions": [
+        {
+          "id": "2026-07-24-01",
+          "wordId": "senang",
+          "word": "Senang",
+          "language": "Malay / Indonesian",
+          "question": "What does \"Senang\" most closely suggest?",
+          "choices": [
+            "The dark polar winter period",
+            "Pleased, comfortable, or at ease",
+            "A meaningful connection between people",
+            "Calm freedom from disturbance"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-24-02",
+          "wordId": "jai-yen",
+          "word": "Jai yen",
+          "language": "Thai",
+          "question": "Which meaning best fits \"Jai yen\"?",
+          "choices": [
+            "An intense urge to squeeze something cute",
+            "Encouragement to keep going",
+            "Cool-hearted calm",
+            "Joyful spirit or lively good mood"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-24-03",
+          "wordId": "nam-jai",
+          "word": "Nam jai",
+          "language": "Thai",
+          "question": "What can \"Nam jai\" express?",
+          "choices": [
+            "Generous-hearted kindness",
+            "Shared self or fellow personhood",
+            "Peaceful, safe, or at ease",
+            "Welcoming care for guests"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-24-04",
+          "wordId": "sukoon",
+          "word": "Sukoon",
+          "language": "Hindi / Urdu",
+          "question": "What does \"Sukoon\" describe?",
+          "choices": [
+            "Peace, relief, or inner calm",
+            "Companion, comrade, or close group member",
+            "Letting go or becoming free",
+            "Fine rain from a clear sky"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-24-05",
+          "wordId": "nazakat",
+          "word": "Nazakat",
+          "language": "Urdu",
+          "question": "What does \"Nazakat\" most closely suggest?",
+          "choices": [
+            "It cannot be helped",
+            "Fate, destiny, or what may unfold",
+            "Peace, ease, or tranquility",
+            "Grace, delicacy, or refinement"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-24-06",
+          "wordId": "yaari",
+          "word": "Yaari",
+          "language": "Hindi / Punjabi",
+          "question": "Which meaning best fits \"Yaari\"?",
+          "choices": [
+            "Happiness or blessed well-being",
+            "Friendship or close companionship",
+            "A farewell or final parting",
+            "A warm hug or safe little place"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-24-07",
+          "wordId": "jijivisha",
+          "word": "Jijivisha",
+          "language": "Hindi / Sanskrit",
+          "question": "What can \"Jijivisha\" express?",
+          "choices": [
+            "Feeling, affection, or emotional bond",
+            "Pleased, comfortable, or at ease",
+            "Grace that appears effortless",
+            "The will to keep living"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-24-08",
+          "wordId": "virasat",
+          "word": "Virasat",
+          "language": "Hindi / Urdu",
+          "question": "What does \"Virasat\" describe?",
+          "choices": [
+            "Love",
+            "Heritage or inheritance",
+            "Cool-hearted calm",
+            "Drowsiness after a satisfying meal"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-24-09",
+          "wordId": "amani",
+          "word": "Amani",
+          "language": "Swahili",
+          "question": "What does \"Amani\" most closely suggest?",
+          "choices": [
+            "Thank you",
+            "Generous-hearted kindness",
+            "Peace or peacefulness",
+            "A leisurely walk or stroll"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-24-10",
+          "wordId": "furaha",
+          "word": "Furaha",
+          "language": "Swahili",
+          "question": "Which meaning best fits \"Furaha\"?",
+          "choices": [
+            "Slowly, gently, little by little",
+            "Peace, relief, or inner calm",
+            "Dawn or music of daybreak",
+            "Joy or happiness"
+          ],
+          "correctIndex": 3
+        }
+      ]
+    },
+    {
+      "date": "2026-07-25",
+      "questions": [
+        {
+          "id": "2026-07-25-01",
+          "wordId": "nia",
+          "word": "Nia",
+          "language": "Swahili",
+          "question": "Which meaning best fits \"Nia\"?",
+          "choices": [
+            "Care, hospitality, and respect for others",
+            "Joy or happiness",
+            "Putting care and soul into what you do",
+            "Purpose or intention"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-25-02",
+          "wordId": "moyo",
+          "word": "Moyo",
+          "language": "Swahili",
+          "question": "What can \"Moyo\" express?",
+          "choices": [
+            "Family or extended family group",
+            "Heart, courage, or inner feeling",
+            "Purpose or intention",
+            "A deep longing for a place or time"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-25-03",
+          "wordId": "akoma",
+          "word": "Akoma",
+          "language": "Akan",
+          "question": "What does \"Akoma\" describe?",
+          "choices": [
+            "Reciprocity or mutual exchange",
+            "Heart, courage, or inner feeling",
+            "The moon's path of light on water",
+            "Heart, patience, or endurance"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-25-04",
+          "wordId": "uns",
+          "word": "Uns",
+          "language": "Arabic",
+          "question": "What does \"Uns\" most closely suggest?",
+          "choices": [
+            "Being in-between",
+            "Heart, patience, or endurance",
+            "The early feeling of falling in love",
+            "Warm companionship or familiarity"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-25-05",
+          "wordId": "darya",
+          "word": "Darya",
+          "language": "Persian",
+          "question": "Which meaning best fits \"Darya\"?",
+          "choices": [
+            "Sea or wide water",
+            "A stone marker or human-made landmark",
+            "Warm companionship or familiarity",
+            "A tender longing for something absent"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-25-06",
+          "wordId": "khayal",
+          "word": "Khayal",
+          "language": "Hindi / Urdu",
+          "question": "What can \"Khayal\" express?",
+          "choices": [
+            "Warm hospitality and kindness",
+            "Sea or wide water",
+            "Thought, imagination, or care",
+            "A reason that makes life feel worth living"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-25-07",
+          "wordId": "yuyay",
+          "word": "Yuyay",
+          "language": "Quechua",
+          "question": "What does \"Yuyay\" describe?",
+          "choices": [
+            "Returning to learn from the past",
+            "Memory, thought, or remembering",
+            "Thought, imagination, or care",
+            "Just the right amount"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-25-08",
+          "wordId": "chaska",
+          "word": "Chaska",
+          "language": "Quechua",
+          "question": "What does \"Chaska\" most closely suggest?",
+          "choices": [
+            "Star or bright celestial presence",
+            "Letting unread books gather nearby",
+            "Memory, thought, or remembering",
+            "Beauty in imperfection and impermanence"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-25-09",
+          "wordId": "aroha",
+          "word": "Aroha",
+          "language": "Maori",
+          "question": "Which meaning best fits \"Aroha\"?",
+          "choices": [
+            "Spending attentive time among trees",
+            "Love, compassion, or care",
+            "Star or bright celestial presence",
+            "Joy in another person's happiness"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-25-10",
+          "wordId": "kaitiakitanga",
+          "word": "Kaitiakitanga",
+          "language": "Maori",
+          "question": "What can \"Kaitiakitanga\" express?",
+          "choices": [
+            "Repair that honors visible cracks",
+            "Love, compassion, or care",
+            "Guardianship or careful stewardship",
+            "Tenderly running fingers through someone's hair"
+          ],
+          "correctIndex": 2
+        }
+      ]
+    },
+    {
+      "date": "2026-07-26",
+      "questions": [
+        {
+          "id": "2026-07-26-01",
+          "wordId": "talanoa",
+          "word": "Talanoa",
+          "language": "Tongan / Fijian / Samoan",
+          "question": "What can \"Talanoa\" express?",
+          "choices": [
+            "Fate, destiny, or what may unfold",
+            "A lingering trace left behind",
+            "A calm sense of inner peace",
+            "Open conversation or shared storytelling"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-26-02",
+          "wordId": "bula",
+          "word": "Bula",
+          "language": "Fijian",
+          "question": "What does \"Bula\" describe?",
+          "choices": [
+            "A farewell or final parting",
+            "A greeting of life and welcome",
+            "A lucky find or delightful discovery",
+            "Longing for someone or something absent"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-26-03",
+          "wordId": "smultronstalle",
+          "word": "Smultronställe",
+          "language": "Swedish",
+          "question": "What does \"Smultronställe\" most closely suggest?",
+          "choices": [
+            "A cherished personal place",
+            "Pleased, comfortable, or at ease",
+            "Warm comfort and easy belonging",
+            "A glow or shimmer seen on the sea at night"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-26-04",
+          "wordId": "madrugada",
+          "word": "Madrugada",
+          "language": "Spanish / Portuguese",
+          "question": "Which meaning best fits \"Madrugada\"?",
+          "choices": [
+            "Cool-hearted calm",
+            "The deep hours before dawn",
+            "Happiness or good fortune",
+            "Tranquility or settled calm"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-26-05",
+          "wordId": "sillage",
+          "word": "Sillage",
+          "language": "French",
+          "question": "What can \"Sillage\" express?",
+          "choices": [
+            "Generous-hearted kindness",
+            "To cozy up or enjoy comfort",
+            "A lingering trace left behind",
+            "A sense of blessing or beneficial abundance"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-26-06",
+          "wordId": "trouvaille",
+          "word": "Trouvaille",
+          "language": "French",
+          "question": "What does \"Trouvaille\" describe?",
+          "choices": [
+            "A lucky find or delightful discovery",
+            "Peace, relief, or inner calm",
+            "A dreamer who lives among clouds",
+            "Light, radiance, or illumination"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-26-07",
+          "wordId": "gemutlichkeit",
+          "word": "Gemütlichkeit",
+          "language": "German",
+          "question": "What does \"Gemütlichkeit\" most closely suggest?",
+          "choices": [
+            "Grace, delicacy, or refinement",
+            "Calm freedom from disturbance",
+            "A deep, searching longing",
+            "Warm comfort and easy belonging"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-26-08",
+          "wordId": "lykke",
+          "word": "Lykke",
+          "language": "Danish / Norwegian",
+          "question": "Which meaning best fits \"Lykke\"?",
+          "choices": [
+            "Happiness or good fortune",
+            "Friendship or close companionship",
+            "Joyful spirit or lively good mood",
+            "The solitude of being in the forest"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-26-09",
+          "wordId": "mysa",
+          "word": "Mysa",
+          "language": "Swedish",
+          "question": "What can \"Mysa\" express?",
+          "choices": [
+            "The will to keep living",
+            "Welcoming care for guests",
+            "To cozy up or enjoy comfort",
+            "Fear that time or chances are running out"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-26-10",
+          "wordId": "nefelibata",
+          "word": "Nefelibata",
+          "language": "Portuguese",
+          "question": "What does \"Nefelibata\" describe?",
+          "choices": [
+            "Heritage or inheritance",
+            "A dreamer who lives among clouds",
+            "Fine rain from a clear sky",
+            "A gentle sadness at passing beauty"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "date": "2026-07-27",
+      "questions": [
+        {
+          "id": "2026-07-27-01",
+          "wordId": "ataraxia",
+          "word": "Ataraxia",
+          "language": "Greek",
+          "question": "What does \"Ataraxia\" describe?",
+          "choices": [
+            "Warm companionship or familiarity",
+            "Dawn or music of daybreak",
+            "Calm freedom from disturbance",
+            "A shared look of unspoken possibility"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-27-02",
+          "wordId": "kefi",
+          "word": "Kefi",
+          "language": "Greek",
+          "question": "What does \"Kefi\" most closely suggest?",
+          "choices": [
+            "Sea or wide water",
+            "A longing for faraway places",
+            "Joyful spirit or lively good mood",
+            "Improvising a solution under pressure"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-27-03",
+          "wordId": "philoxenia",
+          "word": "Philoxenia",
+          "language": "Greek",
+          "question": "Which meaning best fits \"Philoxenia\"?",
+          "choices": [
+            "Thought, imagination, or care",
+            "Sunlight filtering through trees",
+            "A deep, stirring artistic force",
+            "Welcoming care for guests"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-27-04",
+          "wordId": "serein",
+          "word": "Serein",
+          "language": "French",
+          "question": "What can \"Serein\" express?",
+          "choices": [
+            "Fine rain from a clear sky",
+            "Memory, thought, or remembering",
+            "Time spent talking after a meal",
+            "A place where one feels safely rooted"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-27-05",
+          "wordId": "suaimhneas",
+          "word": "Suaimhneas",
+          "language": "Irish",
+          "question": "What does \"Suaimhneas\" describe?",
+          "choices": [
+            "Peace, ease, or tranquility",
+            "Star or bright celestial presence",
+            "A sense of shared humanity",
+            "To use or wear something for the first time"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "2026-07-27-06",
+          "wordId": "cwtch",
+          "word": "Cwtch",
+          "language": "Welsh",
+          "question": "What does \"Cwtch\" most closely suggest?",
+          "choices": [
+            "Love, compassion, or care",
+            "Cozy, friendly, and pleasantly social",
+            "To wander without hurry",
+            "A warm hug or safe little place"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-27-07",
+          "wordId": "sprezzatura",
+          "word": "Sprezzatura",
+          "language": "Italian",
+          "question": "Which meaning best fits \"Sprezzatura\"?",
+          "choices": [
+            "Guardianship or careful stewardship",
+            "Grace that appears effortless",
+            "Putting care and soul into what you do",
+            "The joy of meeting again"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "2026-07-27-08",
+          "wordId": "abbiocco",
+          "word": "Abbiocco",
+          "language": "Italian",
+          "question": "What can \"Abbiocco\" express?",
+          "choices": [
+            "Open conversation or shared storytelling",
+            "A deep longing for a place or time",
+            "To rest in the afternoon shade",
+            "Drowsiness after a satisfying meal"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "2026-07-27-09",
+          "wordId": "passeggiata",
+          "word": "Passeggiata",
+          "language": "Italian",
+          "question": "What does \"Passeggiata\" describe?",
+          "choices": [
+            "A greeting of life and welcome",
+            "The moon's path of light on water",
+            "A leisurely walk or stroll",
+            "The sweetness of doing nothing"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "2026-07-27-10",
+          "wordId": "alborada",
+          "word": "Alborada",
+          "language": "Spanish",
+          "question": "What does \"Alborada\" most closely suggest?",
+          "choices": [
+            "A cherished personal place",
+            "Dawn or music of daybreak",
+            "The early feeling of falling in love",
+            "A cozy atmosphere of togetherness"
+          ],
+          "correctIndex": 1
+        }
+      ]
     }
   ]
 }

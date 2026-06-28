@@ -39,6 +39,8 @@ final class PracticeSessionManager: ObservableObject {
     private let decoder = JSONDecoder()
     private let storageKey = "lexoraDailyPracticeAttempt"
     private var attempt: PracticeAttempt?
+    private var loadedPracticeDateString: String?
+    private var dayChangeObserver: NSObjectProtocol?
 
     init(
         repository: PracticeRepository = PracticeRepository(),
@@ -48,6 +50,21 @@ final class PracticeSessionManager: ObservableObject {
         self.defaults = defaults
         loadPersistedAttempt()
         publishAttemptState()
+        dayChangeObserver = NotificationCenter.default.addObserver(
+            forName: .NSCalendarDayChanged,
+            object: nil,
+            queue: .main
+        ) { [weak self] _ in
+            Task { @MainActor in
+                await self?.loadPracticeIfNeeded()
+            }
+        }
+    }
+
+    deinit {
+        if let dayChangeObserver {
+            NotificationCenter.default.removeObserver(dayChangeObserver)
+        }
     }
 
     var todayDateString: String {
@@ -104,7 +121,10 @@ final class PracticeSessionManager: ObservableObject {
     }
 
     func loadPracticeIfNeeded() async {
-        guard practiceSet == nil else {
+        let now = Date()
+        let dateString = Self.dateString(for: now)
+
+        guard practiceSet == nil || loadedPracticeDateString != dateString else {
             resetIfNeededForNewDay()
             return
         }
@@ -114,8 +134,9 @@ final class PracticeSessionManager: ObservableObject {
         defer { isLoading = false }
 
         let catalog = await repository.bestAvailableCatalog()
-        let loadedSet = catalog.flatMap { repository.practiceSet(for: Date(), in: $0) } ?? Self.safeLocalFallbackSet
+        let loadedSet = catalog.flatMap { repository.practiceSet(for: now, in: $0) } ?? Self.safeLocalFallbackSet
         practiceSet = loadedSet
+        loadedPracticeDateString = dateString
         resetIfNeededForNewDay()
     }
 
@@ -251,6 +272,10 @@ final class PracticeSessionManager: ObservableObject {
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter
     }()
+
+    private static func dateString(for date: Date) -> String {
+        dayFormatter.string(from: date)
+    }
 
     private static let safeLocalFallbackSet = PracticeSet(
         date: "fallback",

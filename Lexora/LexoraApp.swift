@@ -42,6 +42,7 @@ struct LexoraApp: App {
                     guard newPhase == .active else { return }
                     Task {
                         await premium.refreshCustomerInfo(silent: true)
+                        await practice.loadPracticeIfNeeded()
                     }
                 }
         }
