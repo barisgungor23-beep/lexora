@@ -79,7 +79,7 @@ struct PaywallView: View {
         .navigationTitle("Premium")
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(PaywallPalette.background, for: .navigationBar)
-        .toolbarColorScheme(.dark, for: .navigationBar)
+        .toolbarColorScheme(.light, for: .navigationBar)
         .task {
             await premium.loadPremiumPackages()
             selectDefaultPackageIfNeeded()
@@ -108,18 +108,18 @@ struct PaywallView: View {
 
                     Text("Premium is active")
                         .font(.lexoraHeadline)
-                        .foregroundStyle(PaywallPalette.ivory)
+                        .foregroundStyle(PaywallPalette.ink)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .paywallBrownCard()
             } else if premium.isLoadingPackages && premium.availablePackages.isEmpty {
                 HStack(spacing: 10) {
                     ProgressView()
-                        .tint(PaywallPalette.ivory)
+                        .tint(PaywallPalette.ink)
 
                     Text("Loading premium options...")
                         .font(.lexoraBody)
-                        .foregroundStyle(PaywallPalette.mutedText)
+                        .foregroundStyle(PaywallPalette.ink.opacity(0.68))
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .paywallBrownCard()
@@ -127,7 +127,7 @@ struct PaywallView: View {
                 VStack(alignment: .leading, spacing: 10) {
                     Text("Premium options are unavailable right now.")
                         .font(.lexoraBody)
-                        .foregroundStyle(PaywallPalette.ivory)
+                        .foregroundStyle(PaywallPalette.ink)
 
                     Button("Try again") {
                         Task {
@@ -173,13 +173,13 @@ struct PaywallView: View {
                     }
                     .padding(.vertical, 13)
                     .foregroundStyle(PaywallPalette.ink)
-                    .background(PaywallPalette.ivory)
+                    .background(PaywallPalette.cta)
                     .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
                     .overlay(
                         RoundedRectangle(cornerRadius: 14, style: .continuous)
-                            .stroke(PaywallPalette.gold.opacity(0.44), lineWidth: 1)
+                            .stroke(PaywallPalette.border.opacity(0.38), lineWidth: 0.9)
                     )
-                    .shadow(color: .black.opacity(0.18), radius: 14, x: 0, y: 6)
+                    .shadow(color: .black.opacity(0.09), radius: 10, x: 0, y: 4)
                 }
                 .buttonStyle(.plain)
                 .disabled(selectedPackage == nil || premium.isProcessingPurchase)
@@ -211,24 +211,25 @@ struct PaywallView: View {
 }
 
 private enum PaywallPalette {
-    static let background = Color(red: 0.145, green: 0.082, blue: 0.052)
-    static let backgroundLow = Color(red: 0.230, green: 0.135, blue: 0.084)
-    static let surface = Color(red: 0.310, green: 0.190, blue: 0.118)
-    static let surfaceSoft = Color(red: 0.245, green: 0.145, blue: 0.090)
-    static let paper = Color(red: 0.965, green: 0.925, blue: 0.820)
-    static let paperSoft = Color(red: 0.918, green: 0.842, blue: 0.690)
-    static let ivory = Color(red: 0.985, green: 0.954, blue: 0.875)
-    static let mutedText = Color(red: 0.800, green: 0.708, blue: 0.590)
-    static let gold = Color(red: 0.742, green: 0.565, blue: 0.310)
-    static let border = Color(red: 0.820, green: 0.650, blue: 0.365)
-    static let ink = Color(red: 0.145, green: 0.095, blue: 0.060)
+    static let background = Color(red: 0.575, green: 0.472, blue: 0.372)
+    static let backgroundLow = Color(red: 0.650, green: 0.552, blue: 0.438)
+    static let surface = Color(red: 0.705, green: 0.602, blue: 0.482)
+    static let surfaceSoft = Color(red: 0.768, green: 0.680, blue: 0.554)
+    static let paper = Color(red: 0.952, green: 0.918, blue: 0.838)
+    static let paperSoft = Color(red: 0.900, green: 0.840, blue: 0.720)
+    static let cta = Color(red: 0.930, green: 0.880, blue: 0.770)
+    static let ivory = Color(red: 0.988, green: 0.962, blue: 0.900)
+    static let mutedText = Color(red: 0.392, green: 0.310, blue: 0.238)
+    static let gold = Color(red: 0.560, green: 0.430, blue: 0.260)
+    static let border = Color(red: 0.610, green: 0.500, blue: 0.370)
+    static let ink = Color(red: 0.155, green: 0.112, blue: 0.080)
 }
 
 private extension View {
     func paywallBrownCard(padding: CGFloat = 16) -> some View {
         self
             .padding(padding)
-            .background(PaywallPalette.surfaceSoft.opacity(0.9))
+            .background(PaywallPalette.paper.opacity(0.56))
             .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
             .overlay(
                 RoundedRectangle(cornerRadius: 16, style: .continuous)
@@ -254,17 +255,17 @@ private struct PremiumPackageRow: View {
                     HStack(spacing: 8) {
                         Text(premiumPackage.title)
                             .font(.lexoraHeadline)
-                            .foregroundStyle(isSelected ? PaywallPalette.ink : PaywallPalette.ivory)
+                            .foregroundStyle(PaywallPalette.ink)
 
                         if let badge = premiumPackage.badge {
                             Text(badge)
                                 .font(.lexoraCaption)
                                 .textCase(.uppercase)
                                 .tracking(0.8)
-                                .foregroundStyle(isSelected ? PaywallPalette.ink : PaywallPalette.ivory)
+                                .foregroundStyle(PaywallPalette.ink)
                                 .padding(.horizontal, 8)
                                 .padding(.vertical, 3)
-                                .background(isSelected ? PaywallPalette.paperSoft : PaywallPalette.gold.opacity(0.28))
+                                .background(isSelected ? PaywallPalette.paperSoft.opacity(0.78) : PaywallPalette.paper.opacity(0.42))
                                 .clipShape(Capsule())
                                 .overlay(
                                     Capsule()
@@ -275,23 +276,23 @@ private struct PremiumPackageRow: View {
 
                     Text(premiumPackage.subtitle)
                         .font(.lexoraSubheadline)
-                        .foregroundStyle(isSelected ? PaywallPalette.ink.opacity(0.72) : PaywallPalette.mutedText)
+                        .foregroundStyle(PaywallPalette.ink.opacity(isSelected ? 0.68 : 0.58))
                 }
 
                 Spacer()
 
                 Text(premiumPackage.price)
                     .font(.lexoraHeadline)
-                    .foregroundStyle(isSelected ? PaywallPalette.ink : PaywallPalette.ivory)
+                    .foregroundStyle(PaywallPalette.ink)
             }
             .padding(15)
-            .background(isSelected ? PaywallPalette.paper : PaywallPalette.surface.opacity(0.88))
+            .background(isSelected ? PaywallPalette.paper : PaywallPalette.paper.opacity(0.46))
             .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
             .overlay(
                 RoundedRectangle(cornerRadius: 15, style: .continuous)
-                    .stroke(isSelected ? PaywallPalette.gold.opacity(0.78) : PaywallPalette.border.opacity(0.26), lineWidth: isSelected ? 1.25 : 0.75)
+                    .stroke(isSelected ? PaywallPalette.border.opacity(0.62) : PaywallPalette.border.opacity(0.24), lineWidth: isSelected ? 1.05 : 0.7)
             )
-            .shadow(color: .black.opacity(isSelected ? 0.22 : 0.10), radius: isSelected ? 14 : 8, x: 0, y: isSelected ? 7 : 4)
+            .shadow(color: .black.opacity(isSelected ? 0.10 : 0.05), radius: isSelected ? 10 : 5, x: 0, y: isSelected ? 4 : 2)
         }
         .buttonStyle(.plain)
         .accessibilityElement(children: .combine)
@@ -311,7 +312,7 @@ private struct PremiumHeroCard: View {
                 VStack(alignment: .leading, spacing: 9) {
                     Text("Lexora Premium")
                         .font(.lexoraTitle)
-                        .foregroundStyle(PaywallPalette.ivory)
+                        .foregroundStyle(PaywallPalette.ink)
 
                     Text("Go deeper into the words that stay with you.")
                         .font(.lexoraBody)
@@ -325,7 +326,7 @@ private struct PremiumHeroCard: View {
                     .font(.title2.weight(.regular))
                     .foregroundStyle(PaywallPalette.gold)
                     .frame(width: 48, height: 48)
-                    .background(Circle().fill(PaywallPalette.surface))
+                    .background(Circle().fill(PaywallPalette.paper.opacity(0.42)))
                     .clipShape(Circle())
                     .overlay(
                         Circle()
@@ -343,7 +344,7 @@ private struct PremiumHeroCard: View {
 
             Text("Premium opens richer notes, selected reflective stories, Practice answer review, the full archive, favorites without limits, the widget, and shareable cards.")
                 .font(.lexoraSubheadline)
-                .foregroundStyle(PaywallPalette.mutedText)
+                .foregroundStyle(PaywallPalette.ink.opacity(0.68))
                 .lineSpacing(4)
                 .fixedSize(horizontal: false, vertical: true)
         }
@@ -360,7 +361,7 @@ private struct PremiumHeroCard: View {
             RoundedRectangle(cornerRadius: 20, style: .continuous)
                 .stroke(PaywallPalette.border.opacity(0.36), lineWidth: 1)
         )
-        .shadow(color: .black.opacity(0.22), radius: 18, x: 0, y: 9)
+        .shadow(color: .black.opacity(0.08), radius: 12, x: 0, y: 5)
     }
 }
 
@@ -434,7 +435,7 @@ private struct PremiumBenefitRow: View {
 
             Text(text)
                 .font(.lexoraBody)
-                .foregroundStyle(PaywallPalette.ivory)
+                .foregroundStyle(PaywallPalette.ink)
         }
     }
 }
@@ -463,7 +464,7 @@ private struct PaywallBackgroundOrnaments: View {
                         colors: [
                             PaywallPalette.gold.opacity(0.10),
                             .clear,
-                            PaywallPalette.gold.opacity(0.06)
+                            PaywallPalette.gold.opacity(0.04)
                         ],
                         startPoint: .top,
                         endPoint: .bottom
@@ -473,7 +474,7 @@ private struct PaywallBackgroundOrnaments: View {
                 .accessibilityHidden(true)
 
             Circle()
-                .stroke(PaywallPalette.gold.opacity(0.12), lineWidth: 1)
+                .stroke(PaywallPalette.gold.opacity(0.08), lineWidth: 1)
                 .frame(width: 230, height: 230)
                 .offset(x: 132, y: -226)
                 .opacity(isActive ? 1 : 0)
